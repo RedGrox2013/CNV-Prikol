@@ -1,0 +1,242 @@
+dialog Door
+	text PrikolDoor!0x6FEDAE4D
+	
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xC3168520
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xFED460EC
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door02.cnv
+		text PrikolDoor!0x7C6C5389
+	end
+end
+
+dialog Door01
+	text PrikolDoor!0xC826E434 -emotion Sad -exclude Grob
+	text PrikolDoor!0xCD45BC13 -emotion Sad -exclude Grob
+	text PrikolDoor!0xA76118AA -emotion Sad -exclude Grob
+	text PrikolDoor!0xA76118A9 -emotion Sad -exclude Grob
+	text PrikolDoor!0xA76118A8 -emotion Sad -exclude Grob
+	text PrikolDoor!0xA76118AF -emotion Sad -exclude Grob
+	text PrikolDoor!0xA76118AE -emotion Sad -exclude Grob
+	text PrikolDoor!0xA76118AC -emotion Sad -exclude Grob
+	text PrikolDoor!0xA76118AD -emotion Flex
+	text PrikolDoor!0xA76118A3 -emotion Sad -exclude Grob
+	text PrikolDoor!0xA6611738 -emotion Sad -exclude Grob
+	text PrikolDoor!0xA6611739 -emotion Sad -exclude Grob
+	text PrikolDoor!0xA661173A -emotion Sad -exclude Grob
+	text PrikolDoor!0xA661173B -emotion Urgent
+	text PrikolDoor!0xA661173C -emotion Sad -exclude Grob
+	text PrikolDoor!0xA661173D -emotion Sad -exclude Grob
+	text PrikolDoor!0xA661173E -emotion Sad -exclude Grob
+	text PrikolDoor!0xA661173F -emotion Sad -exclude Grob
+	text PrikolDoor!0xA6611730 -emotion Sad -exclude Grob
+	text PrikolDoor!0xA6611731 -emotion Sad -exclude Grob
+	text PrikolDoor!0xA6611731 -require Grob
+	text PrikolDoor!0xA6611730 -require Grob
+	text PrikolDoor!0xA661173F -require Grob
+	text PrikolDoor!0xA661173E -require Grob
+	text PrikolDoor!0xA661173D -require Grob
+	text PrikolDoor!0xA661173C -require Grob
+	text PrikolDoor!0xA661173A -require Grob
+	text PrikolDoor!0xA6611739 -require Grob
+	text PrikolDoor!0xA6611738 -require Grob
+	text PrikolDoor!0xA76118A9 -require Grob
+	text PrikolDoor!0xA76118AA -require Grob
+	text PrikolDoor!0xC826E434 -require Grob
+	text PrikolDoor!0xCD45BC13 -require Grob
+	text PrikolDoor!0xA76118AF -require Grob
+	text PrikolDoor!0xA76118AE -require Grob
+	text PrikolDoor!0xA76118AC -require Grob
+	text PrikolDoor!0xA76118A2 -require Grob
+	text PrikolDoor!0xA76118A3 -require Grob
+	text PrikolDoor!0x788DA6ED -emotion Afraid
+		
+	response
+		action kCnvCommEvent~ RightDoor!Door.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog Door02
+	text PrikolDoor!0xC826E437
+	
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xC3168520
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door03.cnv
+		text PrikolDoor!0xFED460EC
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0x7C6C5389
+	end
+end
+
+dialog Door03
+	text PrikolDoor!0xC826E437
+	
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xC3168520
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xFED460EC
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door04.cnv
+		text PrikolDoor!0x7C6C5389
+	end
+end
+
+dialog Door04
+	text PrikolDoor!0xC826E437
+	
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xC3168520
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xFED460EC
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door05.cnv
+		text PrikolDoor!0x7C6C5389
+	end
+end
+
+dialog Door05
+	text PrikolDoor!0xC826E437
+	
+	response
+		action kCnvCommEvent~ RightDoor!Door06.cnv
+		text PrikolDoor!0xC3168520
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xFED460EC
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0x7C6C5389
+	end
+end
+
+dialog Door06
+	text PrikolDoor!0xC826E437
+	
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xC3168520
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door07.cnv
+		text PrikolDoor!0xFED460EC
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0x7C6C5389
+	end
+end
+
+dialog Door07
+	text PrikolDoor!0xC826E437
+	
+	response
+		action kCnvCommEvent~ RightDoor!Door08.cnv
+		text PrikolDoor!0xC3168520
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xFED460EC
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0x7C6C5389
+	end
+end
+
+dialog Door08
+	text PrikolDoor!0xC826E437
+	
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xC3168520
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door09.cnv
+		text PrikolDoor!0xFED460EC
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0x7C6C5389
+	end
+end
+
+dialog Door09
+	text PrikolDoor!0xC826E437
+	
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xC3168520
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xFED460EC
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door10.cnv
+		text PrikolDoor!0x7C6C5389
+	end
+end
+
+dialog Door10
+	text PrikolDoor!0xC826E437
+	
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0xC3168520
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door11.cnv
+		text PrikolDoor!0xFED460EC
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door01.cnv
+		text PrikolDoor!0x7C6C5389
+	end
+end
+
+dialog Door11
+	text PrikolDoor!0x3A66076D -emotion Happy -exclude Grob
+	text PrikolDoor!0xC0194329 -require Grob
+	
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xD9515895
+	end
+	response
+		action kCnvCommEvent~ RightDoor!Door.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end

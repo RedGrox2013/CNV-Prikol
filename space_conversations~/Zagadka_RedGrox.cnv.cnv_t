@@ -1,0 +1,76 @@
+dialog Zagadka_RedGrox
+	text CNV_Prikol!0x90DAC881 -emotion Happy -exclude Grob
+	text CNV_Prikol!0x90DAC881 -require Grob
+	
+	response
+		action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox02.cnv
+		text CNV_Prikol!0xE6A1A313
+	end
+	response
+		action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox02.cnv
+		text CNV_Prikol!0x90DAC884
+	end
+	response
+		action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox02.cnv
+		text CNV_Prikol!0x91DACA72
+	end
+	response
+		action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox02.cnv
+		text CNV_Prikol!0x91DACA73
+	end
+	response
+		action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox02.cnv
+		text CNV_Prikol!0x30F736EB
+		exclude SourceCivMilitary SourceCivReligious SourceCivEconomic
+	end
+	response
+		action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox02.cnv
+		text CNV_Prikol!0x91DACA71
+	end
+	response # Верный ответ
+		action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox01.cnv
+		text CNV_Prikol!0xBEF3BE6C
+	end
+	response
+		action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox02.cnv
+		text CNV_Prikol!0x90DAC889
+	end
+	response
+		action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox02.cnv
+		text CNV_Prikol!0x162117DE
+	end
+end
+
+dialog Zagadka_RedGrox01
+	text CNV_Prikol!0x90DAC882 -emotion Happy -exclude Grob
+	text CNV_Prikol!0x90DAC883 -require Grob
+		
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xD9515895
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
+
+dialog Zagadka_RedGrox02
+	text CNV_Prikol!0x3588573C -emotion Sad -exclude Grob
+	text CNV_Prikol!0x79150950 -emotion Angry -require Grob
+	
+	response
+		action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+		exclude Grob
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+		exclude Grob
+	end
+end

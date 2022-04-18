@@ -1,0 +1,398 @@
+dialog Quest
+	text PrikolGameQuest!0x38FD75EC
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest01.cnv
+		text PrikolGameQuest!0x38FD75EF
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest06.cnv
+		text PrikolGameQuest!0x37FD7478
+	end
+end
+
+dialog Quest01
+	text PrikolGameQuest!0x38FD75EE
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest02.cnv
+		text PrikolGameQuest!0x38FD75E9
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest03.cnv
+		text PrikolGameQuest!0x38FD75EB
+	end
+end
+
+dialog Quest02 # концовка 1
+	text PrikolGameQuest!0x38FD75E8
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog Quest03
+	text PrikolGameQuest!0x38FD75EA
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest04.cnv
+		text PrikolGameQuest!0x38FD75E5
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest07.cnv
+		text PrikolGameQuest!0x37FD747E
+	end
+end
+
+dialog Quest04
+	text PrikolGameQuest!0x38FD75E4
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest19.cnv
+		text PrikolGameQuest!0x37FD7472
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest05.cnv
+		text PrikolGameQuest!0x37FD747A
+	end
+end
+
+dialog Quest05 # концовка 2
+	text PrikolGameQuest!0x37FD747B
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog Quest06
+	text PrikolGameQuest!0x37FD7479
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest07.cnv
+		text PrikolGameQuest!0x37FD747E
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest09.cnv
+		text PrikolGameQuest!0x37FD7473
+	end
+end
+
+dialog Quest07
+	text PrikolGameQuest!0x37FD747F
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest08.cnv
+		text PrikolGameQuest!0x37FD747C
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest10.cnv
+		text PrikolGameQuest!0x38FD75E5
+	end
+end
+
+dialog Quest08 # концовка 3
+	text PrikolGameQuest!0x37FD747D
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog Quest09
+	text PrikolGameQuest!0x36FD7287
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest19.cnv
+		text PrikolGameQuest!0x37FD7472
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest18.cnv
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog Quest10
+	text PrikolGameQuest!0x36FD7286
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest19.cnv
+		text PrikolGameQuest!0x37FD7472
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest11.cnv
+		text PrikolGameQuest!0x36FD7285
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest12.cnv
+		text PrikolGameQuest!0x36FD7283
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest13.cnv
+		text PrikolGameQuest!0x36FD7281
+	end
+end
+
+dialog Quest11 # концовка 4
+	text PrikolGameQuest!0x36FD7284
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog Quest12 # концовка 5
+	text PrikolGameQuest!0x36FD7282
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog Quest13
+	text PrikolGameQuest!0x36FD7280
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest14.cnv
+		text PrikolGameQuest!0x36FD728F
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest15.cnv
+		text PrikolGameQuest!0x35FD7115
+	end
+end
+
+dialog Quest14
+	text PrikolGameQuest!0x36FD728E
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest16.cnv
+		text PrikolGameQuest!0x35FD7114
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest17.cnv
+		text PrikolGameQuest!0x35FD7110
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest19.cnv
+		text PrikolGameQuest!0x37FD7472
+	end
+end
+
+dialog Quest15
+	text PrikolGameQuest!0x35FD7116
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest16.cnv
+		text PrikolGameQuest!0x35FD7114
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest17.cnv
+		text PrikolGameQuest!0x35FD7110
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest19.cnv
+		text PrikolGameQuest!0x37FD7472
+	end
+end
+
+dialog Quest16 # концовка 6
+	text PrikolGameQuest!0x35FD7117
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog Quest17 # концовка 7
+	text PrikolGameQuest!0x35FD7111
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog Quest18 # секретная концовка
+	text PrikolGameQuest!0x35FD7112 -emotion Fortnite
+		
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog Quest19
+	text PrikolGameQuest!0x36DAC6A7
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest20.cnv
+		text PrikolGameQuest!0x0166B8D4
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest23.cnv
+		text PrikolGameQuest!0x0166B8D2
+	end
+end
+
+dialog Quest20
+	text PrikolGameQuest!0x0166B8D7
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest21.cnv
+		text PrikolGameQuest!0x0166B8D6
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest22.cnv
+		text PrikolGameQuest!0x0166B8D0
+	end
+end
+
+dialog Quest21 # концовка 8
+	text PrikolGameQuest!0x0166B8D1
+		
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog Quest22 # концовка 9
+	text PrikolGameQuest!0x0166B8D3
+		
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+dialog Quest23
+	text PrikolGameQuest!0x0166B8DD
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest24.cnv
+		text PrikolGameQuest!0x0166B8DC
+	end
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest25.cnv
+		text PrikolGameQuest!0xCF09EFC9
+	end
+end
+dialog Quest24 # концовка 10
+	text PrikolGameQuest!0xCF09EFCA
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+dialog Quest25 # концовка 11
+	text PrikolGameQuest!0xCF09EFC8
+	
+	response
+		action kCnvCommEvent~ Prikol_Quest!Quest.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end

@@ -1,0 +1,563 @@
+dialog trade_route_offer_npc
+	text 0xDBF385BF!0x00000012 -emotion Happy -require SourceCivMilitary
+	text 0xDBF385BF!0x00000013 -emotion Happy -require SourceCivReligious
+	text 0xDBF385BF!0x00000014 -emotion Happy -require SourceCivEconomic
+
+	response
+		action kCnvCommEvent~ 0xDBF385BF!trade_route_offer_npc_accept.cnv
+		text 0xDBF385BF!0x00000015
+	end
+	response
+		action kCnvCommEvent~ 0xDBF385BF!trade_route_offer_npc_reject.cnv
+		text 0xDBF385BF!0x00000016
+	end
+end
+dialog npc_alliance_countered
+	text 0xDBF385BF!0x000000A2 -emotion Neutral
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x000000A3
+	end
+end
+dialog player_contact_npc
+	text 0xDBF385BF!0x0000001F -emotion Angry -require AttitudeAnnoyedOrWorse SourceCivMilitary
+	text 0xDBF385BF!0x00000020 -emotion Angry -require AttitudeAnnoyedOrWorse SourceCivMilitary
+	text 0xDBF385BF!0x00000021 -emotion Neutral -require SourceCivMilitary
+	text 0xDBF385BF!0x00000022 -emotion Happy -require AttitudePleasedOrBetter SourceCivMilitary
+	text 0xDBF385BF!0x00000023 -emotion Happy -require AttitudePleasedOrBetter SourceCivMilitary
+	text 0xDBF385BF!0x00000024 -emotion Angry -require AttitudeAnnoyedOrWorse SourceCivReligious
+	text 0xDBF385BF!0x00000025 -emotion Angry -require AttitudeAnnoyedOrWorse SourceCivReligious
+	text 0xDBF385BF!0x00000026 -emotion Neutral -require SourceCivReligious
+	text 0xDBF385BF!0x00000027 -emotion Happy -require AttitudePleasedOrBetter SourceCivReligious
+	text 0xDBF385BF!0x00000028 -emotion Happy -require AttitudePleasedOrBetter SourceCivReligious
+	text 0xDBF385BF!0x00000029 -emotion Angry -require AttitudeAnnoyedOrWorse SourceCivEconomic
+	text 0xDBF385BF!0x0000002A -emotion Angry -require AttitudeAnnoyedOrWorse SourceCivEconomic
+	text 0xDBF385BF!0x0000002B -emotion Neutral -require SourceCivEconomic
+	text 0xDBF385BF!0x0000002C -emotion Happy -require AttitudePleasedOrBetter SourceCivEconomic
+	text 0xDBF385BF!0x0000002D -emotion Happy -require AttitudePleasedOrBetter SourceCivEconomic
+	text 0xDBF385BF!0x0000002E -emotion Laugh -require SourceCivMilitary SourceCivCapturedPlayerCity
+	text 0xDBF385BF!0x0000002F -emotion Laugh -require SourceCivMilitary SourceCivCapturedNPCCity
+	text 0xDBF385BF!0x00000030 -emotion Angry -require SourceCivMilitary SourceCivLostCityToPlayer
+	text 0xDBF385BF!0x00000033 -emotion Angry -require AttitudeFurious SourceCivMilitary
+	text 0xDBF385BF!0x00000034 -emotion Laugh -require SourceCivReligious SourceCivCapturedPlayerCity
+	text 0xDBF385BF!0x00000035 -emotion Laugh -require SourceCivReligious SourceCivCapturedNPCCity
+	text 0xDBF385BF!0x00000036 -emotion Angry -require SourceCivReligious SourceCivLostCityToPlayer
+	text 0xDBF385BF!0x00000038 -emotion Angry -require AttitudeFurious SourceCivReligious
+	text 0xDBF385BF!0x00000039 -emotion Laugh -require SourceCivEconomic SourceCivCapturedNPCCity
+	text 0xDBF385BF!0x0000003A -emotion Laugh -require SourceCivEconomic SourceCivCapturedNPCCity
+	text 0xDBF385BF!0x0000003E -emotion Angry -require AttitudeFurious SourceCivEconomic
+
+	response
+		action kCnvCommEvent~ 0xDBF385BF!npc_attack_city.cnv
+		text 0xDBF385BF!0x0000003F
+		require AttitudeCautiousOrBetter SourceCivMoreThan1City
+	end
+	response
+		action 0x70C14C34
+		text 0xDBF385BF!0x00000042
+		text 0xDBF385BF!0x00000042
+		text 0xDBF385BF!0x00000042
+		text 0xDBF385BF!0x00000042
+		text CNV_Prikol!0x70C14C34
+	end
+	response
+		action 0x26B14441
+		text 0xDBF385BF!0x00000046
+	end
+	response
+		action kCnvCommEvent~ 0xDBF385BF!npc_gift.cnv
+		text 0xDBF385BF!0x00000051
+		require AcceptsGifts
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0x37C8C6B6
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!ModCreator.cnv
+		text ModCreator!0xE6147379
+	end
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x00000052
+	end
+end
+dialog npc_embargo_countered
+	text 0xDBF385BF!0x00000098 -emotion Neutral
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x00000099
+	end
+end
+dialog trade_route_offer_player_accepted
+	text 0xDBF385BF!0x0000000A -emotion Happy -require SourceCivMilitary
+	text 0xDBF385BF!0x0000000B -emotion Happy -require SourceCivReligious
+	text 0xDBF385BF!0x0000000C -emotion Happy -require SourceCivEconomic
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x0000000D
+	end
+end
+dialog npc_war_warning
+	text 0xDBF385BF!0x00000060 -emotion Angry -require SourceCivMilitary
+	text 0xDBF385BF!0x00000061 -emotion Angry -require SourceCivReligious
+	text 0xDBF385BF!0x00000062 -emotion Angry -require SourceCivEconomic
+
+	response
+		action 0x6BA64250
+		text 0xDBF385BF!0x00000063
+	end
+end
+dialog capture_city_npc_gloat
+	text 0xDBF385BF!0x0000006C -emotion Happy -require SourceCiv0to3Cities
+	text 0xDBF385BF!0x0000006D -emotion Happy -require SourceCiv4to6Cities
+	text 0xDBF385BF!0x0000006E -emotion Laugh -require SourceCiv7to9Cities
+	text 0xDBF385BF!0x0000006F -emotion Laugh -require SourceCivMoreThan9Cities
+
+	response
+		action 0x6BA64250
+		text 0xDBF385BF!0x00000070
+	end
+end
+dialog capture_city_from_player_religious
+	text 0xDBF385BF!0x0000006A -emotion Laugh
+
+	response
+		action 0x6BA64250
+		text 0xDBF385BF!0x0000006B
+	end
+end
+dialog greetings
+	text 0xDBF385BF!0x00000083 -emotion Happy
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x00000084
+	end
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x00000085
+	end
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x00000086
+	end
+end
+dialog npc_complimented
+	text 0xDBF385BF!0x00000053 -emotion Laugh
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x00000054
+	end
+end
+dialog buy_city_offer_from_player_rejected
+	text 0xDBF385BF!0x0000007F -emotion Gasp
+
+	response
+		action 0xBF3B803A
+		text 0xDBF385BF!0x00000080
+	end
+end
+dialog capture_city_from_npc_religious
+	text 0xDBF385BF!0x00000066 -emotion Neutral
+
+	response
+		action 0x6BA64250
+		text 0xDBF385BF!0x00000067
+	end
+end
+dialog npc_insulted
+	text 0xDBF385BF!0x00000055 -emotion Angry
+
+	response
+		action kCnvCloseComm~
+		text CNV_Prikol!0xF70FB9DC
+	end
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x00000056
+	end
+end
+dialog npc_receive_gift
+	text 0xDBF385BF!0x00000057 -emotion Laugh -require AttitudeCautiousOrBetter
+	text 0xDBF385BF!0x00000058 -emotion Neutral -require AttitudeCautiousOrWorse
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x00000059
+	end
+end
+dialog npc_attack_city
+	text 0xDBF385BF!0x000000A6 -emotion Neutral
+
+	response
+		action 0x18646F3F
+		text 0xDBF385BF!0x000000A7
+		require AttackCity1
+	end
+	response
+		action 0x18646F3C
+		text 0xDBF385BF!0x000000A8
+		require AttackCity2
+	end
+	response
+		action 0x18646F3D
+		text 0xDBF385BF!0x000000A9
+		require AttackCity3
+	end
+	response
+		action 0x18646F3A
+		text 0xDBF385BF!0x000000AA
+		require AttackCity4
+	end
+	response
+		action 0x18646F3B
+		text 0xDBF385BF!0x000000AB
+		require AttackCity5
+	end
+	response
+		action 0x18646F38
+		text 0xDBF385BF!0x000000AC
+		require AttackCity6
+	end
+	response
+		action 0x18646F39
+		text 0xDBF385BF!0x000000AD
+		require AttackCity7
+	end
+	response
+		action 0x18646F36
+		text 0xDBF385BF!0x000000AE
+		require AttackCity8
+	end
+	response
+		action 0x18646F37
+		text 0xDBF385BF!0x000000AF
+		require AttackCity9
+	end
+	response
+		action 0xA51B201D
+		text 0xDBF385BF!0x000000B0
+		require AttackCity10
+	end
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x000000B1
+	end
+end
+dialog npc_surrender
+	text 0xDBF385BF!0x00000087 -emotion Angry
+
+	response
+		action 0x3EF09234
+		text 0xDBF385BF!0x00000088
+	end
+end
+dialog buy_city_offer_from_player
+	text 0xDBF385BF!0x00000072 -emotion Neutral
+
+	response
+		action 0x758330B8
+		text 0xDBF385BF!0x00000073
+		enableRequire AtLeast3200Money
+	end
+	response
+		action 0x758330BB
+		text 0xDBF385BF!0x00000074
+		enableRequire AtLeast2400Money
+	end
+	response
+		action 0x758330BA
+		text 0xDBF385BF!0x00000075
+		enableRequire AtLeast1600Money
+	end
+	response
+		action 0x758330BD
+		text 0xDBF385BF!0x00000076
+		enableRequire AtLeast8000Money
+	end
+	response
+		action 0x758330BC
+		text 0xDBF385BF!0x00000077
+		enableRequire AtLeast4000Money
+	end
+	response
+		action 0xA3C1D501
+		text 0xDBF385BF!0x00000078
+	end
+end
+dialog capture_city_from_player_military
+	text 0xDBF385BF!0x00000068 -emotion Laugh
+
+	response
+		action 0x6BA64250
+		text 0xDBF385BF!0x00000069
+	end
+end
+dialog buy_city_offer_from_player_accepted
+	text 0xDBF385BF!0x0000007D -emotion Neutral
+
+	response
+		action kCnvCityBuyAccepted~
+		text 0xDBF385BF!0x0000007E
+	end
+end
+dialog npc_demand_rejected
+	text 0xDBF385BF!0x00000090 -emotion Angry
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x00000091
+	end
+end
+dialog npc_gift
+	text 0xDBF385BF!0x0000005A -emotion Laugh -require AttitudeCautiousOrBetter
+	text 0xDBF385BF!0x0000005B -emotion Neutral -require AttitudeCautiousOrWorse
+
+	response
+		action 0xD648ED4D
+		text 0xDBF385BF!0x0000005C
+		enableExclude NotEnoughMoneyLargeGift
+	end
+	response
+		action 0x5EA6D3ED
+		text 0xDBF385BF!0x0000005D
+		enableExclude NotEnoughMoneyMediumGift
+	end
+	response
+		action 0x410C4A65
+		text 0xDBF385BF!0x0000005E
+		enableExclude NotEnoughMoneySmallGift
+	end
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x0000005F
+	end
+end
+dialog npc_demand_met
+	text 0xDBF385BF!0x0000008E -emotion Happy
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x0000008F
+	end
+end
+dialog buy_city_offer_from_npc
+	text 0xDBF385BF!0x00000071 -emotion Neutral
+
+	response
+		action 0x015BC92B
+	end
+	response
+		action 0x7E41D64A
+	end
+end
+dialog npc_attack_city_counter_accepted
+	text 0xDBF385BF!0x000000B5 -emotion Happy
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x000000B6
+	end
+end
+dialog npc_embargo_accepted
+	text 0xDBF385BF!0x00000096 -emotion Happy
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x00000097
+	end
+end
+dialog trade_route_offer_npc_accept
+	text 0xDBF385BF!0x00000017 -emotion Happy -require SourceCivMilitary
+	text 0xDBF385BF!0x00000018 -emotion Happy -require SourceCivReligious
+	text 0xDBF385BF!0x00000019 -emotion Happy -require SourceCivEconomic
+
+	response
+		action 0xCADAC8A0
+		text 0xDBF385BF!0x0000001A
+	end
+end
+dialog npc_alliance
+	text 0xDBF385BF!0x0000009C -emotion Angry
+
+	response
+		action 0x24E1525D
+		text 0xDBF385BF!0x0000009D
+	end
+	response
+		action 0x9F0FF4CB
+		text 0xDBF385BF!0x0000009E
+	end
+	response
+		action 0x0764C336
+		text 0xDBF385BF!0x0000009F
+	end
+end
+dialog npc_embargo
+	text 0xDBF385BF!0x00000092 -emotion Angry
+
+	response
+		action 0xD50A1A6D
+		text 0xDBF385BF!0x00000093
+	end
+	response
+		action 0xE7977907
+		text 0xDBF385BF!0x00000094
+	end
+	response
+		action 0x789418DC
+		text 0xDBF385BF!0x00000095
+	end
+end
+dialog npc_alliance_rejected
+	text 0xDBF385BF!0x000000A4 -emotion Angry
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x000000A5
+	end
+end
+dialog npc_alliance_accepted
+	text 0xDBF385BF!0x000000A0 -emotion Happy
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x000000A1
+	end
+end
+dialog trade_route_offer_player_rejected
+	text 0xDBF385BF!0x0000000E -emotion Gasp -require SourceCivMilitary
+	text 0xDBF385BF!0x0000000F -emotion Gasp -require SourceCivReligious
+	text 0xDBF385BF!0x00000010 -emotion Gasp -require SourceCivEconomic
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x00000011
+	end
+end
+dialog buy_city_offer_from_player_too_low
+	text 0xDBF385BF!0x00000081 -emotion Angry
+
+	response
+		action 0x96508A98
+		text 0xDBF385BF!0x00000082
+	end
+end
+dialog npc_trade_route_sever_city
+	text 0xDBF385BF!0x00000003 -emotion Angry -require SourceCivMilitary
+	text 0xDBF385BF!0x00000004 -emotion Angry -require SourceCivReligious
+	text 0xDBF385BF!0x00000005 -emotion Angry -require SourceCivEconomic
+	text 0xDBF385BF!0x00000006 -emotion Angry -require SourceCivMilitary
+	text 0xDBF385BF!0x00000007 -emotion Angry -require SourceCivReligious
+	text 0xDBF385BF!0x00000008 -emotion Angry -require SourceCivEconomic
+
+	response
+		action 0x6BA64250
+		text 0xDBF385BF!0x00000009
+	end
+end
+dialog capture_city_from_npc_military
+	text 0xDBF385BF!0x00000064 -emotion Sad
+
+	response
+		action 0x6BA64250
+		text 0xDBF385BF!0x00000065
+	end
+end
+dialog default
+	text 0xDBF385BF!0x000000B9
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x000000BA
+	end
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x000000BB
+	end
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x000000BC
+	end
+end
+dialog npc_attack_city_counter
+	text 0xDBF385BF!0x000000B2 -emotion Happy
+
+	response
+		action 0x91386D6C
+		text 0xDBF385BF!0x000000B3
+		enableRequire AttackCityMoney
+	end
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x000000B4
+	end
+end
+dialog npc_node_bought
+	text 0xDBF385BF!0x000000B7 -emotion Happy
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x000000B8
+	end
+end
+dialog npc_embargo_rejected
+	text 0xDBF385BF!0x0000009A -emotion Angry
+
+	response
+		action kCnvCloseComm~
+		text 0xDBF385BF!0x0000009B
+	end
+end
+dialog trade_route_offer_npc_reject
+	text 0xDBF385BF!0x0000001B -emotion Gasp -require SourceCivMilitary
+	text 0xDBF385BF!0x0000001C -emotion Gasp -require SourceCivReligious
+	text 0xDBF385BF!0x0000001D -emotion Gasp -require SourceCivEconomic
+
+	response
+		action 0x1125D6A9
+		text 0xDBF385BF!0x0000001E
+	end
+end
+dialog buy_city_offer_from_player_too_high
+	text 0xDBF385BF!0x0000007B -emotion Happy
+
+	response
+		action kCnvCityBuyAcceptedHigh~
+		text 0xDBF385BF!0x0000007C
+	end
+end
+dialog npc_surrender_ally
+	text 0xDBF385BF!0x00000089 -emotion Happy
+
+	response
+		action 0x3EF09234
+		text 0xDBF385BF!0x0000008A
+	end
+end
+dialog npc_demand
+	text 0xDBF385BF!0x0000008B -emotion Angry
+
+	response
+		action 0x23A2D684
+		text 0xDBF385BF!0x0000008C
+	end
+	response
+		action 0x764EA37C
+		text 0xDBF385BF!0x0000008D
+	end
+end
+dialog buy_city_offer_from_player_canceled
+	text 0xDBF385BF!0x00000079 -emotion Angry
+
+	response
+		action 0xA3C1D501
+		text 0xDBF385BF!0x0000007A
+	end
+end
+

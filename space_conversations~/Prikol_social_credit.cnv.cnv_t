@@ -1,0 +1,391 @@
+dialog social_credit01
+	text PrikolSocial_credit!0x058E11DB
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit02.cnv
+		text Prikol_BrawlStarsTest!0x35553B19
+	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit03.cnv
+		text Prikol_BrawlStarsTest!0x33553832
+	end
+end
+
+dialog social_credit02
+	text PrikolSocial_credit!0x058E11D8 -emotion Angry
+	text PrikolSocial_credit!0x6247022C -emotion Angry
+	text PrikolSocial_credit!0xE28127AD -emotion Angry
+	text PrikolSocial_credit!0xE28127AE -emotion Angry
+	text PrikolSocial_credit!0xE28127AF -emotion Angry
+	text PrikolSocial_credit!0xE28127A8 -emotion Angry
+	text PrikolSocial_credit!0xE28127A9 -emotion Angry
+	text PrikolSocial_credit!0xE28127AA -emotion Angry
+	text PrikolSocial_credit!0xE28127AB -emotion Angry
+	text PrikolSocial_credit!0xE28127A4 -emotion Angry
+	text PrikolSocial_credit!0xE28127A5 -emotion Angry
+	text PrikolSocial_credit!0xE4812AF0 -emotion Angry
+	text PrikolSocial_credit!0xE4812AF1 -emotion Angry
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit04.cnv
+		text PrikolSocial_credit!0x1F0AA31F
+	end
+end
+
+dialog social_credit03
+	text PrikolSocial_credit!0x058E11D9 -emotion Happy
+	text PrikolSocial_credit!0xE381291F -emotion Happy
+	text PrikolSocial_credit!0xE381291E -emotion Happy
+	text PrikolSocial_credit!0xE381291D -emotion Happy
+	text PrikolSocial_credit!0xE381291C -emotion Happy
+	text PrikolSocial_credit!0xE381291B -emotion Happy
+	text PrikolSocial_credit!0xE381291A -emotion Happy
+	text PrikolSocial_credit!0xE3812919 -emotion Happy
+	text PrikolSocial_credit!0xE3812918 -emotion Happy
+	text PrikolSocial_credit!0xE3812917 -emotion Happy
+	text PrikolSocial_credit!0xE3812916 -emotion Happy
+	text PrikolSocial_credit!0xE4812AF2 -emotion Happy
+	text PrikolSocial_credit!0xE4812AF3 -emotion Happy
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit04.cnv
+		text PrikolSocial_credit!0x1F0AA31F
+	end
+end
+
+dialog social_credit04
+	text PrikolSocial_credit!0x058E11DE
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit05.cnv
+		text PrikolSocial_credit!0xE4812AF6
+	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit06.cnv
+		text PrikolSocial_credit!0xE4812AF7
+	end
+end
+
+dialog social_credit05
+	text PrikolSocial_credit!0x058E11D9 -emotion Happy
+	text PrikolSocial_credit!0xE381291F -emotion Happy
+	text PrikolSocial_credit!0xE381291E -emotion Happy
+	text PrikolSocial_credit!0xE381291D -emotion Happy
+	text PrikolSocial_credit!0xE381291C -emotion Happy
+	text PrikolSocial_credit!0xE381291B -emotion Happy
+	text PrikolSocial_credit!0xE381291A -emotion Happy
+	text PrikolSocial_credit!0xE3812919 -emotion Happy
+	text PrikolSocial_credit!0xE3812918 -emotion Happy
+	text PrikolSocial_credit!0xE3812917 -emotion Happy
+	text PrikolSocial_credit!0xE3812916 -emotion Happy
+	text PrikolSocial_credit!0xE4812AF2 -emotion Happy
+	text PrikolSocial_credit!0xE4812AF3 -emotion Happy
+	
+#	response
+#		action kCnvCommEvent~ Prikol_social_credit!social_credit_civ.cnv
+#		text PrikolSocial_credit!0x1F0AA31F
+#		require SourceCivMilitary SourceCivReligious SourceCivEconomic
+#	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit10.cnv
+		text PrikolSocial_credit!0x1F0AA31F
+#		exclude SourceCivMilitary SourceCivReligious SourceCivEconomic
+	end
+end
+
+dialog social_credit06
+	text PrikolSocial_credit!0x058E11D8 -emotion Angry
+	text PrikolSocial_credit!0x6247022C -emotion Angry
+	text PrikolSocial_credit!0xE28127AD -emotion Angry
+	text PrikolSocial_credit!0xE28127AE -emotion Angry
+	text PrikolSocial_credit!0xE28127AF -emotion Angry
+	text PrikolSocial_credit!0xE28127A8 -emotion Angry
+	text PrikolSocial_credit!0xE28127A9 -emotion Angry
+	text PrikolSocial_credit!0xE28127AA -emotion Angry
+	text PrikolSocial_credit!0xE28127AB -emotion Angry
+	text PrikolSocial_credit!0xE28127A4 -emotion Angry
+	text PrikolSocial_credit!0xE28127A5 -emotion Angry
+	text PrikolSocial_credit!0xE4812AF0 -emotion Angry
+	text PrikolSocial_credit!0xE4812AF1 -emotion Angry
+	
+#	response
+#		action kCnvCommEvent~ Prikol_social_credit!social_credit_civ.cnv
+#		text PrikolSocial_credit!0x1F0AA31F
+#		require SourceCivMilitary SourceCivReligious SourceCivEconomic
+#	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit10.cnv
+		text PrikolSocial_credit!0x1F0AA31F
+#		exclude SourceCivMilitary SourceCivReligious SourceCivEconomic
+	end
+end
+
+dialog social_credit07
+	text PrikolSocial_credit!0xE4812AF4
+
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit08.cnv
+		text PrikolSocial_credit!0xE4812AFA
+	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit09.cnv
+		text PrikolSocial_credit!0xE4812AFB
+	end
+end
+
+dialog social_credit08
+	text PrikolSocial_credit!0x058E11D9 -emotion Happy
+	text PrikolSocial_credit!0xE381291F -emotion Happy
+	text PrikolSocial_credit!0xE381291E -emotion Happy
+	text PrikolSocial_credit!0xE381291D -emotion Happy
+	text PrikolSocial_credit!0xE381291C -emotion Happy
+	text PrikolSocial_credit!0xE381291B -emotion Happy
+	text PrikolSocial_credit!0xE381291A -emotion Happy
+	text PrikolSocial_credit!0xE3812919 -emotion Happy
+	text PrikolSocial_credit!0xE3812918 -emotion Happy
+	text PrikolSocial_credit!0xE3812917 -emotion Happy
+	text PrikolSocial_credit!0xE3812916 -emotion Happy
+	text PrikolSocial_credit!0xE4812AF2 -emotion Happy
+	text PrikolSocial_credit!0xE4812AF3 -emotion Happy
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit10.cnv
+		text PrikolSocial_credit!0x1F0AA31F
+	end
+end
+
+dialog social_credit09
+	text PrikolSocial_credit!0x058E11D8 -emotion Angry
+	text PrikolSocial_credit!0x6247022C -emotion Angry
+	text PrikolSocial_credit!0xE28127AD -emotion Angry
+	text PrikolSocial_credit!0xE28127AE -emotion Angry
+	text PrikolSocial_credit!0xE28127AF -emotion Angry
+	text PrikolSocial_credit!0xE28127A8 -emotion Angry
+	text PrikolSocial_credit!0xE28127A9 -emotion Angry
+	text PrikolSocial_credit!0xE28127AA -emotion Angry
+	text PrikolSocial_credit!0xE28127AB -emotion Angry
+	text PrikolSocial_credit!0xE28127A4 -emotion Angry
+	text PrikolSocial_credit!0xE28127A5 -emotion Angry
+	text PrikolSocial_credit!0xE4812AF0 -emotion Angry
+	text PrikolSocial_credit!0xE4812AF1 -emotion Angry
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit10.cnv
+		text PrikolSocial_credit!0x1F0AA31F
+	end
+end
+
+dialog social_credit10
+	text PrikolSocial_credit!0xE5812C64
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit11.cnv
+		text Prikol_BrawlStarsTest!0x35553B19
+	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit11.cnv
+		text PrikolSocial_credit!0xE5812C67
+	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit12.cnv
+		text PrikolSocial_credit!0xE5812C66
+	end
+end
+
+dialog social_credit11
+	text PrikolSocial_credit!0x058E11D8 -emotion Angry
+	text PrikolSocial_credit!0x6247022C -emotion Angry
+	text PrikolSocial_credit!0xE28127AD -emotion Angry
+	text PrikolSocial_credit!0xE28127AE -emotion Angry
+	text PrikolSocial_credit!0xE28127AF -emotion Angry
+	text PrikolSocial_credit!0xE28127A8 -emotion Angry
+	text PrikolSocial_credit!0xE28127A9 -emotion Angry
+	text PrikolSocial_credit!0xE28127AA -emotion Angry
+	text PrikolSocial_credit!0xE28127AB -emotion Angry
+	text PrikolSocial_credit!0xE28127A4 -emotion Angry
+	text PrikolSocial_credit!0xE28127A5 -emotion Angry
+	text PrikolSocial_credit!0xE4812AF0 -emotion Angry
+	text PrikolSocial_credit!0xE4812AF1 -emotion Angry
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit13.cnv
+		text PrikolSocial_credit!0x1F0AA31F
+	end
+end
+
+dialog social_credit12
+	text PrikolSocial_credit!0x058E11D9 -emotion Happy
+	text PrikolSocial_credit!0xE381291F -emotion Happy
+	text PrikolSocial_credit!0xE381291E -emotion Happy
+	text PrikolSocial_credit!0xE381291D -emotion Happy
+	text PrikolSocial_credit!0xE381291C -emotion Happy
+	text PrikolSocial_credit!0xE381291B -emotion Happy
+	text PrikolSocial_credit!0xE381291A -emotion Happy
+	text PrikolSocial_credit!0xE3812919 -emotion Happy
+	text PrikolSocial_credit!0xE3812918 -emotion Happy
+	text PrikolSocial_credit!0xE3812917 -emotion Happy
+	text PrikolSocial_credit!0xE3812916 -emotion Happy
+	text PrikolSocial_credit!0xE4812AF2 -emotion Happy
+	text PrikolSocial_credit!0xE4812AF3 -emotion Happy
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit13.cnv
+		text PrikolSocial_credit!0x1F0AA31F
+	end
+end
+
+dialog social_credit13
+	text PrikolSocial_credit!0xE5812C61
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit14.cnv
+		text PrikolSocial_credit!0xE5812C60
+	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit15.cnv
+		text PrikolSocial_credit!0xE5812C63
+	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit14.cnv
+		text PrikolSocial_credit!0xE5812C62
+	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit14.cnv
+		text PrikolSocial_credit!0xE5812C6D
+	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit14.cnv
+		text PrikolSocial_credit!0x3B8C4633
+	end
+end
+
+dialog social_credit14
+	text PrikolSocial_credit!0x058E11D8 -emotion Angry
+	text PrikolSocial_credit!0x6247022C -emotion Angry
+	text PrikolSocial_credit!0xE28127AD -emotion Angry
+	text PrikolSocial_credit!0xE28127AE -emotion Angry
+	text PrikolSocial_credit!0xE28127AF -emotion Angry
+	text PrikolSocial_credit!0xE28127A8 -emotion Angry
+	text PrikolSocial_credit!0xE28127A9 -emotion Angry
+	text PrikolSocial_credit!0xE28127AA -emotion Angry
+	text PrikolSocial_credit!0xE28127AB -emotion Angry
+	text PrikolSocial_credit!0xE28127A4 -emotion Angry
+	text PrikolSocial_credit!0xE28127A5 -emotion Angry
+	text PrikolSocial_credit!0xE4812AF0 -emotion Angry
+	text PrikolSocial_credit!0xE4812AF1 -emotion Angry
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit16.cnv
+		text PrikolSocial_credit!0x1F0AA31F
+	end
+end
+
+dialog social_credit15
+	text PrikolSocial_credit!0x058E11D9 -emotion Happy
+	text PrikolSocial_credit!0xE381291F -emotion Happy
+	text PrikolSocial_credit!0xE381291E -emotion Happy
+	text PrikolSocial_credit!0xE381291D -emotion Happy
+	text PrikolSocial_credit!0xE381291C -emotion Happy
+	text PrikolSocial_credit!0xE381291B -emotion Happy
+	text PrikolSocial_credit!0xE381291A -emotion Happy
+	text PrikolSocial_credit!0xE3812919 -emotion Happy
+	text PrikolSocial_credit!0xE3812918 -emotion Happy
+	text PrikolSocial_credit!0xE3812917 -emotion Happy
+	text PrikolSocial_credit!0xE3812916 -emotion Happy
+	text PrikolSocial_credit!0xE4812AF2 -emotion Happy
+	text PrikolSocial_credit!0xE4812AF3 -emotion Happy
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit16.cnv
+		text PrikolSocial_credit!0x1F0AA31F
+	end
+end
+
+dialog social_credit16
+	text Prikol_Chinese!0xE5812C6C
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit17.cnv
+		text Prikol_Chinese!0xDE812160
+	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit18.cnv
+		text Prikol_Chinese!0xDE812161
+	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit18.cnv
+		text PrikolSocial_credit!0xDE812162
+	end
+end
+
+dialog social_credit17
+	text PrikolSocial_credit!0x058E11D9 -emotion Happy
+	text PrikolSocial_credit!0xE381291F -emotion Happy
+	text PrikolSocial_credit!0xE381291E -emotion Happy
+	text PrikolSocial_credit!0xE381291D -emotion Happy
+	text PrikolSocial_credit!0xE381291C -emotion Happy
+	text PrikolSocial_credit!0xE381291B -emotion Happy
+	text PrikolSocial_credit!0xE381291A -emotion Happy
+	text PrikolSocial_credit!0xE3812919 -emotion Happy
+	text PrikolSocial_credit!0xE3812918 -emotion Happy
+	text PrikolSocial_credit!0xE3812917 -emotion Happy
+	text PrikolSocial_credit!0xE3812916 -emotion Happy
+	text PrikolSocial_credit!0xE4812AF2 -emotion Happy
+	text PrikolSocial_credit!0xE4812AF3 -emotion Happy
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit19.cnv
+		text PrikolSocial_credit!0xDE812163
+	end
+end
+
+dialog social_credit18
+	text PrikolSocial_credit!0x058E11D8 -emotion Angry
+	text PrikolSocial_credit!0x6247022C -emotion Angry
+	text PrikolSocial_credit!0xE28127AD -emotion Angry
+	text PrikolSocial_credit!0xE28127AE -emotion Angry
+	text PrikolSocial_credit!0xE28127AF -emotion Angry
+	text PrikolSocial_credit!0xE28127A8 -emotion Angry
+	text PrikolSocial_credit!0xE28127A9 -emotion Angry
+	text PrikolSocial_credit!0xE28127AA -emotion Angry
+	text PrikolSocial_credit!0xE28127AB -emotion Angry
+	text PrikolSocial_credit!0xE28127A4 -emotion Angry
+	text PrikolSocial_credit!0xE28127A5 -emotion Angry
+	text PrikolSocial_credit!0xE4812AF0 -emotion Angry
+	text PrikolSocial_credit!0xE4812AF1 -emotion Angry
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit19.cnv
+		text PrikolSocial_credit!0xDE812163
+	end
+end
+
+dialog social_credit19
+	text PrikolSocial_credit!0xDE812164 -emotion Happy
+	
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xD9515895
+	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit01.cnv
+		text Prikol_BrawlStarsTest!0x35553B1F
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
+
+dialog social_credit_civ
+	text PrikolSocial_credit!0xE4812AF5
+
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit08.cnv
+		text PrikolSocial_credit!0xE4812AFA
+	end
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit09.cnv
+		text PrikolSocial_credit!0xE5812C65
+	end
+end

@@ -1,0 +1,233 @@
+# Тест украл от сюда - https://ustaliy.ru/snax_quiz/kto-ty-iz-bravl-stars-po-znaku-zodiaka/
+dialog BrawlStars01
+	text Prikol_BrawlStarsTest!0x345539A7
+	
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars02.cnv
+		text Prikol_BrawlStarsTest!0x345539A4
+	end
+	response
+		action kCnvCommDefault~
+		text Prikol_BrawlStarsTest!0x345539A5
+	end
+end
+dialog BrawlStars02
+	text Prikol_BrawlStarsTest!0x345539A2
+	
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars03.cnv
+		text Prikol_BrawlStarsTest!0x345539A3
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars03.cnv
+		text Prikol_BrawlStarsTest!0x35553B1E
+	end
+end
+dialog BrawlStars03
+	text Prikol_BrawlStarsTest!0x345539A0
+	
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars04.cnv
+		text Prikol_BrawlStarsTest!0x345539AE
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars04.cnv
+		text Prikol_BrawlStarsTest!0x35553B11
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars04.cnv
+		text Prikol_BrawlStarsTest!0x35553B10
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars04.cnv
+		text Prikol_BrawlStarsTest!0x32553640
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars04.cnv
+		text Prikol_BrawlStarsTest!0x32553641
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars04.cnv
+		text Prikol_BrawlStarsTest!0x32553642
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars04.cnv
+		text Prikol_BrawlStarsTest!0x32553643
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars04.cnv
+		text Prikol_BrawlStarsTest!0x32553644
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars04.cnv
+		text Prikol_BrawlStarsTest!0x32553645
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars04.cnv
+		text Prikol_BrawlStarsTest!0x32553646
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars04.cnv
+		text Prikol_BrawlStarsTest!0x32553647
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars04.cnv
+		text Prikol_BrawlStarsTest!0x32553648
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars04.cnv
+		text CNV_Prikol!0xBEF3BE6C
+	end
+end
+dialog BrawlStars04
+	text Prikol_BrawlStarsTest!0x345539AF
+	
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars05.cnv
+		text Prikol_BrawlStarsTest!0x35553B19
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars06.cnv
+		text Prikol_BrawlStarsTest!0x33553832
+	end
+end
+dialog BrawlStars05
+	text Prikol_BrawlStarsTest!0x35553B18
+	
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars06.cnv
+		text Prikol_BrawlStarsTest!0x35553B1B
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars06.cnv
+		text Prikol_BrawlStarsTest!0x33553831
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars06.cnv
+		text Prikol_BrawlStarsTest!0x33553830
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars06.cnv
+		text Prikol_BrawlStarsTest!0x33553837
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars06.cnv
+		text Prikol_BrawlStarsTest!0x33553836
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars06.cnv
+		text Prikol_BrawlStarsTest!0x33553835
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars06.cnv
+		text Prikol_BrawlStarsTest!0x33553834
+	end
+end
+dialog BrawlStars06
+	text Prikol_BrawlStarsTest!0x35553B1A
+	
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars07.cnv
+		text Prikol_BrawlStarsTest!0x35553B1D
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars07.cnv
+		text Prikol_BrawlStarsTest!0x3355383B
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars07.cnv
+		text Prikol_BrawlStarsTest!0x3355383A
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars07.cnv
+		text Prikol_BrawlStarsTest!0x38553FD2
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars07.cnv
+		text Prikol_BrawlStarsTest!0x38553FD3
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars07.cnv
+		text Prikol_BrawlStarsTest!0x38553FD0
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars07.cnv
+		text Prikol_BrawlStarsTest!0x38553FD1
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars07.cnv
+		text Prikol_BrawlStarsTest!0x38553FD6
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars07.cnv
+		text Prikol_BrawlStarsTest!0x38553FD7
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars07.cnv
+		text Prikol_BrawlStarsTest!0x38553FD4
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars07.cnv
+		text Prikol_BrawlStarsTest!0x38553FD5
+	end
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars07.cnv
+		text Prikol_BrawlStarsTest!0x38553FDA
+	end
+end
+dialog BrawlStars07 # Результат
+	text Prikol_BrawlStarsTest!0x35553B1C -emotion Laugh
+	text Prikol_BrawlStarsTest!0x38553FDB -emotion Laugh
+	text Prikol_BrawlStarsTest!0x39554145 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x39554144 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x39554147 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x39554146 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x39554141 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x39554140 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x39554143 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x39554142 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x3955414D -emotion Laugh
+	text Prikol_BrawlStarsTest!0x3955414C -emotion Laugh
+	text Prikol_BrawlStarsTest!0x36553C8C -emotion Laugh
+	text Prikol_BrawlStarsTest!0x36553C8D -emotion Laugh
+	text Prikol_BrawlStarsTest!0x36553C8E -emotion Laugh
+	text Prikol_BrawlStarsTest!0x36553C8F -emotion Laugh
+	text Prikol_BrawlStarsTest!0x36553C88 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x36553C89 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x36553C8A -emotion Laugh
+	text Prikol_BrawlStarsTest!0x36553C8B -emotion Laugh
+	text Prikol_BrawlStarsTest!0x36553C84 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x36553C85 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x37553E7F -emotion Laugh
+	text Prikol_BrawlStarsTest!0x37553E7E -emotion Laugh
+	text Prikol_BrawlStarsTest!0x37553E7D -emotion Laugh
+	text Prikol_BrawlStarsTest!0x37553E7C -emotion Laugh
+	text Prikol_BrawlStarsTest!0x37553E7B -emotion Laugh
+	text Prikol_BrawlStarsTest!0x37553E7A -emotion Laugh
+	text Prikol_BrawlStarsTest!0x37553E79 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x37553E78 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x37553E77 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x37553E76 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x3C55461E -emotion Laugh
+	text Prikol_BrawlStarsTest!0x3C55461F -emotion Laugh
+	text Prikol_BrawlStarsTest!0x3C55461C -emotion Laugh
+	text Prikol_BrawlStarsTest!0x3C55461D -emotion Laugh
+	text Prikol_BrawlStarsTest!0x3C55461A -emotion Laugh
+	text Prikol_BrawlStarsTest!0x3C55461B -emotion Laugh
+	text Prikol_BrawlStarsTest!0x3C554618 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x3C554619 -emotion Laugh
+	text Prikol_BrawlStarsTest!0x3C554616 -emotion Laugh
+	
+	response
+		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars02.cnv
+		text Prikol_BrawlStarsTest!0x35553B1F
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end

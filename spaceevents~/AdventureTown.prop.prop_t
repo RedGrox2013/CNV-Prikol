@@ -1,0 +1,8 @@
+key parent spaceevents~!MissionTemplate.prop
+key missionAdventureID 0xBF0CE0D0
+key missionConversation missionAdventureTown
+float missionGenericRewardMoney 0
+float missionGenericRewardRelation 0
+bool missionIsAdventure true
+bool missionIsTutorial true
+key missionType Adventure

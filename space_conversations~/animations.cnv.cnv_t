@@ -1,0 +1,476 @@
+animation Afraid
+	variation playerm
+		idle 0x058C960A 0x058C960F
+		action 0x058CA135 0x058CA13A
+	end
+	variation playere
+		idle 0x058C960A 0x058C960F
+		action 0x058CA135 0x058CA13A
+	end
+	variation playerc
+		idle 0x058C960A 0x058C960F
+		action 0x058CA135 0x058CA13A
+	end
+	variation ecologist
+		idle 0x058C960A 0x058C960F
+		action 0x058CA135 0x058CA13A
+	end
+	variation shaman
+		idle 0x058C960A 0x058C960F
+		action 0x058CA135 0x058CA13A
+	end
+	variation trader
+		idle 0x058C960A 0x058C960F
+		action 0x058CA135 0x058CA13A
+	end
+	variation zealot
+		idle 0x058C960A 0x058C960F
+		action 0x058CA135 0x058CA13A
+	end
+	variation warrior
+		idle 0x058C960A 0x058C960F
+		action 0x058CA135 0x058CA13A
+	end
+	variation grob
+		idle 0x058C960A 0x058C960F
+		action 0x068C32D9 0x068C33C5
+	end
+	variation bard
+		idle 0x058C960A 0x058C960F
+		action 0x058CA135 0x058CA13A
+	end
+	variation scientist
+		idle 0x058C960A 0x058C960F
+		action 0x058CA135 0x058CA13A
+	end
+	variation diplomat
+		idle 0x058C960A 0x058C960F
+		action 0x058CA135 0x058CA13A
+	end
+end
+animation Laugh
+	variation playerm
+		idle 0x058C963C 0x058C963F
+		action 0x058CA18B 0x058CA18F
+	end
+	variation playere
+		idle 0x058C963C 0x058C963F
+		action 0x058CA18B 0x058CA18F
+	end
+	variation playerc
+		idle 0x058C963C 0x058C963F
+		action 0x058CA18B 0x058CA18F
+	end
+	variation ecologist
+		idle 0x058C963C 0x058C963F
+		action 0x058CA18B 0x058CA18F
+	end
+	variation shaman
+		idle 0x058C963C 0x058C963F
+		action 0x058CA18B 0x058CA18F
+	end
+	variation trader
+		idle 0x058C963C 0x058C963F
+		action 0x058CA18B 0x058CA18F
+	end
+	variation zealot
+		idle 0x058C963C 0x058C963F
+		action 0x058CA18B 0x058CA18F
+	end
+	variation warrior
+		idle 0x058C963C 0x058C963F
+		action 0x058CA18B 0x058CA18F
+	end
+	variation grob
+		idle 0x058C963C 0x058C963F
+		action 0x068C34AE 0x068C34B4
+	end
+	variation bard
+		idle 0x058C963C 0x058C963F
+		action 0x058CA18B 0x058CA18F
+	end
+	variation scientist
+		idle 0x058C963C 0x058C963F
+		action 0x058CA18B 0x058CA18F
+	end
+	variation diplomat
+		idle 0x058C963C 0x058C963F
+		action 0x058CA18B 0x058CA18F
+	end
+end
+animation Sad
+	variation playerm
+		idle 0x058C965A 0x058C965E
+		action 0x058CA1B2 0x058CA1B6
+	end
+	variation playere
+		idle 0x058C965A 0x058C965E
+		action 0x058CA1B2 0x058CA1B6
+	end
+	variation playerc
+		idle 0x058C965A 0x058C965E
+		action 0x058CA1B2 0x058CA1B6
+	end
+	variation ecologist
+		idle 0x058C965A 0x058C965E
+		action 0x058CA1B2 0x058CA1B6
+	end
+	variation shaman
+		idle 0x058C965A 0x058C965E
+		action 0x058CA1B2 0x058CA1B6
+	end
+	variation trader
+		idle 0x058C965A 0x058C965E
+		action 0x058CA1B2 0x058CA1B6
+	end
+	variation zealot
+		idle 0x058C965A 0x058C965E
+		action 0x058CA1B2 0x058CA1B6
+	end
+	variation warrior
+		idle 0x058C965A 0x058C965E
+		action 0x058CA1B2 0x058CA1B6
+	end
+	variation grob
+		idle 0x058C965A 0x058C965E
+		action 0x068C35B2 0x068C35B9
+	end
+	variation bard
+		idle 0x058C965A 0x058C965E
+		action 0x058CA1B2 0x058CA1B6
+	end
+	variation scientist
+		idle 0x058C965A 0x058C965E
+		action 0x058CA1B2 0x058CA1B6
+	end
+	variation diplomat
+		idle 0x058C965A 0x058C965E
+		action 0x058CA1B2 0x058CA1B6
+	end
+end
+animation Neutral
+	variation playerm
+		idle 0x058C964A 0x058C964E 0x058C9652 0x058C9656
+		action 0x058CA194 0x058CA198 0x058CA19D 0x058CA1A6 0x058CA1AA 0x058CA1AE
+	end
+	variation playere
+		idle 0x058C964A 0x058C964E 0x058C9652 0x058C9656
+		action 0x058CA194 0x058CA198 0x058CA19D 0x058CA1A6 0x058CA1AA 0x058CA1AE
+	end
+	variation playerc
+		idle 0x058C964A 0x058C964E 0x058C9652 0x058C9656
+		action 0x058CA194 0x058CA198 0x058CA19D 0x058CA1A6 0x058CA1AA 0x058CA1AE
+	end
+	variation ecologist
+		idle 0x058C964A 0x058C964E 0x058C9652 0x058C9656
+		action 0x058CA194 0x058CA198 0x058CA19D 0x058CA1A6 0x058CA1AA 0x058CA1AE
+	end
+	variation shaman
+		idle 0x058C964A 0x058C964E 0x058C9652 0x058C9656
+		action 0x058CA194 0x058CA198 0x058CA19D 0x058CA1A6 0x058CA1AA 0x058CA1AE
+	end
+	variation trader
+		idle 0x058C964A 0x058C964E 0x058C9652 0x058C9656
+		action 0x058CA194 0x058CA198 0x058CA19D 0x058CA1A6 0x058CA1AA 0x058CA1AE
+	end
+	variation zealot
+		idle 0x058C964A 0x058C964E 0x058C9652 0x058C9656
+		action 0x058CA194 0x058CA198 0x058CA19D 0x058CA1A6 0x058CA1AA 0x058CA1AE
+	end
+	variation warrior
+		idle 0x058C964A 0x058C964E 0x058C9652 0x058C9656
+		action 0x058CA194 0x058CA198 0x058CA19D 0x058CA1A6 0x058CA1AA 0x058CA1AE
+	end
+	variation grob
+		idle 0x058C964A 0x058C964E 0x058C9652 0x058C9656
+		action 0x068C34F3 0x068C34FE 0x068C3505 0x068C3561 0x068C356A 0x068C3571
+	end
+	variation bard
+		idle 0x058C964A 0x058C964E 0x058C9652 0x058C9656
+		action 0x058CA194 0x058CA198 0x058CA19D 0x058CA1A6 0x058CA1AA 0x058CA1AE
+	end
+	variation scientist
+		idle 0x058C964A 0x058C964E 0x058C9652 0x058C9656
+		action 0x058CA194 0x058CA198 0x058CA19D 0x058CA1A6 0x058CA1AA 0x058CA1AE
+	end
+	variation diplomat
+		idle 0x058C964A 0x058C964E 0x058C9652 0x058C9656
+		action 0x058CA194 0x058CA198 0x058CA19D 0x058CA1A6 0x058CA1AA 0x058CA1AE
+	end
+end
+animation Gasp
+	variation playerm
+		idle 0x058C961D 0x058C9622 0x058C962B
+		action 0x058CA153 0x058CA166 0x058CA16A
+	end
+	variation playere
+		idle 0x058C961D 0x058C9622 0x058C962B
+		action 0x058CA153 0x058CA166 0x058CA16A
+	end
+	variation playerc
+		idle 0x058C961D 0x058C9622 0x058C962B
+		action 0x058CA153 0x058CA166 0x058CA16A
+	end
+	variation ecologist
+		idle 0x058C961D 0x058C9622 0x058C962B
+		action 0x058CA153 0x058CA166 0x058CA16A
+	end
+	variation shaman
+		idle 0x058C961D 0x058C9622 0x058C962B
+		action 0x058CA153 0x058CA166 0x058CA16A
+	end
+	variation trader
+		idle 0x058C961D 0x058C9622 0x058C962B
+		action 0x058CA153 0x058CA166 0x058CA16A
+	end
+	variation zealot
+		idle 0x058C961D 0x058C9622 0x058C962B
+		action 0x058CA153 0x058CA166 0x058CA16A
+	end
+	variation warrior
+		idle 0x058C961D 0x058C9622 0x058C962B
+		action 0x058CA153 0x058CA166 0x058CA16A
+	end
+	variation grob
+		idle 0x058C961D 0x058C9622 0x058C962B
+		action 0x068C3405 0x068C3411 0x068C3417
+	end
+	variation bard
+		idle 0x058C961D 0x058C9622 0x058C962B
+		action 0x058CA153 0x058CA166 0x058CA16A
+	end
+	variation scientist
+		idle 0x058C961D 0x058C9622 0x058C962B
+		action 0x058CA153 0x058CA166 0x058CA16A
+	end
+	variation diplomat
+		idle 0x058C961D 0x058C9622 0x058C962B
+		action 0x058CA153 0x058CA166 0x058CA16A
+	end
+end
+animation Urgent
+	variation playerm
+		idle 0x058C9662 0x058C9679
+		action 0x058CA1BF 0x058CA1C3
+	end
+	variation playere
+		idle 0x058C9662 0x058C9679
+		action 0x058CA1BF 0x058CA1C3
+	end
+	variation playerc
+		idle 0x058C9662 0x058C9679
+		action 0x058CA1BF 0x058CA1C3
+	end
+	variation ecologist
+		idle 0x058C9662 0x058C9679
+		action 0x058CA1BF 0x058CA1C3
+	end
+	variation shaman
+		idle 0x058C9662 0x058C9679
+		action 0x058CA1BF 0x058CA1C3
+	end
+	variation trader
+		idle 0x058C9662 0x058C9679
+		action 0x058CA1BF 0x058CA1C3
+	end
+	variation zealot
+		idle 0x058C9662 0x058C9679
+		action 0x058CA1BF 0x058CA1C3
+	end
+	variation warrior
+		idle 0x058C9662 0x058C9679
+		action 0x058CA1BF 0x058CA1C3
+	end
+	variation grob
+		idle 0x058C9662 0x058C9679
+		action 0x068C35C0 0x068C35CA
+	end
+	variation bard
+		idle 0x058C9662 0x058C9679
+		action 0x058CA1BF 0x058CA1C3
+	end
+	variation scientist
+		idle 0x058C9662 0x058C9679
+		action 0x058CA1BF 0x058CA1C3
+	end
+	variation diplomat
+		idle 0x058C9662 0x058C9679
+		action 0x058CA1BF 0x058CA1C3
+	end
+end
+animation Angry
+	variation playerm
+		idle 0x058C9612 0x058C9616 0x058C961A 0x064BB420
+		action 0x058CA13E 0x058CA141 0x058CA14F 0x064BB3AB
+	end
+	variation playere
+		idle 0x058C9612 0x058C9616 0x058C961A 0x064BB420
+		action 0x058CA13E 0x058CA141 0x058CA14F 0x064BB3AB
+	end
+	variation playerc
+		idle 0x058C9612 0x058C9616 0x058C961A 0x064BB420
+		action 0x058CA13E 0x058CA141 0x058CA14F 0x064BB3AB
+	end
+	variation ecologist
+		idle 0x058C9612 0x058C9616 0x058C961A 0x064BB420
+		action 0x058CA13E 0x058CA141 0x058CA14F 0x064BB3AB
+	end
+	variation shaman
+		idle 0x058C9612 0x058C9616 0x058C961A 0x064BB420
+		action 0x058CA13E 0x058CA141 0x058CA14F 0x064BB3AB
+	end
+	variation trader
+		idle 0x058C9612 0x058C9616 0x058C961A 0x064BB420
+		action 0x058CA13E 0x058CA141 0x058CA14F 0x064BB3AB
+	end
+	variation zealot
+		idle 0x058C9612 0x058C9616 0x058C961A 0x064BB420
+		action 0x058CA13E 0x058CA141 0x058CA14F 0x064BB3AB
+	end
+	variation warrior
+		idle 0x058C9612 0x058C9616 0x058C961A 0x064BB420
+		action 0x058CA13E 0x058CA141 0x058CA14F 0x064BB3AB
+	end
+	variation grob
+		idle 0x058C9612 0x058C9616 0x058C961A 0x064BB420
+		action 0x068C33D0 0x068C33DC 0x068C33E9 0x068C33F2
+	end
+	variation bard
+		idle 0x058C9612 0x058C9616 0x058C961A 0x064BB420
+		action 0x058CA13E 0x058CA141 0x058CA14F 0x064BB3AB
+	end
+	variation scientist
+		idle 0x058C9612 0x058C9616 0x058C961A 0x064BB420
+		action 0x058CA13E 0x058CA141 0x058CA14F 0x064BB3AB
+	end
+	variation diplomat
+		idle 0x058C9612 0x058C9616 0x058C961A 0x064BB420
+		action 0x058CA13E 0x058CA141 0x058CA14F 0x064BB3AB
+	end
+end
+animation Happy
+	variation playerm
+		idle 0x058C962E 0x058C9632 0x058C9635 0x058C9638
+		action 0x058CA170 0x058CA174 0x058CA178 0x058CA187
+	end
+	variation playere
+		idle 0x058C962E 0x058C9632 0x058C9635 0x058C9638
+		action 0x058CA170 0x058CA174 0x058CA178 0x058CA187
+	end
+	variation playerc
+		idle 0x058C962E 0x058C9632 0x058C9635 0x058C9638
+		action 0x058CA170 0x058CA174 0x058CA178 0x058CA187
+	end
+	variation ecologist
+		idle 0x058C962E 0x058C9632 0x058C9635 0x058C9638
+		action 0x058CA170 0x058CA174 0x058CA178 0x058CA187
+	end
+	variation shaman
+		idle 0x058C962E 0x058C9632 0x058C9635 0x058C9638
+		action 0x058CA170 0x058CA174 0x058CA178 0x058CA187
+	end
+	variation trader
+		idle 0x058C962E 0x058C9632 0x058C9635 0x058C9638
+		action 0x058CA170 0x058CA174 0x058CA178 0x058CA187
+	end
+	variation zealot
+		idle 0x058C962E 0x058C9632 0x058C9635 0x058C9638
+		action 0x058CA170 0x058CA174 0x058CA178 0x058CA187
+	end
+	variation warrior
+		idle 0x058C962E 0x058C9632 0x058C9635 0x058C9638
+		action 0x058CA170 0x058CA174 0x058CA178 0x058CA187
+	end
+	variation grob
+		idle 0x058C962E 0x058C9632 0x058C9635 0x058C9638
+		action 0x068C3475 0x068C347C 0x068C3488 0x068C3491
+	end
+	variation bard
+		idle 0x058C962E 0x058C9632 0x058C9635 0x058C9638
+		action 0x058CA170 0x058CA174 0x058CA178 0x058CA187
+	end
+	variation scientist
+		idle 0x058C962E 0x058C9632 0x058C9635 0x058C9638
+		action 0x058CA170 0x058CA174 0x058CA178 0x058CA187
+	end
+	variation diplomat
+		idle 0x058C962E 0x058C9632 0x058C9635 0x058C9638
+		action 0x058CA170 0x058CA174 0x058CA178 0x058CA187
+	end
+end
+animation Flex
+	variation ecologist
+		idle Flex_01 Flex_02 Flex_03 Flex_04
+		action Flex_01 Flex_02 Flex_03 Flex_04
+	end
+	variation shaman
+		idle Flex_01 Flex_02 Flex_03 Flex_04
+		action Flex_01 Flex_02 Flex_03 Flex_04
+	end
+	variation trader
+		idle Flex_01 Flex_02 Flex_03 Flex_04
+		action Flex_01 Flex_02 Flex_03 Flex_04
+	end
+	variation zealot
+		idle Flex_01 Flex_02 Flex_03 Flex_04
+		action Flex_01 Flex_02 Flex_03 Flex_04
+	end
+	variation warrior
+		idle Flex_01 Flex_02 Flex_03 Flex_04
+		action Flex_01 Flex_02 Flex_03 Flex_04
+	end
+	variation grob
+		idle GroxFlex Flex_01 Flex_02 Flex_03 Flex_04
+		action GroxFlex
+	end
+	variation bard
+		idle Flex_01 Flex_02 Flex_03 Flex_04
+		action Flex_01 Flex_02 Flex_03 Flex_04
+	end
+	variation scientist
+		idle Flex_01 Flex_02 Flex_03 Flex_04
+		action Flex_01 Flex_02 Flex_03 Flex_04
+	end
+	variation diplomat
+		idle Flex_01 Flex_02 Flex_03 Flex_04
+		action Flex_01 Flex_02 Flex_03 Flex_04
+	end
+end
+animation Fortnite
+	variation ecologist
+		idle PrikolFortnite
+		action PrikolFortnite
+	end
+	variation shaman
+		idle PrikolFortnite
+		action PrikolFortnite
+	end
+	variation trader
+		idle PrikolFortnite
+		action PrikolFortnite
+	end
+	variation zealot
+		idle PrikolFortnite
+		action PrikolFortnite
+	end
+	variation warrior
+		idle PrikolFortnite
+		action PrikolFortnite
+	end
+	variation grob
+		idle PrikolFortnite
+		action PrikolFortnite
+	end
+	variation bard
+		idle PrikolFortnite
+		action PrikolFortnite
+	end
+	variation scientist
+		idle PrikolFortnite
+		action PrikolFortnite
+	end
+	variation diplomat
+		idle PrikolFortnite
+		action PrikolFortnite
+	end
+end

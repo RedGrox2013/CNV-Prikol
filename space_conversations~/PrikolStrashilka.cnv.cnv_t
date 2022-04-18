@@ -1,0 +1,122 @@
+dialog PrikolStrashilka01
+	text PrikolStrashilka_text!0xD8D0C84B
+	
+	response
+		action kCnvCommEvent~ PrikolStrashilka!PrikolStrashilka02.cnv
+		text PrikolStrashilka_text!0x9AAB4C4F
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolStrashilka_text!0xD8D0C848
+	end
+end
+
+dialog PrikolStrashilka02
+	text PrikolStrashilka_text!0x9AAB4C4C
+	
+	response
+		action kCnvCommEvent~ PrikolStrashilka!PrikolStrashilka03.cnv
+		text PrikolStrashilka_text!0x9AAB4C4F
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolStrashilka_text!0xD8D0C848
+	end
+end
+
+dialog PrikolStrashilka03
+	text PrikolStrashilka_text!0x9AAB4C4D
+	
+	response
+		action kCnvCommEvent~ PrikolStrashilka!PrikolStrashilka04.cnv
+		text PrikolStrashilka_text!0x9AAB4C4F
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolStrashilka_text!0xD8D0C848
+	end
+end
+
+dialog PrikolStrashilka04
+	text PrikolStrashilka_text!0x9AAB4C4A
+	
+	response
+		action kCnvCommEvent~ PrikolStrashilka!PrikolStrashilka05.cnv
+		text PrikolStrashilka_text!0x9AAB4C4F
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolStrashilka_text!0xD8D0C848
+	end
+end
+
+dialog PrikolStrashilka05
+	text PrikolStrashilka_text!0x9AAB4C4B
+	
+	response
+		action kCnvCommEvent~ PrikolStrashilka!PrikolStrashilka06.cnv
+		text PrikolStrashilka_text!0x9AAB4C4F
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolStrashilka_text!0xD8D0C848
+	end
+end
+
+dialog PrikolStrashilka06
+	text PrikolStrashilka_text!0x9AAB4C48
+	
+	response
+		action kCnvCommEvent~ PrikolStrashilka!PrikolStrashilka07.cnv
+		text PrikolStrashilka_text!0x9AAB4C4F
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolStrashilka_text!0xD8D0C848
+	end
+end
+
+dialog PrikolStrashilka07
+	showStatic true
+	text PrikolStrashilka_text!0x9AAB4C49
+	
+	response
+		action kCnvCommEvent~ PrikolStrashilka!PrikolStrashilka08.cnv
+		text PrikolStrashilka_text!0x9AAB4C4F
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolStrashilka_text!0xD8D0C848
+	end
+end
+
+dialog PrikolStrashilka08
+	showStatic true
+	text PrikolStrashilka_text!0x9AAB4C46
+	
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommEvent~ PrikolStrashilka!PrikolStrashilka09.cnv
+		text PrikolStrashilka_text!0x9AAB4C4F
+	end
+	response
+		action kCnvCommDefault~
+		text PrikolStrashilka_text!0xD8D0C848
+	end
+end
+
+dialog PrikolStrashilka09
+	text PrikolStrashilka_text!0x24F05F71 -emotion Angry
+	
+	response
+		action kCnvCommDefault~
+		text PrikolStrashilka_text!0xC8F87522
+	end
+	response
+		action kCnvCommDefault~
+		text PrikolStrashilka_text!0xE2F47798
+	end
+end

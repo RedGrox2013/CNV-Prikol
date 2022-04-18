@@ -1,0 +1,182 @@
+dialog mission_assign
+	text Prikol_missionAdventureTown!0x8C5E0C8E -emotion Neutral
+
+	response
+		action kCnvCommEvent~ missionAdventureTown!mission_accept.cnv
+		text 0xCF4AA8C2!0xFADED01B
+		text 0xCF4AA8C2!0xFADED019
+	end
+	response
+		action kCnvCommEvent~ missionAdventureTown!mission_reject.cnv
+		text Prikol_missionAdventureTown!0x8C5E0C8D
+	end
+end
+dialog dynamic_response_to_source
+	text 0xCF4AA8C2!0xFADED023
+
+	response
+		action kCnvCommEvent~ missionAdventureTown!mission_incomplete.cnv
+		text 0xCF4AA8C2!0xFADED027
+		text 0xCF4AA8C2!0xFADED028
+		text 0xCF4AA8C2!0xFADED024
+	end
+	response
+		action kCnvCommDefault~
+		text 0xCF4AA8C2!0xFADED006
+		text 0xCF4AA8C2!0xFADED003
+		text 0xCF4AA8C2!0xFADED002
+	end
+	response
+		action kCnvCommEvent~ missionAdventureTown!abort.cnv
+		text 0xCF4AA8C2!0xFADED022
+		text 0xCF4AA8C2!0xFADED020
+	end
+	response
+		action kCnvCloseComm~
+		text 0xCF4AA8C2!0xFADED008
+		text 0xCF4AA8C2!0xFADED02A
+		text 0xCF4AA8C2!0xFADED00B
+	end
+end
+dialog mission_reject
+	action 0x1FEBC3EA
+
+	text Prikol_missionAdventureTown!0x8C5E0C8C -emotion Neutral
+	text Prikol_missionAdventureTown!0x8C5E0C8B -emotion Neutral
+	text Prikol_missionAdventureTown!0x8C5E0C8A -emotion Neutral
+	text Prikol_missionAdventureTown!0x8C5E0C89 -emotion Neutral
+
+	response
+		action kCnvCommDefault~
+		text 0xCF4AA8C2!0xFADED001
+		text 0xCF4AA8C2!0xFADED004
+		text 0xCF4AA8C2!0xFADED003
+		text 0xCF4AA8C2!0xFADED002
+	end
+	response
+		action kCnvCloseComm~
+		text 0xCF4AA8C2!0xFADED008
+	end
+end
+dialog abort
+	action 0xC0816F3B
+
+	text Prikol_missionAdventureTown!0x00000081 -emotion Neutral
+
+	response
+		action kCnvCommDefault~
+		text 0xCF4AA8C2!0xFADED001
+		text 0xCF4AA8C2!0xFADED004
+		text 0xCF4AA8C2!0xFADED003
+		text 0xCF4AA8C2!0xFADED002
+	end
+	response
+		action kCnvCloseComm~
+		text 0xCF4AA8C2!0xFADED008
+	end
+end
+dialog mission_complete
+	action 0x7D8AA8BE
+
+	text Prikol_missionAdventureTown!0x00000041 -emotion Neutral
+
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text 0xCF4AA8C2!0xFADED001
+		text 0xCF4AA8C2!0xFADED006
+		text 0xCF4AA8C2!0xFADED002
+	end
+end
+dialog mission_incomplete
+	text Prikol_missionAdventureTown!0x0000004E -emotion Angry
+
+	response
+		action kCnvCommEvent~ missionAdventureTown!da_ne_bombit_y_menya.cnv
+		text 0xCF4AA8C2!0xFADED001
+		text 0xCF4AA8C2!0xFADED006
+		text 0xCF4AA8C2!0xFADED003
+		text 0xCF4AA8C2!0xFADED002
+	end
+	response
+		action kCnvCommEvent~ missionAdventureTown!mission_reject.cnv
+		text Prikol_missionAdventureTown!0x8C5E0C8D
+	end
+	response
+		action kCnvCloseComm~
+		text 0xCF4AA8C2!0xFADED007
+		text 0xCF4AA8C2!0xFADED005
+		text 0xCF4AA8C2!0xFADED00C
+		text 0xCF4AA8C2!0xFADED010
+	end
+end
+dialog da_ne_bombit_y_menya
+	text Prikol_missionAdventureTown!0x8C5E0C88 -emotion Angry
+	
+	response
+		action kCnvCommEvent~ missionAdventureTown!toilet.cnv
+		text Prikol_missionAdventureTown!0x8C5E0C87
+	end
+	response
+		action kCnvCloseComm~
+		text Prikol_missionAdventureTown!0x9DCD0E47
+	end
+end
+dialog toilet
+	text Prikol_missionAdventureTown!0x8C5E0C86
+	
+	response
+		action kCnvCommDefault~
+		text Prikol_missionAdventureTown!0x8B5E0B1C
+	end
+end
+dialog mission_accept
+	action 0x5D79F0CB
+
+	text Prikol_missionAdventureTown!0x00000064 -emotion Neutral
+
+	response
+		action kCnvCommDefault~
+		text 0xCF4AA8C2!0xFADED001
+		text 0xCF4AA8C2!0xFADED004
+		text 0xCF4AA8C2!0xFADED003
+		text 0xCF4AA8C2!0xFADED002
+	end
+	response
+		action kCnvCloseComm~
+		text 0xCF4AA8C2!0xFADED007
+		text 0xCF4AA8C2!0xFADED005
+	end
+end
+
+eventlog UIMediumDesc_Fulfilled
+	text 0x59649908!0x00000093
+end
+eventlog event_log_return_for_rewards
+	text 0x59649908!0x00000099
+end
+eventlog UIShortDesc_InProgress
+	text Prikol_missionAdventureTown!0x000000B1
+end
+eventlog UILongDesc_Fulfilled
+	text Prikol_missionAdventureTown!0x00000095
+end
+eventlog UIMediumDesc_InProgress
+	text Prikol_missionAdventureTown!0x00000092
+end
+eventlog status_fulfilled
+	text 0x59649908!0x00000098
+end
+eventlog status_in_progress
+	text 0x59649908!0x00000097
+end
+eventlog UILongDesc_InProgress
+	text Prikol_missionAdventureTown!0x000000B1
+end
+eventlog UIShortDesc_Fulfilled
+	text 0x59649908!0x000000B2
+end
+

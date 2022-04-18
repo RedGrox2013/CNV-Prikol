@@ -1,0 +1,172 @@
+dialog Zagadka_Truboglazki01
+	text CNV_Prikol!0x442F549C
+	
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki02.cnv
+		text CNV_Prikol!0x4248CF3E
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki03.cnv
+		text CNV_Prikol!0x0A846634
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki02.cnv
+		text CNV_Prikol!0x30F736EB
+		exclude Grob SourceCivMilitary SourceCivReligious SourceCivEconomic
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki03.cnv
+		text CNV_Prikol!0x30F736EB
+		require Grob
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki02.cnv
+		text CNV_Prikol!0x162117DE
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki02.cnv
+		text CNV_Prikol!0xE6A1A313
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki02.cnv
+		text CNV_Prikol!0xBEF3BE6C
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki04.cnv
+		text CNV_Prikol!0xE5B0A712
+	end
+end
+
+dialog Zagadka_Truboglazki02
+	text CNV_Prikol!0x3588573C -emotion Sad -exclude Grob
+	text CNV_Prikol!0x79150950 -emotion Angry -require Grob
+	
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki01.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+		exclude Grob
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+		exclude Grob
+	end
+end
+
+dialog Zagadka_Truboglazki03
+	text CNV_Prikol!0x30F736EA -emotion Happy -exclude Grob
+	text CNV_Prikol!0x4C76EB2D -require Grob
+	
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xD9515895
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
+
+dialog Zagadka_Truboglazki04
+	text CNV_Prikol!0x40D5A04E -emotion Angry -exclude Grob
+	text CNV_Prikol!0x79150950 -emotion Angry -require Grob
+	
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki01.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+		exclude Grob
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+		exclude Grob
+	end
+end
+
+dialog Zagadka_Truboglazki01_mission_tutorial_story_201
+	showStatic true
+	text CNV_Prikol!0x442F549C
+	
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki02_mission_tutorial_story_201.cnv
+		text CNV_Prikol!0x4248CF3E
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki03_mission_tutorial_story_201.cnv
+		text CNV_Prikol!0x0A846634
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki02_mission_tutorial_story_201.cnv
+		text CNV_Prikol!0x162117DE
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki02_mission_tutorial_story_201.cnv
+		text CNV_Prikol!0xE6A1A313
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki02_mission_tutorial_story_201.cnv
+		text CNV_Prikol!0xBEF3BE6C
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki04_mission_tutorial_story_201.cnv
+		text CNV_Prikol!0xE5B0A712
+	end
+end
+
+dialog Zagadka_Truboglazki02_mission_tutorial_story_201
+	showStatic true
+	text CNV_Prikol!0x3588573C
+	
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki01_mission_tutorial_story_201.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ mission_tutorial_story_201!defender_conversation_2.cnv
+		text CNV_Prikol!0xEFC02891
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_gamemission_tutorial_story_201.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
+
+dialog Zagadka_Truboglazki03_mission_tutorial_story_201
+	showStatic true
+	text CNV_Prikol!0x30F736EA
+	
+	response
+		action kCnvCommEvent~ mission_tutorial_story_201!defender_conversation_2.cnv
+		text CNV_Prikol!0xEFC02891
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_gamemission_tutorial_story_201.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
+
+dialog Zagadka_Truboglazki04_mission_tutorial_story_201
+	showStatic true
+	text CNV_Prikol!0x40D5A04E
+	
+	response
+		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki01_mission_tutorial_story_201.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_gamemission_tutorial_story_201.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommEvent~ mission_tutorial_story_201!defender_conversation_2.cnv
+		text CNV_Prikol!0xEFC02891
+	end
+end

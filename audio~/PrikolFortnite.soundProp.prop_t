@@ -1,0 +1,5 @@
+key musicTemplate space_comm_vo_base
+keys samples
+	PrikolFortnite
+end
+uint32 0xBA03D0CD 5

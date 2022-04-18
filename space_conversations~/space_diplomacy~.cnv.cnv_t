@@ -1,0 +1,2219 @@
+dialog mission_unavailable
+	text space_diplomacy~!0x00000159 -emotion Neutral -require MySpecies
+	text space_diplomacy~!0x0000015A -emotion Neutral -require MySpecies
+	text space_diplomacy~!0x0000015B -emotion Neutral -require MySpecies
+	text space_diplomacy~!0x0000015C -emotion Neutral -require MySpecies
+	text space_diplomacy~!0x0000015D -emotion Sad -require MySpecies
+	text space_diplomacy~!0x00000640 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000641 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000642 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000643 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000644 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000645 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000646 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000647 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000648 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000649 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000064A -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000064B -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000064C -emotion Neutral -require Shaman
+	text space_diplomacy~!0x0000064D -emotion Neutral -require Shaman
+	text space_diplomacy~!0x0000064E -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000064F -emotion Neutral -require Warrior
+	text space_diplomacy~!0x00000650 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000651 -emotion Neutral -require Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x0000015E
+		text space_diplomacy~!0x0000015F
+		text space_diplomacy~!0x00000160
+		text space_diplomacy~!0x00000161
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x00000162
+		text space_diplomacy~!0x00000163
+		text space_diplomacy~!0x00000164
+		text space_diplomacy~!0x00000165
+	end
+end
+dialog trade_route_destroyed
+	value1 true
+	value4 true
+
+	text space_diplomacy~!0x00000669 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000301 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000108 -emotion Sad -require Ecologist
+	text space_diplomacy~!0x00000109 -emotion Sad -require Ecologist
+	text space_diplomacy~!0x0000010A -emotion Angry -require Bard
+	text space_diplomacy~!0x00000179 -emotion Angry -require Bard
+	text space_diplomacy~!0x0000017A -emotion Angry -require Zealot
+	text space_diplomacy~!0x0000017B -emotion Angry -require Zealot
+	text space_diplomacy~!0x0000017C -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000017D -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000017E -emotion Sad -require Trader
+	text space_diplomacy~!0x0000017F -emotion Sad -require Trader
+	text space_diplomacy~!0x0000018E -emotion Neutral -require Shaman
+	text space_diplomacy~!0x000002FC -emotion Neutral -require Shaman
+	text space_diplomacy~!0x000002FD -emotion Neutral -require Warrior
+	text space_diplomacy~!0x000002FE -emotion Neutral -require Warrior
+	text space_diplomacy~!0x000002FF -emotion Neutral -require Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x0000066A
+	end
+end
+dialog trade_route_purchase_failure
+	value4 true
+
+	text space_diplomacy~!0x000004AF -emotion Neutral -require Diplomat -exclude Alliance
+	text space_diplomacy~!0x000004B0 -emotion Neutral -require Diplomat -exclude Alliance
+	text space_diplomacy~!0x000004B1 -emotion Neutral -require Alliance Diplomat
+	text space_diplomacy~!0x000004B2 -emotion Neutral -require Alliance Diplomat
+	text space_diplomacy~!0x000004B3 -emotion Neutral -require Ecologist -exclude Alliance
+	text space_diplomacy~!0x000004B4 -emotion Neutral -require Ecologist -exclude Alliance
+	text space_diplomacy~!0x000004B5 -emotion Neutral -require Alliance Ecologist
+	text space_diplomacy~!0x000004B6 -emotion Neutral -require Alliance Ecologist
+	text space_diplomacy~!0x000004B7 -emotion Neutral -require Bard -exclude Alliance
+	text space_diplomacy~!0x000004B8 -emotion Gasp -require Bard -exclude Alliance
+	text space_diplomacy~!0x000004B9 -emotion Neutral -require Alliance Bard
+	text space_diplomacy~!0x000004BA -emotion Angry -require Alliance Bard
+	text space_diplomacy~!0x000004BB -emotion Angry -require Zealot -exclude Alliance
+	text space_diplomacy~!0x000004BC -emotion Neutral -require Zealot -exclude Alliance
+	text space_diplomacy~!0x000004BD -emotion Neutral -require Alliance Zealot
+	text space_diplomacy~!0x000004BE -emotion Neutral -require Alliance Zealot
+	text space_diplomacy~!0x000004BF -emotion Neutral -require Scientist -exclude Alliance
+	text space_diplomacy~!0x000004C0 -emotion Neutral -require Scientist -exclude Alliance
+	text space_diplomacy~!0x000000E7 -emotion Neutral -require Alliance Scientist
+	text space_diplomacy~!0x000004C1 -emotion Neutral -require Alliance Scientist
+	text space_diplomacy~!0x000004C2 -emotion Neutral -require Trader -exclude Alliance
+	text space_diplomacy~!0x000004C3 -emotion Neutral -require Trader -exclude Alliance
+	text space_diplomacy~!0x000004C4 -emotion Neutral -require Alliance Trader
+	text space_diplomacy~!0x000004C5 -emotion Neutral -require Alliance Trader
+	text space_diplomacy~!0x000004C6 -emotion Neutral -require Shaman -exclude Alliance
+	text space_diplomacy~!0x000004C7 -require Shaman -exclude Alliance
+	text space_diplomacy~!0x000004C8 -emotion Neutral -require Alliance Shaman
+	text space_diplomacy~!0x000004C9 -emotion Neutral -require Alliance Shaman
+	text space_diplomacy~!0x000004CA -emotion Neutral -require Warrior -exclude Alliance
+	text space_diplomacy~!0x000004CB -emotion Neutral -require Warrior -exclude Alliance
+	text space_diplomacy~!0x000004CC -emotion Neutral -require Alliance Warrior
+	text space_diplomacy~!0x000004CD -emotion Neutral -require Alliance Warrior
+	text space_diplomacy~!0x000004CE -emotion Neutral -require Grob
+	text space_diplomacy~!0x000004CF -emotion Neutral -require Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x000002F9
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x000000E8
+	end
+end
+dialog give_gift_Relationship
+	text space_diplomacy~!0x0000036A -emotion Neutral -require Diplomat AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000036B -emotion Neutral -require Diplomat AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000036C -emotion Happy -require Diplomat AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x0000036D -emotion Happy -require Diplomat AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x0000036E -emotion Happy -require Alliance Diplomat
+	text space_diplomacy~!0x0000036F -emotion Happy -require Alliance Diplomat
+	text space_diplomacy~!0x00000370 -emotion Neutral -require Ecologist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000371 -emotion Neutral -require Ecologist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000372 -emotion Happy -require Ecologist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000373 -emotion Happy -require Ecologist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000374 -emotion Happy -require Alliance Ecologist
+	text space_diplomacy~!0x00000375 -emotion Happy -require Alliance Ecologist
+	text space_diplomacy~!0x00000376 -emotion Neutral -require Bard AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000377 -emotion Neutral -require Bard AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000378 -emotion Happy -require Bard AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000379 -emotion Happy -require Bard AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x0000037A -emotion Happy -require Alliance Bard
+	text space_diplomacy~!0x0000037B -emotion Happy -require Alliance Bard
+	text space_diplomacy~!0x0000037C -emotion Neutral -require Zealot AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000037D -emotion Neutral -require Zealot AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000037E -emotion Happy -require Zealot AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x0000037F -emotion Happy -require Zealot AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000380 -emotion Happy -require Alliance Zealot
+	text space_diplomacy~!0x00000381 -emotion Happy -require Alliance Zealot
+	text space_diplomacy~!0x00000382 -emotion Neutral -require Scientist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000383 -emotion Neutral -require Scientist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000384 -emotion Happy -require Scientist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000385 -emotion Happy -require Scientist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000386 -emotion Happy -require Alliance Scientist
+	text space_diplomacy~!0x00000387 -emotion Happy -require Alliance Scientist
+	text space_diplomacy~!0x00000388 -emotion Neutral -require Trader AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000389 -emotion Neutral -require Trader AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000038A -emotion Happy -require Trader AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x0000038B -emotion Happy -require Trader AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x0000038C -emotion Happy -require Alliance Trader
+	text space_diplomacy~!0x0000038D -emotion Happy -require Alliance Trader
+	text space_diplomacy~!0x0000038E -emotion Neutral -require Shaman AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000038F -emotion Neutral -require Shaman AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000390 -emotion Happy -require Shaman AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000391 -emotion Happy -require Shaman AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000392 -emotion Happy -require Alliance Shaman
+	text space_diplomacy~!0x00000393 -emotion Happy -require Alliance Shaman
+	text space_diplomacy~!0x00000394 -emotion Neutral -require Warrior AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000395 -emotion Neutral -require Warrior AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000396 -emotion Happy -require Warrior AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000397 -emotion Happy -require Warrior AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000398 -emotion Happy -require Alliance Warrior
+	text space_diplomacy~!0x00000399 -emotion Happy -require Alliance Warrior
+	text space_diplomacy~!0x0000039A -emotion Angry -require Grob AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000039B -emotion Angry -require Grob AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000120 -emotion Neutral -require Grob AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000001A6 -emotion Happy -require Alliance Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x0000039C
+		text space_diplomacy~!0x0000039D
+		text space_diplomacy~!0x0000039E
+		text space_diplomacy~!0x0000039F
+		exclude AtWar
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x000003A0 -exclude AtWar
+		text space_diplomacy~!0x000003A1 -require AtWar
+	end
+end
+dialog trade_route_accepted
+	value1 true
+	value4 true
+
+	text space_diplomacy~!0x0000046F -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000470 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000471 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000472 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000473 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000474 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000475 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000476 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000477 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000478 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000479 -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000047A -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000047B -emotion Neutral -require Shaman
+	text space_diplomacy~!0x0000047C -emotion Neutral -require Shaman
+	text space_diplomacy~!0x0000047D -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000047E -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000047F -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000480 -emotion Neutral -require Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x000000D8
+	end
+end
+dialog trade_route_purchase_big_failure
+	value4 true
+
+	text space_diplomacy~!0x000000E5 -emotion Angry -require Diplomat -exclude Alliance
+	text space_diplomacy~!0x00000353 -emotion Angry -require Diplomat -exclude Alliance
+	text space_diplomacy~!0x00000354 -emotion Angry -require Alliance Diplomat
+	text space_diplomacy~!0x00000355 -emotion Angry -require Alliance Diplomat
+	text space_diplomacy~!0x00000356 -emotion Angry -require Ecologist -exclude Alliance
+	text space_diplomacy~!0x00000357 -emotion Angry -require Ecologist -exclude Alliance
+	text space_diplomacy~!0x00000358 -emotion Angry -require Alliance Ecologist
+	text space_diplomacy~!0x00000359 -emotion Angry -require Alliance Ecologist
+	text space_diplomacy~!0x0000035A -emotion Angry -require Bard -exclude Alliance
+	text space_diplomacy~!0x0000035B -emotion Angry -require Bard -exclude Alliance
+	text space_diplomacy~!0x0000035C -emotion Angry -require Alliance Bard
+	text space_diplomacy~!0x0000035D -emotion Angry -require Alliance Bard
+	text space_diplomacy~!0x0000035E -emotion Angry -require Zealot -exclude Alliance
+	text space_diplomacy~!0x0000035F -emotion Angry -require Zealot -exclude Alliance
+	text space_diplomacy~!0x00000360 -emotion Angry -require Alliance Zealot
+	text space_diplomacy~!0x00000361 -emotion Angry -require Alliance Zealot
+	text space_diplomacy~!0x00000362 -emotion Angry -require Scientist -exclude Alliance
+	text space_diplomacy~!0x00000363 -emotion Angry -require Scientist -exclude Alliance
+	text space_diplomacy~!0x00000364 -emotion Angry -require Alliance Scientist
+	text space_diplomacy~!0x00000365 -emotion Angry -require Alliance Scientist
+	text space_diplomacy~!0x00000366 -emotion Angry -require Trader -exclude Alliance
+	text space_diplomacy~!0x00000367 -emotion Angry -require Trader -exclude Alliance
+	text space_diplomacy~!0x00000368 -emotion Angry -require Alliance Trader
+	text space_diplomacy~!0x00000369 -emotion Angry -require Alliance Trader
+	text space_diplomacy~!0x000004A5 -emotion Angry -require Shaman -exclude Alliance
+	text space_diplomacy~!0x000004A6 -emotion Angry -require Shaman -exclude Alliance
+	text space_diplomacy~!0x000004A7 -emotion Angry -require Alliance Shaman
+	text space_diplomacy~!0x000004A8 -emotion Angry -require Alliance Shaman
+	text space_diplomacy~!0x000004A9 -emotion Angry -require Warrior -exclude Alliance
+	text space_diplomacy~!0x000004AA -emotion Angry -require Warrior -exclude Alliance
+	text space_diplomacy~!0x000004AB -emotion Angry -require Alliance Warrior
+	text space_diplomacy~!0x000004AC -emotion Angry -require Alliance Warrior
+	text space_diplomacy~!0x000004AD -emotion Angry -require Grob
+	text space_diplomacy~!0x000004AE -emotion Angry -require Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x000002F8
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x000000E6
+	end
+end
+dialog military_capture_option
+	text space_diplomacy~!0x000000ED -emotion Neutral -require MySpecies
+	text space_diplomacy~!0x0000058D -emotion Afraid -require Diplomat
+	text space_diplomacy~!0x0000058E -emotion Afraid -require Diplomat
+	text space_diplomacy~!0x0000058F -emotion Afraid -require Ecologist
+	text space_diplomacy~!0x00000590 -emotion Afraid -require Ecologist
+	text space_diplomacy~!0x00000591 -emotion Afraid -require Bard
+	text space_diplomacy~!0x00000592 -emotion Afraid -require Bard
+	text space_diplomacy~!0x00000593 -emotion Urgent -require Zealot
+	text space_diplomacy~!0x00000594 -emotion Urgent -require Zealot
+	text space_diplomacy~!0x00000595 -emotion Afraid -require Scientist
+	text space_diplomacy~!0x00000596 -emotion Afraid -require Scientist
+	text space_diplomacy~!0x00000597 -emotion Afraid -require Trader
+	text space_diplomacy~!0x00000598 -emotion Afraid -require Trader
+	text space_diplomacy~!0x00000599 -emotion Afraid -require Shaman
+	text space_diplomacy~!0x0000059A -emotion Afraid -require Shaman
+	text space_diplomacy~!0x0000059B -emotion Urgent -require Warrior
+	text space_diplomacy~!0x0000059C -emotion Urgent -require Warrior
+	text space_diplomacy~!0x0000059D -emotion Neutral -require Grob
+
+	response
+		action 0xEAB9E2C9
+		text space_diplomacy~!0x000000EE
+	end
+	response
+		action 0xAB909E37
+		text space_diplomacy~!0x000000EF
+	end
+end
+dialog request_attack_declined_already_raided
+	text space_diplomacy~!0x00000439 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x0000043A -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x0000043B -emotion Neutral -require Bard
+	text space_diplomacy~!0x0000043C -emotion Neutral -require Zealot
+	text space_diplomacy~!0x0000043D -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000043E -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000043F -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000440 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x00000441 -emotion Neutral -require Grob
+
+	response
+		action 0x2027BC64
+		text space_diplomacy~!0x000000CF
+	end
+end
+dialog greeting_after_disaster_player_NOThelped
+	value4 true
+
+	text space_diplomacy~!0x000001D9 -emotion Angry -require MySpecies
+	text space_diplomacy~!0x000001DA -emotion Angry -require MySpecies
+	text space_diplomacy~!0x000001DB -emotion Angry -require MySpecies
+	text space_diplomacy~!0x000001DC -emotion Angry -require Diplomat -exclude MySpecies
+	text space_diplomacy~!0x000001DD -emotion Angry -require Diplomat -exclude MySpecies
+	text space_diplomacy~!0x000001DE -emotion Angry -require Diplomat -exclude MySpecies
+	text space_diplomacy~!0x000001DF -emotion Gasp -require Bard -exclude MySpecies
+	text space_diplomacy~!0x000001E0 -emotion Gasp -require Bard -exclude MySpecies
+	text space_diplomacy~!0x000001E1 -emotion Gasp -require Bard -exclude MySpecies
+	text space_diplomacy~!0x000001E2 -emotion Angry -require Shaman -exclude MySpecies
+	text space_diplomacy~!0x000001E3 -emotion Angry -require Shaman -exclude MySpecies
+	text space_diplomacy~!0x000001E4 -emotion Angry -require Shaman -exclude MySpecies
+	text space_diplomacy~!0x000001E5 -emotion Angry -require Ecologist -exclude MySpecies
+	text space_diplomacy~!0x000001E6 -emotion Angry -require Ecologist -exclude MySpecies
+	text space_diplomacy~!0x000001E7 -emotion Angry -require Ecologist -exclude MySpecies
+	text space_diplomacy~!0x000001E8 -emotion Angry -require Trader -exclude MySpecies
+	text space_diplomacy~!0x000001E9 -emotion Angry -require Trader -exclude MySpecies
+	text space_diplomacy~!0x000001EA -emotion Angry -require Trader -exclude MySpecies
+	text space_diplomacy~!0x000001EB -emotion Angry -require Scientist -exclude MySpecies
+	text space_diplomacy~!0x000001EC -emotion Angry -require Scientist -exclude MySpecies
+	text space_diplomacy~!0x000001ED -emotion Angry -require Scientist -exclude MySpecies
+	text space_diplomacy~!0x000001EE -emotion Angry -require Warrior -exclude MySpecies
+	text space_diplomacy~!0x000001EF -emotion Angry -require Warrior -exclude MySpecies
+	text space_diplomacy~!0x000001F0 -emotion Angry -require Warrior -exclude MySpecies
+	text space_diplomacy~!0x000001F1 -emotion Angry -require Zealot -exclude MySpecies
+	text space_diplomacy~!0x000001F2 -emotion Angry -require Zealot -exclude MySpecies
+	text space_diplomacy~!0x000001F3 -emotion Angry -require Zealot -exclude MySpecies
+	text space_diplomacy~!0x000001F4 -emotion Angry -require Grob -exclude MySpecies
+	text space_diplomacy~!0x000001F5 -emotion Angry -require Grob -exclude MySpecies
+	text space_diplomacy~!0x000001F6 -emotion Angry -require Grob -exclude MySpecies
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x000001F7
+		text space_diplomacy~!0x000001F8
+	end
+end
+dialog first_greetings
+	text space_diplomacy~!0x00000007 -emotion Happy -require Diplomat AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000010 -emotion Happy -require Diplomat AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000011 -emotion Happy -require Diplomat AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000012 -emotion Neutral -require Bard AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000001C -emotion Neutral -require Bard AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000001D -emotion Neutral -require Bard AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000005 -emotion Neutral -require Bard AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000001E -emotion Neutral -require Bard AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000050 -emotion Neutral -require Shaman AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000051 -emotion Neutral -require Shaman AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000052 -emotion Neutral -require Shaman AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000053 -emotion Neutral -require Ecologist AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000054 -emotion Neutral -require Ecologist AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000055 -emotion Neutral -require Ecologist AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000003 -emotion Neutral -require Ecologist AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000057 -emotion Happy -require Trader AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000005F -emotion Happy -require Trader AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000063 -emotion Neutral -require Trader AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000002 -emotion Happy -require Trader AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000000C -emotion Happy -require Trader AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000064 -emotion Neutral -require Zealot AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000066 -emotion Neutral -require Zealot AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000000D -emotion Happy -require Zealot AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000067 -emotion Neutral -require Scientist AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000068 -emotion Neutral -require Scientist AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000069 -emotion Neutral -require Scientist AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000000E -emotion Neutral -require Scientist AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000006A -emotion Neutral -require Warrior AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000006C -emotion Neutral -require Warrior AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000004 -emotion Neutral -require Warrior AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000006D -emotion Neutral -require Warrior AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000008A -emotion Neutral -require Grob
+	text space_diplomacy~!0x0000008C -emotion Neutral -require Grob
+	text space_diplomacy~!0x0000008E -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000013 -emotion Neutral -require Diplomat AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000019E -emotion Neutral -require Diplomat AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000019F -emotion Neutral -require Diplomat AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000014 -emotion Angry -require Bard AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000001A0 -emotion Angry -require Bard AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000001A1 -emotion Angry -require Bard AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000015 -emotion Angry -require Ecologist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000028C -emotion Angry -require Ecologist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000028D -emotion Angry -require Ecologist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000016 -emotion Neutral -require Scientist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000028E -emotion Neutral -require Scientist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000028F -emotion Neutral -require Scientist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000290 -emotion Neutral -require Zealot AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000291 -emotion Neutral -require Zealot AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000017 -emotion Neutral -require Zealot AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000018 -emotion Neutral -require Trader AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000292 -emotion Neutral -require Trader AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000293 -emotion Neutral -require Trader AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000019 -emotion Angry -require Shaman AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000294 -emotion Angry -require Shaman AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000295 -emotion Angry -require Shaman AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000001A -emotion Neutral -require Warrior AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000296 -emotion Neutral -require Warrior AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000297 -emotion Neutral -require Warrior AttitudeAnnoyedOrWorse
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!first_contact_friendly.cnv
+		text space_diplomacy~!animations~
+		exclude AtWar
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!first_contact_neutral.cnv
+		text space_diplomacy~!0x00000061
+		exclude AtWar
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!first_contact_unfriendly.cnv
+		text space_diplomacy~!0x00000062
+		exclude AtWar
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!war_peace_offering.cnv
+		text space_diplomacy~!0x0000007A
+		require AtWar
+		exclude Grob
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x00000079
+		require AtWar
+	end
+end
+dialog war_surrender
+	text space_diplomacy~!0x000000F0 -require MySpecies
+	text space_diplomacy~!0x0000059E -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x0000059F -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x000005A0 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x000005A1 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x000005A2 -emotion Gasp -require Bard
+	text space_diplomacy~!0x000005A3 -emotion Neutral -require Bard
+	text space_diplomacy~!0x000005A4 -emotion Afraid -require Zealot
+	text space_diplomacy~!0x000005A5 -emotion Afraid -require Zealot
+	text space_diplomacy~!0x000005A6 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x000005A7 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x000005A8 -emotion Afraid -require Trader
+	text space_diplomacy~!0x000005A9 -emotion Afraid -require Trader
+	text space_diplomacy~!0x000005AA -emotion Neutral -require Shaman
+	text space_diplomacy~!0x000005AB -emotion Neutral -require Shaman
+	text space_diplomacy~!0x000005AC -emotion Neutral -require Warrior
+	text space_diplomacy~!0x000005AD -emotion Neutral -require Warrior
+	text space_diplomacy~!0x000005AE -emotion Neutral -require Grob
+
+	response
+		action 0x3DE7CB69
+		text space_diplomacy~!0x000000F1
+	end
+	response
+		action 0x2E42264B
+		text space_diplomacy~!0x000000F2
+	end
+end
+dialog select_attack_request_target
+	text space_diplomacy~!0x000000C4 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000416 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000417 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000418 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000419 -emotion Neutral -require Bard
+	text space_diplomacy~!0x0000041A -emotion Neutral -require Bard
+	text space_diplomacy~!0x0000041B -emotion Neutral -require Zealot
+	text space_diplomacy~!0x0000041C -emotion Neutral -require Zealot
+	text space_diplomacy~!0x0000041D -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000041E -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000041F -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000420 -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000421 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000422 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000423 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x00000424 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x00000425 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000426 -emotion Neutral -require Grob
+
+	response
+		action 0x307071C8
+		text space_diplomacy~!0x000000C5
+		require AttackEmpire1
+	end
+	response
+		action 0x307071CB
+		text space_diplomacy~!0x000000C6
+		require AttackEmpire2
+	end
+	response
+		action 0x307071CA
+		text space_diplomacy~!0x000000C7
+		require AttackEmpire3
+	end
+	response
+		action 0x307071CD
+		text space_diplomacy~!0x000000C8
+		require AttackEmpire4
+	end
+	response
+		action 0x2027BC64
+		text space_diplomacy~!0x000000C9
+	end
+end
+dialog create_alliance_failure
+	text space_diplomacy~!0x0000014A -emotion Gasp -require Diplomat -exclude HasAssignedMission
+	text space_diplomacy~!0x0000014B -emotion Gasp -require Diplomat -exclude HasAssignedMission
+	text space_diplomacy~!0x000001A7 -emotion Gasp -require Ecologist -exclude HasAssignedMission
+	text space_diplomacy~!0x000001A8 -emotion Gasp -require Ecologist -exclude HasAssignedMission
+	text space_diplomacy~!0x000001A9 -emotion Laugh -require Bard -exclude HasAssignedMission
+	text space_diplomacy~!0x000001AA -emotion Gasp -require Bard -exclude HasAssignedMission
+	text space_diplomacy~!0x000001AB -emotion Gasp -require Zealot -exclude HasAssignedMission
+	text space_diplomacy~!0x00000283 -emotion Gasp -require Zealot -exclude HasAssignedMission
+	text space_diplomacy~!0x00000550 -emotion Neutral -require Scientist -exclude HasAssignedMission
+	text space_diplomacy~!0x00000658 -emotion Neutral -require Scientist -exclude HasAssignedMission
+	text space_diplomacy~!0x0000065A -emotion Sad -require Trader -exclude HasAssignedMission
+	text space_diplomacy~!0x0000065C -emotion Sad -require Trader -exclude HasAssignedMission
+	text space_diplomacy~!0x0000065E -emotion Neutral -require Shaman -exclude HasAssignedMission
+	text space_diplomacy~!0x0000065F -emotion Neutral -require Shaman -exclude HasAssignedMission
+	text space_diplomacy~!0x00000660 -emotion Gasp -require Warrior -exclude HasAssignedMission
+	text space_diplomacy~!0x00000661 -emotion Gasp -require Warrior -exclude HasAssignedMission
+	text space_diplomacy~!0x00000662 -emotion Angry -require Grob -exclude HasAssignedMission
+	text space_diplomacy~!0x00000663 -emotion Angry -require Grob -exclude HasAssignedMission
+	text space_diplomacy~!0x0000062E -emotion Neutral -require Diplomat HasAssignedMission
+	text space_diplomacy~!0x0000062F -emotion Neutral -require Diplomat HasAssignedMission
+	text space_diplomacy~!0x00000630 -emotion Neutral -require Ecologist HasAssignedMission
+	text space_diplomacy~!0x00000631 -emotion Neutral -require Ecologist HasAssignedMission
+	text space_diplomacy~!0x00000632 -emotion Angry -require Bard HasAssignedMission
+	text space_diplomacy~!0x00000633 -emotion Angry -require Bard HasAssignedMission
+	text space_diplomacy~!0x00000634 -emotion Angry -require Zealot HasAssignedMission
+	text space_diplomacy~!0x00000635 -emotion Neutral -require Zealot HasAssignedMission
+	text space_diplomacy~!0x00000636 -emotion Angry -require Scientist HasAssignedMission
+	text space_diplomacy~!0x00000637 -emotion Angry -require Scientist HasAssignedMission
+	text space_diplomacy~!0x00000638 -emotion Angry -require Trader HasAssignedMission
+	text space_diplomacy~!0x00000639 -emotion Angry -require Trader HasAssignedMission
+	text space_diplomacy~!0x00000149 -require Trader HasAssignedMission
+	text space_diplomacy~!0x0000063A -emotion Angry -require Shaman HasAssignedMission
+	text space_diplomacy~!0x0000063B -emotion Angry -require Shaman HasAssignedMission
+	text space_diplomacy~!0x0000063C -emotion Angry -require Warrior HasAssignedMission
+	text space_diplomacy~!0x0000063D -emotion Angry -require Warrior HasAssignedMission
+	text space_diplomacy~!0x0000063E -emotion Angry -require Grob HasAssignedMission
+	text space_diplomacy~!0x0000063F -emotion Angry -require Grob HasAssignedMission
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!mission_info.cnv
+		text space_diplomacy~!0x0000014C
+		text space_diplomacy~!0x0000014D
+		text space_diplomacy~!0x0000014E
+		text space_diplomacy~!0x0000014F
+		require HasMissionConversation
+		exclude AtWar
+	end
+	response
+		action kCnvMission~
+		text space_diplomacy~!0x00000150
+		text space_diplomacy~!0x00000151
+		text space_diplomacy~!0x00000152
+		text space_diplomacy~!0x00000153
+		exclude AtWar HasAssignedMission
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x00000154
+		text space_diplomacy~!0x00000155
+		text space_diplomacy~!0x00000156
+		text space_diplomacy~!0x00000157
+		text space_diplomacy~!0x00000158
+	end
+end
+dialog greetings
+	value4 true
+
+	text space_diplomacy~!0x0000001B -emotion Happy -require MySpecies Homeworld
+	text space_diplomacy~!0x0000001F -emotion Happy -require MySpecies Colony -exclude Homeworld
+	text space_diplomacy~!0x00000298 -emotion Neutral -require Diplomat AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x00000299 -emotion Neutral -require Diplomat AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x0000029A -emotion Neutral -require Diplomat AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x00000020 -emotion Happy -require Diplomat AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x0000002A -emotion Neutral -require Diplomat AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x0000029B -emotion Neutral -require Bard AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x0000029C -emotion Neutral -require Bard AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x0000029D -emotion Neutral -require Bard AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x0000002B -emotion Neutral -require Bard AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x00000024 -emotion Happy -require Bard AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x00000039 -emotion Neutral -require Bard AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x0000029E -emotion Neutral -require Shaman AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x0000029F -emotion Neutral -require Shaman AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002A0 -emotion Neutral -require Shaman AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x0000002C -emotion Neutral -require Shaman AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002A1 -emotion Neutral -require Ecologist AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002A2 -emotion Neutral -require Ecologist AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002A3 -emotion Neutral -require Ecologist AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x0000002D -emotion Neutral -require Ecologist AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x00000027 -emotion Neutral -require Ecologist AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x00000038 -emotion Neutral -require Ecologist AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002A4 -emotion Happy -require Trader AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002A5 -emotion Happy -require Trader AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x00000023 -emotion Happy -require Trader AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x00000037 -emotion Happy -require Trader AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x0000002E -emotion Neutral -require Trader AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002A6 -emotion Neutral -require Zealot AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002A7 -emotion Neutral -require Zealot AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002A8 -emotion Neutral -require Zealot AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x0000002F -emotion Neutral -require Zealot AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002A9 -emotion Neutral -require Scientist AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002AA -emotion Neutral -require Scientist AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002AB -emotion Neutral -require Scientist AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x00000030 -emotion Neutral -require Scientist AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002AC -emotion Neutral -require Warrior AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002AD -emotion Neutral -require Warrior AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002AE -emotion Neutral -require Warrior AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x0000003A -emotion Neutral -require Warrior AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x00000031 -emotion Neutral -require Warrior AttitudePleasedOrBetter -exclude MySpecies Grob
+	text space_diplomacy~!0x000002AF -emotion Neutral -require Grob AttitudePleasedOrBetter -exclude MySpecies
+	text space_diplomacy~!0x00000025 -emotion Neutral -require Grob AttitudePleasedOrBetter -exclude MySpecies
+	text space_diplomacy~!0x00000032 -emotion Neutral -require Grob AttitudePleasedOrBetter -exclude MySpecies
+	text space_diplomacy~!0x00000033 -emotion Neutral -require Diplomat AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002B0 -emotion Neutral -require Diplomat AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002B1 -emotion Neutral -require Diplomat AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x00000034 -emotion Neutral -require Shaman AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002B2 -emotion Neutral -require Shaman AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002B3 -emotion Neutral -require Shaman AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002B4 -emotion Neutral -require Bard AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002B5 -emotion Neutral -require Bard AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x00000035 -emotion Neutral -require Bard AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x00000036 -emotion Neutral -require Zealot AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002B6 -emotion Neutral -require Zealot AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002B7 -emotion Neutral -require Zealot AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x0000003C -emotion Neutral -require Ecologist AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002B8 -emotion Neutral -require Ecologist AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002B9 -emotion Neutral -require Ecologist AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x0000003D -emotion Neutral -require Trader AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002BA -emotion Neutral -require Trader AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002BB -emotion Neutral -require Trader AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x0000003E -emotion Neutral -require Warrior AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002BC -emotion Neutral -require Warrior AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002BD -emotion Neutral -require Warrior AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x00000026 -emotion Neutral -require Warrior AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x0000003F -emotion Neutral -require Scientist AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002BE -emotion Neutral -require Scientist AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002BF -emotion Neutral -require Scientist AttitudeCautious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002C0 -emotion Neutral -require Grob AttitudeCautious -exclude MySpecies
+	text space_diplomacy~!0x0000003B -emotion Neutral -require Grob AttitudeCautious -exclude MySpecies
+	text space_diplomacy~!0x00000029 -emotion Neutral -require Grob AttitudeCautious -exclude MySpecies
+	text space_diplomacy~!0x00000040 -emotion Angry -require Diplomat AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002C1 -emotion Angry -require Diplomat AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002C2 -emotion Angry -require Diplomat AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x00000041 -emotion Angry -require Shaman AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002C3 -require Shaman AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002C4 -require Shaman AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x00000042 -emotion Angry -require Bard AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002C5 -emotion Angry -require Bard AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002C6 -emotion Angry -require Bard AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x00000021 -emotion Angry -require Bard AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002C7 -emotion Angry -require Zealot AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x00000043 -emotion Angry -require Zealot AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002C8 -emotion Angry -require Zealot AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x00000044 -emotion Angry -require Ecologist AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002C9 -emotion Angry -require Ecologist AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002CA -emotion Angry -require Ecologist AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x00000045 -emotion Angry -require Trader AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002CB -emotion Angry -require Trader AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002CC -emotion Angry -require Trader AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x00000046 -emotion Angry -require Warrior AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002CD -emotion Angry -require Warrior AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002CE -emotion Angry -require Warrior AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x00000047 -emotion Angry -require Scientist AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002CF -emotion Angry -require Scientist AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002D0 -emotion Angry -require Scientist AttitudeAnnoyed -exclude MySpecies Grob
+	text space_diplomacy~!0x000002D1 -emotion Angry -require Grob AttitudeAnnoyed -exclude MySpecies
+	text space_diplomacy~!0x00000048 -emotion Angry -require Diplomat AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002D2 -emotion Angry -require Diplomat AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x00000049 -emotion Angry -require Shaman AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002D3 -emotion Angry -require Shaman AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x0000004A -emotion Angry -require Bard AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002D4 -emotion Angry -require Bard AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002D5 -emotion Angry -require Zealot AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x0000004B -emotion Angry -require Zealot AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002D6 -emotion Angry -require Zealot AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x0000004C -emotion Angry -require Ecologist AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002D7 -emotion Angry -require Ecologist AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x0000004D -emotion Angry -require Trader AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002D8 -emotion Angry -require Trader AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002D9 -emotion Angry -require Trader AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x0000004E -emotion Angry -require Warrior AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002DA -emotion Angry -require Warrior AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002DB -emotion Angry -require Warrior AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x00000028 -emotion Angry -require Warrior AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x0000004F -emotion Angry -require Scientist AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002DC -emotion Angry -require Scientist AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x000002DD -emotion Angry -require Scientist AttitudeFurious -exclude MySpecies Grob
+	text space_diplomacy~!0x00000006 -emotion Angry -require Grob AttitudeFurious -exclude MySpecies
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x0000006E -exclude AttitudeFurious
+		text space_diplomacy~!0x0000006F -exclude Grob
+		text space_diplomacy~!0x00000070
+		text space_diplomacy~!0x00000071 -exclude Grob
+		text space_diplomacy~!0x00000072
+		exclude AtWar
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x00000075
+		text space_diplomacy~!0x00000076
+		text space_diplomacy~!0x00000077
+		text space_diplomacy~!0x00000078
+		text space_diplomacy~!0x00000073
+		exclude AtWar
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!war_peace_offering.cnv
+		text space_diplomacy~!0x0000007A
+		require AtWar
+		exclude Grob
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x00000079
+		text space_diplomacy~!0x00000074
+		require AtWar
+	end
+end
+dialog teaching_explore_menu
+	text space_diplomacy~!0x00000285 -emotion Happy
+
+	response
+		action kCnvMission~ TutorialFindAliens
+		text space_diplomacy~!0x00000286
+		ints4 0x06E7602B
+	end
+	response
+		action kCnvMission~ TutorialFindRare
+		text space_diplomacy~!0x00000287
+		ints4 0x4AB09A80
+	end
+	response
+		action kCnvMission~ TutorialColorTerrainPurple
+		text space_diplomacy~!0x00000288
+		ints3 0x06E7602B
+		ints4 0xDD53B0F0
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!teaching_menu.cnv
+		text space_diplomacy~!0x0000028A
+	end
+end
+dialog peace_offering_failure
+	text space_diplomacy~!0x000000FC -require MySpecies
+	text space_diplomacy~!0x000005D1 -emotion Angry -require Diplomat
+	text space_diplomacy~!0x000005D2 -emotion Angry -require Diplomat
+	text space_diplomacy~!0x000005D3 -emotion Angry -require Ecologist
+	text space_diplomacy~!0x000005D4 -emotion Angry -require Ecologist
+	text space_diplomacy~!0x000005D5 -emotion Angry -require Bard
+	text space_diplomacy~!0x000005D6 -emotion Angry -require Bard
+	text space_diplomacy~!0x000005D7 -emotion Angry -require Zealot
+	text space_diplomacy~!0x000005D8 -emotion Angry -require Zealot
+	text space_diplomacy~!0x000005D9 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x000005DA -emotion Neutral -require Scientist
+	text space_diplomacy~!0x000005DB -emotion Neutral -require Trader
+	text space_diplomacy~!0x000005DC -emotion Neutral -require Trader
+	text space_diplomacy~!0x000005DD -emotion Neutral -require Shaman
+	text space_diplomacy~!0x000005DE -emotion Neutral -require Shaman
+	text space_diplomacy~!0x000005DF -emotion Angry -require Warrior
+	text space_diplomacy~!0x000005E0 -emotion Angry -require Warrior
+	text space_diplomacy~!0x000005E1 -emotion Neutral -require Grob
+
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x000000FD
+	end
+end
+dialog congratulations
+	value4 true
+
+	text space_diplomacy~!0x0000010F -emotion Happy -require MySpecies
+	text space_diplomacy~!0x00000058 -emotion Neutral -require Diplomat AttitudeCautiousOrBetter
+	text space_diplomacy~!0x000002DE -emotion Neutral -require Diplomat AttitudeCautiousOrBetter
+	text space_diplomacy~!0x000002DF -emotion Neutral -require Diplomat AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000059 -emotion Happy -require Bard AttitudeCautiousOrBetter
+	text space_diplomacy~!0x000002E0 -emotion Happy -require Bard AttitudeCautiousOrBetter
+	text space_diplomacy~!0x000002E1 -emotion Happy -require Bard AttitudeCautiousOrBetter
+	text space_diplomacy~!0x000002E2 -emotion Neutral -require Shaman AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000005A -emotion Neutral -require Shaman AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000005B -emotion Neutral -require Ecologist AttitudeCautiousOrBetter
+	text space_diplomacy~!0x000002E3 -emotion Happy -require Shaman AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000005C -emotion Happy -require Trader AttitudeCautiousOrBetter
+	text space_diplomacy~!0x000002E4 -emotion Happy -require Trader AttitudeCautiousOrBetter
+	text space_diplomacy~!0x000002E5 -emotion Neutral -require Zealot AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000005D -emotion Neutral -require Zealot AttitudeCautiousOrBetter
+	text space_diplomacy~!0x0000005E -emotion Neutral -require Scientist AttitudeCautiousOrBetter
+	text space_diplomacy~!0x000002E6 -emotion Neutral -require Scientist AttitudeCautiousOrBetter
+	text space_diplomacy~!0x000002E7 -emotion Neutral -require Warrior AttitudeCautiousOrBetter
+	text space_diplomacy~!0x000002E8 -emotion Neutral -require Warrior AttitudeCautiousOrBetter
+	text space_diplomacy~!0x00000060 -emotion Neutral -require Grob AttitudeCautiousOrBetter
+	text space_diplomacy~!0x000002E9 -emotion Angry -require Diplomat AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000002EA -emotion Angry -require Bard AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000002EB -emotion Angry -require Shaman AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000002EC -emotion Angry -require Ecologist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000002ED -emotion Angry -require Trader AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000002EE -emotion Angry -require Zealot AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000002EF -emotion Angry -require Scientist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000002F0 -emotion Angry -require Warrior AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000110 -emotion Angry -require Grob AttitudeAnnoyedOrWorse
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x00000534 -exclude Grob
+		text space_diplomacy~!0x00000535 -exclude Grob
+		text space_diplomacy~!0x00000536 -exclude Grob
+		text space_diplomacy~!0x00000537 -exclude Grob
+		text space_diplomacy~!0x00000538 -require Grob
+		exclude AtWar
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x0000053B
+		text space_diplomacy~!0x0000053C
+		text space_diplomacy~!0x0000053D
+		text space_diplomacy~!0x0000007B
+		text space_diplomacy~!0x0000053E
+		exclude AtWar
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!war_peace_offering.cnv
+		text space_diplomacy~!0x00000540
+		require AtWar
+		exclude Grob
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x0000053F
+		text space_diplomacy~!0x0000007C
+		require AtWar
+	end
+end
+dialog request_attack_declined_busy
+	value1 true
+
+	text space_diplomacy~!0x00000427 -emotion Sad -require Diplomat
+	text space_diplomacy~!0x00000428 -emotion Sad -require Ecologist
+	text space_diplomacy~!0x00000429 -emotion Sad -require Bard
+	text space_diplomacy~!0x0000042A -emotion Sad -require Zealot
+	text space_diplomacy~!0x0000042B -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000042C -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000042D -emotion Neutral -require Shaman
+	text space_diplomacy~!0x0000042E -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000042F -emotion Neutral -require Grob
+	text space_diplomacy~!0x000002F7
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x000002F6
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x000000CB
+	end
+end
+dialog first_contact_unfriendly
+	text space_diplomacy~!0x00000519 -emotion Gasp -require Diplomat
+	text space_diplomacy~!0x0000051A -emotion Gasp -require Diplomat
+	text space_diplomacy~!0x00000184 -emotion Gasp -require Bard
+	text space_diplomacy~!0x00000187 -emotion Gasp -require Bard
+	text space_diplomacy~!0x0000018A -emotion Gasp -require Shaman
+	text space_diplomacy~!0x0000018D -emotion Gasp -require Shaman
+	text space_diplomacy~!0x00000652 -emotion Gasp -require Ecologist
+	text space_diplomacy~!0x00000515 -emotion Gasp -require Ecologist
+	text space_diplomacy~!0x00000653 -emotion Afraid -require Trader
+	text space_diplomacy~!0x00000654 -emotion Afraid -require Trader
+	text space_diplomacy~!0x00000552 -emotion Gasp -require Scientist
+	text space_diplomacy~!0x00000553 -emotion Gasp -require Scientist
+	text space_diplomacy~!0x00000554 -emotion Angry -require Warrior
+	text space_diplomacy~!0x00000555 -emotion Angry -require Warrior
+	text space_diplomacy~!0x00000556 -emotion Angry -require Zealot
+	text space_diplomacy~!0x00000557 -emotion Angry -require Zealot
+	text space_diplomacy~!0x00000558 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000559 -emotion Neutral -require Grob
+
+	response
+		action kCnvRelationshipCommunicatedMean~
+		text space_diplomacy~!0x0000008F
+	end
+end
+dialog teaching_menu_after_201
+	text space_diplomacy~!0x00000118 -emotion Happy
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!teaching_explore_menu.cnv
+		text space_diplomacy~!0x00000119
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!teaching_expand_empire_menu.cnv
+		text space_diplomacy~!0x0000011A
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!teaching_other_empires_menu.cnv
+		text space_diplomacy~!0x0000011B
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x0000011C
+	end
+end
+dialog mission_main
+	value1 true
+	value4 true
+
+	text space_diplomacy~!0x0000055C -emotion Happy -require Diplomat
+	text space_diplomacy~!0x0000009B -emotion Happy -require Diplomat
+	text space_diplomacy~!0x0000055D -emotion Happy -require Diplomat
+	text space_diplomacy~!0x0000055E -emotion Happy -require Ecologist
+	text space_diplomacy~!0x0000055F -emotion Happy -require Ecologist
+	text space_diplomacy~!0x00000560 -emotion Happy -require Ecologist
+	text space_diplomacy~!0x00000561 -emotion Happy -require Bard
+	text space_diplomacy~!0x00000562 -emotion Happy -require Bard
+	text space_diplomacy~!0x00000563 -emotion Happy -require Bard
+	text space_diplomacy~!0x00000564 -emotion Happy -require Zealot
+	text space_diplomacy~!0x00000565 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000566 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000567 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000568 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000569 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000056A -emotion Happy -require Trader
+	text space_diplomacy~!0x0000056B -emotion Happy -require Trader
+	text space_diplomacy~!0x0000056C -emotion Happy -require Trader
+	text space_diplomacy~!0x0000056D -emotion Happy -require Shaman
+	text space_diplomacy~!0x0000056E -emotion Happy -require Shaman
+	text space_diplomacy~!0x0000056F -emotion Happy -require Shaman
+	text space_diplomacy~!0x00000570 -emotion Urgent -require Warrior
+	text space_diplomacy~!0x00000571 -emotion Urgent -require Warrior
+	text space_diplomacy~!0x00000572 -emotion Urgent -require Warrior
+	text space_diplomacy~!0x00000573 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000574 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000575 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000576 -emotion Happy -require Homeworld
+	text space_diplomacy~!0x00000577 -emotion Happy -require Homeworld
+	text space_diplomacy~!0x00000578 -emotion Happy -require Homeworld
+	text space_diplomacy~!0x000001F9 -emotion Happy -require Colony
+	text space_diplomacy~!0x000001FA -emotion Happy -require Colony
+	text space_diplomacy~!0x000001FB -emotion Happy -require Colony
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!teaching_menu.cnv
+		text space_diplomacy~!0x0000009C
+		require Homeworld
+		exclude HasAssignedMission
+	end
+	response
+		action kCnvMission~
+		text space_diplomacy~!0x0000009D
+		text space_diplomacy~!0x0000009E
+		text space_diplomacy~!0x0000009F
+		text space_diplomacy~!0x000000A0
+		exclude Homeworld AtWar HasAssignedMission
+	end
+	response
+		action 0x0C5D2701
+		text space_diplomacy~!0x000000AD
+		require ArchetypeMissionAvailable
+		exclude Grob HasActiveArchetypeMission
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!already_active_archetype_mission.cnv
+		text space_diplomacy~!0x000000B7
+		require Grob ArchetypeMissionAvailable HasActiveArchetypeMission
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!mission_info.cnv
+		text space_diplomacy~!0x000000A1
+		text space_diplomacy~!0x000000A2
+		text space_diplomacy~!0x000000A3
+		text space_diplomacy~!0x000000A4
+		require HasMissionConversation
+		exclude AtWar
+	end
+end
+dialog first_contact_friendly
+	text space_diplomacy~!0x00000111 -emotion Happy -require Diplomat
+	text space_diplomacy~!0x00000112 -emotion Happy -require Diplomat
+	text space_diplomacy~!0x00000114 -emotion Happy -require Bard
+	text space_diplomacy~!0x00000115 -emotion Happy -require Bard
+	text space_diplomacy~!0x00000117 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000180 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000182 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000183 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000185 -emotion Happy -require Trader
+	text space_diplomacy~!0x00000186 -emotion Happy -require Trader
+	text space_diplomacy~!0x00000188 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000189 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000018B -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000018C -emotion Neutral -require Warrior
+	text space_diplomacy~!0x00000513 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000514 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000516 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000008 -require Grob
+
+	response
+		action 0xAE44B32E
+		text space_diplomacy~!0x0000008B
+	end
+end
+dialog trade_route_declined_count
+	value1 true
+	value4 true
+
+	text space_diplomacy~!0x00000493 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000494 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000495 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000496 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000497 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000498 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000499 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x0000049A -emotion Neutral -require Zealot
+	text space_diplomacy~!0x0000049B -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000049C -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000049D -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000049E -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000049F -emotion Neutral -require Shaman
+	text space_diplomacy~!0x000004A0 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x000004A1 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x000004A2 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x000004A3 -emotion Neutral -require Grob
+	text space_diplomacy~!0x000004A4 -emotion Neutral -require Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x000000DD
+	end
+end
+dialog greeting_after_meeting_grob
+	value4 true
+
+	text space_diplomacy~!0x0000065B -emotion Urgent -require MySpecies
+	text space_diplomacy~!0x00000107 -emotion Urgent -require Diplomat -exclude MySpecies
+	text space_diplomacy~!0x000001AC -emotion Urgent -require Bard -exclude MySpecies
+	text space_diplomacy~!0x000001AD -emotion Urgent -require Shaman -exclude MySpecies
+	text space_diplomacy~!0x000001AE -emotion Urgent -require Ecologist -exclude MySpecies
+	text space_diplomacy~!0x000001AF -emotion Urgent -require Trader -exclude MySpecies
+	text space_diplomacy~!0x000001B0 -emotion Urgent -require Scientist -exclude MySpecies
+	text space_diplomacy~!0x000001B5 -emotion Urgent -require Warrior -exclude MySpecies
+	text space_diplomacy~!0x000001B6 -emotion Urgent -require Zealot -exclude MySpecies
+	text space_diplomacy~!0x000001B7 -emotion Urgent -require Grob -exclude MySpecies
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x0000065D
+	end
+end
+dialog trade_route_purchase_big_success
+	value4 true
+
+	text space_diplomacy~!0x000004F1 -emotion Happy -require Diplomat -exclude Alliance
+	text space_diplomacy~!0x000004F2 -emotion Happy -require Diplomat -exclude Alliance
+	text space_diplomacy~!0x000004F3 -emotion Happy -require Alliance Diplomat
+	text space_diplomacy~!0x000004F4 -emotion Happy -require Alliance Diplomat
+	text space_diplomacy~!0x000004F5 -emotion Happy -require Ecologist -exclude Alliance
+	text space_diplomacy~!0x000004F6 -emotion Happy -require Ecologist -exclude Alliance
+	text space_diplomacy~!0x000004F7 -emotion Happy -require Alliance Ecologist
+	text space_diplomacy~!0x000004F8 -emotion Happy -require Alliance Ecologist
+	text space_diplomacy~!0x000004F9 -emotion Happy -require Bard -exclude Alliance
+	text space_diplomacy~!0x000004FA -emotion Gasp -require Bard -exclude Alliance
+	text space_diplomacy~!0x000004FB -emotion Gasp -require Alliance Bard
+	text space_diplomacy~!0x000004FC -emotion Happy -require Alliance Bard
+	text space_diplomacy~!0x000004FD -emotion Happy -require Zealot -exclude Alliance
+	text space_diplomacy~!0x000004FE -emotion Happy -require Zealot -exclude Alliance
+	text space_diplomacy~!0x000004FF -emotion Happy -require Alliance Zealot
+	text space_diplomacy~!0x00000500 -emotion Happy -require Alliance Zealot
+	text space_diplomacy~!0x00000501 -emotion Happy -require Scientist -exclude Alliance
+	text space_diplomacy~!0x00000502 -emotion Happy -require Scientist -exclude Alliance
+	text space_diplomacy~!0x00000503 -emotion Neutral -require Alliance Scientist
+	text space_diplomacy~!0x00000504 -emotion Neutral -require Alliance Scientist
+	text space_diplomacy~!0x00000505 -emotion Happy -require Trader -exclude Alliance
+	text space_diplomacy~!0x00000506 -emotion Happy -require Trader -exclude Alliance
+	text space_diplomacy~!0x00000507 -emotion Happy -require Alliance Trader
+	text space_diplomacy~!0x00000508 -emotion Happy -require Alliance Trader
+	text space_diplomacy~!0x00000509 -emotion Happy -require Shaman -exclude Alliance
+	text space_diplomacy~!0x0000050A -emotion Happy -require Shaman -exclude Alliance
+	text space_diplomacy~!0x0000050B -emotion Happy -require Alliance Shaman
+	text space_diplomacy~!0x0000050C -emotion Happy -require Alliance Shaman
+	text space_diplomacy~!0x0000050D -emotion Neutral -require Warrior -exclude Alliance
+	text space_diplomacy~!0x0000050E -emotion Neutral -require Warrior -exclude Alliance
+	text space_diplomacy~!0x0000050F -emotion Neutral -require Alliance Warrior
+	text space_diplomacy~!0x00000510 -emotion Neutral -require Alliance Warrior
+	text space_diplomacy~!0x00000511 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000512 -emotion Neutral -require Grob
+
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x000000EC
+	end
+end
+dialog get_posse_accepted
+	value1 true
+	value4 true
+
+	text space_diplomacy~!0x00000406 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000407 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000408 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000409 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x0000040A -emotion Happy -require Bard
+	text space_diplomacy~!0x0000040B -emotion Happy -require Bard
+	text space_diplomacy~!0x0000040C -emotion Urgent -require Zealot
+	text space_diplomacy~!0x0000040D -emotion Happy -require Zealot
+	text space_diplomacy~!0x0000040E -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000040F -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000410 -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000411 -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000412 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x00000413 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x00000414 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000415 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000177 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000178 -emotion Neutral -require Shaman
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x000002F5
+	end
+end
+dialog give_gift_menu
+	text space_diplomacy~!0x000000BB -emotion Neutral -require Diplomat AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000000BC -emotion Neutral -require Diplomat AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000000BD -emotion Happy -require Diplomat AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000000BE -emotion Happy -require Diplomat AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000000BF -emotion Happy -require Alliance Diplomat
+	text space_diplomacy~!0x000000C0 -emotion Happy -require Alliance Diplomat
+	text space_diplomacy~!0x000000C1 -emotion Neutral -require Ecologist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000102 -emotion Neutral -require Ecologist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000123 -emotion Happy -require Ecologist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000124 -emotion Happy -require Ecologist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000125 -emotion Happy -require Alliance Ecologist
+	text space_diplomacy~!0x00000126 -emotion Happy -require Alliance Ecologist
+	text space_diplomacy~!0x00000127 -emotion Neutral -require Bard AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000128 -emotion Neutral -require Bard AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000129 -emotion Happy -require Bard AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x0000012A -emotion Happy -require Bard AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x0000018F -emotion Happy -require Alliance Bard
+	text space_diplomacy~!0x00000190 -emotion Happy -require Alliance Bard
+	text space_diplomacy~!0x00000191 -emotion Neutral -require Zealot AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000192 -emotion Neutral -require Zealot AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000193 -emotion Happy -require Zealot AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000194 -emotion Happy -require Zealot AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000195 -emotion Happy -require Alliance Zealot
+	text space_diplomacy~!0x00000196 -emotion Happy -require Alliance Zealot
+	text space_diplomacy~!0x00000197 -emotion Neutral -require Scientist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000198 -emotion Neutral -require Scientist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000199 -emotion Happy -require Scientist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x0000019A -emotion Happy -require Scientist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x0000019B -emotion Happy -require Alliance Scientist
+	text space_diplomacy~!0x0000019C -emotion Happy -require Alliance Scientist
+	text space_diplomacy~!0x000001B1 -emotion Neutral -require Trader AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000001B2 -emotion Happy -require Trader AttitudeCautiousOrBetter
+	text space_diplomacy~!0x000001B3 -emotion Happy -require Trader AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000001B4 -emotion Neutral -require Trader AttitudeAnnoyedOrWorse -exclude Alliance
+	text space_diplomacy~!0x00000329 -emotion Happy -require Alliance Trader
+	text space_diplomacy~!0x0000032A -emotion Happy -require Alliance Trader
+	text space_diplomacy~!0x0000032B -emotion Neutral -require Shaman AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000032C -emotion Neutral -require Shaman AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000032D -emotion Happy -require Shaman AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x0000032E -emotion Happy -require Shaman AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x0000032F -emotion Happy -require Alliance Shaman
+	text space_diplomacy~!0x00000330 -emotion Happy -require Alliance Shaman
+	text space_diplomacy~!0x00000331 -emotion Neutral -require Warrior AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000332 -emotion Neutral -require Warrior AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x00000333 -emotion Happy -require Warrior AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000334 -emotion Happy -require Warrior AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x00000335 -emotion Happy -require Alliance Warrior
+	text space_diplomacy~!0x00000336 -emotion Happy -require Alliance Warrior
+	text space_diplomacy~!0x00000337 -emotion Neutral -require Grob
+
+	response
+		action 0xDAC9A912
+		text space_diplomacy~!0x00000103
+		enableRequire LargeGiftMoneyAvailable
+	end
+	response
+		action 0xD13E4CA2
+		text space_diplomacy~!0x00000104
+		enableRequire MediumGiftMoneyAvailable
+	end
+	response
+		action 0x12D9113A
+		text space_diplomacy~!0x00000105
+		enableRequire SmallGiftMoneyAvailable
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x00000106
+	end
+end
+dialog diplomacy
+	value1 true
+	value4 true
+
+	text space_diplomacy~!0x000000A5 -emotion Neutral -require Diplomat AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000000C2 -emotion Neutral -require Diplomat AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000000CA -emotion Urgent -require Ecologist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000000CC -emotion Neutral -require Ecologist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000000CE -emotion Angry -require Bard AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000000D0 -emotion Angry -require Bard AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000000D2 -emotion Angry -require Zealot AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000000D5 -emotion Angry -require Zealot AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000000D7 -emotion Angry -require Scientist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000000D9 -emotion Angry -require Scientist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000000DB -emotion Angry -require Trader AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000000DC -emotion Angry -require Trader AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x0000010B -emotion Angry -require Warrior AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003DA -emotion Angry -require Warrior AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003DB -emotion Angry -require Shaman AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003DC -emotion Angry -require Shaman AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003DD -emotion Neutral -require Diplomat AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003DE -emotion Neutral -require Diplomat AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003DF -emotion Neutral -require Ecologist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003E0 -emotion Neutral -require Ecologist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003E1 -emotion Neutral -require Bard AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003E2 -emotion Neutral -require Bard AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003E3 -emotion Neutral -require Zealot AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003E4 -emotion Neutral -require Zealot AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003E5 -emotion Neutral -require Scientist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003E6 -emotion Neutral -require Scientist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003E7 -emotion Happy -require Trader AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003E8 -emotion Happy -require Trader AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003E9 -emotion Neutral -require Warrior AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003EA -emotion Neutral -require Warrior AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003EB -emotion Happy -require Shaman AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003EC -emotion Happy -require Shaman AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003ED -emotion Neutral -require Alliance Diplomat
+	text space_diplomacy~!0x000003EE -emotion Happy -require Alliance Diplomat
+	text space_diplomacy~!0x000003EF -emotion Neutral -require Alliance Ecologist
+	text space_diplomacy~!0x000003F0 -emotion Happy -require Alliance Ecologist
+	text space_diplomacy~!0x000003F1 -emotion Happy -require Alliance Zealot
+	text space_diplomacy~!0x000003F2 -emotion Happy -require Alliance Zealot
+	text space_diplomacy~!0x000003F3 -emotion Happy -require Alliance Bard
+	text space_diplomacy~!0x000003F4 -emotion Happy -require Alliance Bard
+	text space_diplomacy~!0x000003F5 -emotion Neutral -require Alliance Scientist
+	text space_diplomacy~!0x000003F6 -emotion Neutral -require Alliance Scientist
+	text space_diplomacy~!0x000003F7 -emotion Happy -require Alliance Trader
+	text space_diplomacy~!0x000003F8 -emotion Happy -require Alliance Trader
+	text space_diplomacy~!0x000003F9 -emotion Happy -require Alliance Warrior
+	text space_diplomacy~!0x000003FA -emotion Happy -require Alliance Warrior
+	text space_diplomacy~!0x000003FB -emotion Neutral -require Alliance Shaman
+	text space_diplomacy~!0x000003FC -emotion Neutral -require Alliance Shaman
+	text space_diplomacy~!0x000003FD -emotion Neutral -require Diplomat AttitudeAnnoyedOrWorse LargeEmpire
+	text space_diplomacy~!0x000003FE -emotion Neutral -require Ecologist AttitudeAnnoyedOrWorse LargeEmpire
+	text space_diplomacy~!0x000003FF -emotion Angry -require Bard AttitudeAnnoyedOrWorse LargeEmpire
+	text space_diplomacy~!0x00000400 -emotion Angry -require Zealot AttitudeAnnoyedOrWorse LargeEmpire
+	text space_diplomacy~!0x00000401 -emotion Neutral -require Scientist AttitudeAnnoyedOrWorse LargeEmpire
+	text space_diplomacy~!0x00000402 -emotion Neutral -require Trader AttitudeAnnoyedOrWorse LargeEmpire
+	text space_diplomacy~!0x00000403 -emotion Neutral -require Shaman AttitudeAnnoyedOrWorse LargeEmpire
+	text space_diplomacy~!0x00000404 -emotion Angry -require Warrior AttitudeAnnoyedOrWorse LargeEmpire
+	text space_diplomacy~!0x00000405 -emotion Neutral -require Grob
+	text space_diplomacy~!0x000000EB -emotion Neutral -require Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!philosophy.cnv
+		text space_diplomacy~!0x00000323
+		text space_diplomacy~!0x00000324
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!give_gift_menu.cnv
+		text space_diplomacy~!0x000000A6
+		exclude MySpecies AtWar
+	end
+	response
+		action 0xCA667561
+		text space_diplomacy~!0x000000A7
+		require Alliance CanHavePosse
+		exclude HasPosse
+	end
+	response
+		action 0x135594F5
+		text space_diplomacy~!0x000000A8
+		exclude MySpecies PlayerSaveEmpire AttitudeFurious HasTradeRoute
+	end
+	response
+		action 0xDAFF3CE0
+		text space_diplomacy~!0x000000A9
+		require Alliance
+		exclude UnderAttack PlayerSaveEmpire
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!request_attack_declined_busy.cnv
+		text space_diplomacy~!0x000000AA
+		require Alliance UnderAttack
+		exclude PlayerSaveEmpire
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!trade_route_purchase.cnv
+		text space_diplomacy~!0x000000AB
+		require TradeCaptureComplete
+		exclude PlayerSaveEmpire
+	end
+	response
+		action kCnvEndTradeRoute~
+		text space_diplomacy~!0x00000668
+		require HasTradeRoute
+		exclude MySpecies PlayerSaveEmpire
+	end
+	response
+		action 0x31484F2C
+		text space_diplomacy~!0x000000AE
+		text space_diplomacy~!0x000000AF
+		text space_diplomacy~!0x000000B0
+		text space_diplomacy~!0x000000B1
+		exclude MySpecies Alliance AtWar AttitudeFurious AttitudeAnnoyed
+	end
+	response
+		action 0xD95019BD
+		text space_diplomacy~!0x000000B2
+		text space_diplomacy~!0x000000B3
+		text space_diplomacy~!0x000000B4
+		text space_diplomacy~!0x000000B5
+		text space_diplomacy~!0x000000B6
+		require Alliance
+		exclude MySpecies
+	end
+	response # кнопка вызова мини-игр
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0x37C8C6B6
+	end
+	response # создатель мода
+		action kCnvCommEvent~ Prikol_diplomacy!ModCreator.cnv
+		text ModCreator!0xE6147379
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x000000B8
+	end
+end
+dialog already_active_archetype_mission
+	value1 true
+	value4 true
+
+	text space_diplomacy~!0x00000579 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x0000057B -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x0000057D -emotion Neutral -require Bard
+	text space_diplomacy~!0x0000057E -emotion Neutral -require Bard
+	text space_diplomacy~!0x0000057F -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000580 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000581 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000584 -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000585 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000586 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000587 -emotion Neutral -require Warrior
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x000000C3
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x000000BA
+	end
+end
+dialog first_colony_greetings
+	value4 true
+
+	text space_diplomacy~!0x00000001 -emotion Happy
+	text space_diplomacy~!0x0000011D -emotion Happy
+	text space_diplomacy~!0x0000011F -emotion Happy
+	text space_diplomacy~!0x00000121 -emotion Happy
+	text space_diplomacy~!0x00000122 -emotion Happy
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x00000655
+	end
+end
+dialog trade_route_purchase
+	value1 true
+	value4 true
+
+	text space_diplomacy~!0x000000DE -emotion Neutral -require Diplomat -exclude Alliance
+	text space_diplomacy~!0x0000012B -emotion Neutral -require Diplomat -exclude Alliance
+	text space_diplomacy~!0x0000012C -emotion Neutral -require Alliance Diplomat
+	text space_diplomacy~!0x0000012D -emotion Neutral -require Alliance Diplomat
+	text space_diplomacy~!0x0000012E -emotion Neutral -require Ecologist -exclude Alliance
+	text space_diplomacy~!0x0000012F -emotion Neutral -require Ecologist -exclude Alliance
+	text space_diplomacy~!0x00000130 -emotion Neutral -require Alliance Ecologist
+	text space_diplomacy~!0x00000338 -emotion Neutral -require Alliance Ecologist
+	text space_diplomacy~!0x00000339 -emotion Neutral -require Bard -exclude Alliance
+	text space_diplomacy~!0x0000033A -emotion Neutral -require Bard -exclude Alliance
+	text space_diplomacy~!0x0000033B -emotion Neutral -require Alliance Bard
+	text space_diplomacy~!0x0000033C -emotion Neutral -require Alliance Bard
+	text space_diplomacy~!0x0000033D -emotion Neutral -require Zealot -exclude Alliance
+	text space_diplomacy~!0x0000033E -emotion Neutral -require Zealot -exclude Alliance
+	text space_diplomacy~!0x0000033F -emotion Neutral -require Alliance Zealot
+	text space_diplomacy~!0x00000340 -emotion Neutral -require Alliance Zealot
+	text space_diplomacy~!0x00000341 -emotion Neutral -require Scientist -exclude Alliance
+	text space_diplomacy~!0x00000342 -emotion Neutral -require Scientist -exclude Alliance
+	text space_diplomacy~!0x00000343 -emotion Neutral -require Alliance Scientist
+	text space_diplomacy~!0x00000344 -emotion Neutral -require Alliance Scientist
+	text space_diplomacy~!0x00000345 -emotion Neutral -require Trader -exclude Alliance
+	text space_diplomacy~!0x00000346 -emotion Happy -require Trader -exclude Alliance
+	text space_diplomacy~!0x00000347 -emotion Happy -require Alliance Trader
+	text space_diplomacy~!0x00000348 -emotion Happy -require Alliance Trader
+	text space_diplomacy~!0x00000349 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x0000034A -emotion Neutral -require Shaman -exclude Alliance
+	text space_diplomacy~!0x0000034B -emotion Neutral -require Alliance Shaman -exclude Alliance
+	text space_diplomacy~!0x0000034C -emotion Neutral -require Alliance Shaman
+	text space_diplomacy~!0x0000034D -emotion Neutral -require Warrior -exclude Alliance
+	text space_diplomacy~!0x0000034E -emotion Neutral -require Warrior -exclude Alliance
+	text space_diplomacy~!0x0000034F -emotion Neutral -require Alliance Warrior
+	text space_diplomacy~!0x00000350 -emotion Neutral -require Alliance Warrior
+	text space_diplomacy~!0x00000351 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000352 -emotion Neutral -require Grob
+
+	response
+		action 0x12293370
+		text space_diplomacy~!0x000000DF
+		enableRequire PurchaseOfferMoneyAvailable5
+	end
+	response
+		action 0x12293371
+		text space_diplomacy~!0x000000E0
+		enableRequire PurchaseOfferMoneyAvailable4
+	end
+	response
+		action 0x12293376
+		text space_diplomacy~!0x000000E1
+		enableRequire PurchaseOfferMoneyAvailable3
+	end
+	response
+		action 0x12293377
+		text space_diplomacy~!0x000000E2
+		enableRequire PurchaseOfferMoneyAvailable2
+	end
+	response
+		action 0x12293374
+		text space_diplomacy~!0x000000E3
+		enableRequire PurchaseOfferMoneyAvailable1
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x000000E4
+	end
+end
+dialog request_attack_payment
+	text space_diplomacy~!0x0000044B -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x0000044C -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x0000044D -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x0000044E -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x0000044F -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000450 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000451 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000452 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000453 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000454 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000455 -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000456 -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000457 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000458 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000459 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000045A -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000045B -emotion Neutral -require Grob
+	text space_diplomacy~!0x0000045C -emotion Neutral -require Grob
+
+	response
+		action 0x4C113574
+		text space_diplomacy~!0x000000D3
+		enableRequire AttackMoneyAvailable
+	end
+	response
+		action 0x2027BC64
+		text space_diplomacy~!0x000000D4
+	end
+end
+dialog create_alliance_successful
+	text space_diplomacy~!0x0000061C -emotion Happy -require Diplomat
+	text space_diplomacy~!0x0000061D -emotion Happy -require Diplomat
+	text space_diplomacy~!0x0000061E -emotion Happy -require Ecologist
+	text space_diplomacy~!0x0000061F -emotion Happy -require Ecologist
+	text space_diplomacy~!0x00000620 -emotion Happy -require Bard
+	text space_diplomacy~!0x00000621 -emotion Happy -require Bard
+	text space_diplomacy~!0x00000622 -emotion Happy -require Zealot
+	text space_diplomacy~!0x00000623 -emotion Happy -require Zealot
+	text space_diplomacy~!0x00000624 -emotion Happy -require Scientist
+	text space_diplomacy~!0x00000625 -emotion Happy -require Scientist
+	text space_diplomacy~!0x00000626 -emotion Happy -require Trader
+	text space_diplomacy~!0x00000627 -emotion Happy -require Trader
+	text space_diplomacy~!0x00000628 -emotion Happy -require Shaman
+	text space_diplomacy~!0x00000629 -emotion Happy -require Shaman
+	text space_diplomacy~!0x0000062A -emotion Happy -require Warrior
+	text space_diplomacy~!0x0000062B -emotion Happy -require Warrior
+	text space_diplomacy~!0x0000062C -emotion Neutral -require Grob
+	text space_diplomacy~!0x0000062D -emotion Neutral -require Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x00000141
+		text space_diplomacy~!0x00000142
+		text space_diplomacy~!0x00000143
+		text space_diplomacy~!0x00000144
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x00000145
+		text space_diplomacy~!0x00000146
+		text space_diplomacy~!0x00000147
+		text space_diplomacy~!0x00000148
+	end
+end
+dialog peace_offering_big_failure
+	text space_diplomacy~!0x000000FA -emotion Neutral -require MySpecies
+	text space_diplomacy~!0x000005C0 -emotion Angry -require Diplomat
+	text space_diplomacy~!0x000005C1 -emotion Angry -require Diplomat
+	text space_diplomacy~!0x000005C2 -emotion Angry -require Ecologist
+	text space_diplomacy~!0x000005C3 -emotion Angry -require Ecologist
+	text space_diplomacy~!0x000005C4 -emotion Angry -require Bard
+	text space_diplomacy~!0x000005C5 -emotion Angry -require Bard
+	text space_diplomacy~!0x000005C6 -emotion Angry -require Zealot
+	text space_diplomacy~!0x000005C7 -emotion Angry -require Zealot
+	text space_diplomacy~!0x000005C8 -emotion Angry -require Scientist
+	text space_diplomacy~!0x000005C9 -emotion Angry -require Scientist
+	text space_diplomacy~!0x000005CA -emotion Angry -require Trader
+	text space_diplomacy~!0x000005CB -emotion Angry -require Trader
+	text space_diplomacy~!0x000005CC -emotion Angry -require Shaman
+	text space_diplomacy~!0x000005CD -emotion Angry -require Shaman
+	text space_diplomacy~!0x000005CE -emotion Angry -require Warrior
+	text space_diplomacy~!0x000005CF -emotion Angry -require Warrior
+	text space_diplomacy~!0x000005D0 -emotion Neutral -require Grob
+
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x000000FB
+	end
+end
+dialog under_disaster
+	text space_diplomacy~!0x00000303 -emotion Urgent -require Diplomat
+	text space_diplomacy~!0x00000304 -emotion Urgent -require Diplomat
+	text space_diplomacy~!0x00000305 -emotion Urgent -require Bard
+	text space_diplomacy~!0x00000306 -emotion Urgent -require Bard
+	text space_diplomacy~!0x00000307 -emotion Urgent -require Shaman
+	text space_diplomacy~!0x00000308 -emotion Urgent -require Shaman
+	text space_diplomacy~!0x00000309 -emotion Urgent -require Ecologist
+	text space_diplomacy~!0x0000030A -emotion Urgent -require Ecologist
+	text space_diplomacy~!0x0000030B -emotion Urgent -require Trader
+	text space_diplomacy~!0x0000030D -emotion Urgent -require Zealot
+	text space_diplomacy~!0x0000030E -emotion Urgent -require Zealot
+	text space_diplomacy~!0x0000030F -emotion Urgent -require Scientist
+	text space_diplomacy~!0x00000310 -emotion Urgent -require Scientist
+	text space_diplomacy~!0x00000311 -emotion Urgent -require Warrior
+	text space_diplomacy~!0x00000312 -emotion Urgent -require Warrior
+	text space_diplomacy~!0x00000313 -emotion Urgent -require Grob
+	text space_diplomacy~!0x00000314 -emotion Urgent -require Grob
+	text space_diplomacy~!0x0000030C -emotion Urgent -require Trader
+	text space_diplomacy~!0x0000019D -emotion Urgent -require MySpecies
+	text space_diplomacy~!0x000001A2 -emotion Urgent -require MySpecies
+	text space_diplomacy~!0x000001A3 -emotion Urgent -require MySpecies
+
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x0000010C
+	end
+end
+dialog request_attack_declined_count
+	text space_diplomacy~!0x00000442 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000443 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000444 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000445 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000446 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000447 -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000448 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000449 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000044A -emotion Neutral -require Grob
+
+	response
+		action 0x2027BC64
+		text space_diplomacy~!0x000000D1
+	end
+end
+dialog teaching_menu
+	text space_diplomacy~!0x0000027F -emotion Happy
+	text space_diplomacy~!0x00000300 -emotion Happy
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!teaching_explore_menu.cnv
+		text space_diplomacy~!0x00000280
+		require TeachingExploreMissionAvailable
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!teaching_expand_empire_menu.cnv
+		text space_diplomacy~!0x00000281
+		require TeachingExpandMissionAvailable
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!teaching_other_empires_menu.cnv
+		text space_diplomacy~!0x00000282
+		require TeachingInteractMissionAvailable
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x00000284
+	end
+end
+dialog break_alliance_successful
+	text space_diplomacy~!0x00000131 -emotion Sad -require Trader
+	text space_diplomacy~!0x00000132 -emotion Sad -require Diplomat
+	text space_diplomacy~!0x00000133 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000134 -emotion Sad -require Diplomat
+	text space_diplomacy~!0x00000613 -emotion Sad -require Diplomat
+	text space_diplomacy~!0x00000614 -emotion Sad -require Ecologist
+	text space_diplomacy~!0x00000615 -emotion Sad -require Bard
+	text space_diplomacy~!0x00000616 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000617 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000618 -emotion Sad -require Trader
+	text space_diplomacy~!0x00000619 -emotion Sad -require Shaman
+	text space_diplomacy~!0x0000061A -emotion Sad -require Warrior
+	text space_diplomacy~!0x0000061B -emotion Angry -require Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x00000135
+		text space_diplomacy~!0x00000136
+		text space_diplomacy~!0x00000137
+		text space_diplomacy~!0x00000138
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x00000139
+		text space_diplomacy~!0x0000013A
+		text space_diplomacy~!0x0000013B
+		text space_diplomacy~!0x0000013C
+	end
+end
+dialog default # главная страница
+	value4 true
+
+	text space_diplomacy~!0x0000007D -emotion Neutral -require MySpecies
+	text space_diplomacy~!0x0000007E -emotion Neutral -require MySpecies
+	text space_diplomacy~!0x0000007F -emotion Neutral -require MySpecies
+	text space_diplomacy~!0x00000080 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000081 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000082 -emotion Happy -require Bard
+	text space_diplomacy~!0x00000083 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000084 -emotion Neutral -require Shaman -exclude AtWar
+	text space_diplomacy~!0x00000085 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000086 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000087 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000088 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000089 -emotion Neutral -require Trader -exclude AtWar
+	text space_diplomacy~!0x00000090 -emotion Happy -require Trader -exclude AtWar
+	text space_diplomacy~!0x00000091 -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000092 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000093 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000094 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000095 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000096 -emotion Neutral -require Warrior -exclude AtWar
+	text space_diplomacy~!0x0000009A -emotion Neutral -require Warrior
+	text space_diplomacy~!0x000002F1 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x000002F2 -emotion Neutral -require Grob -exclude AtWar
+	text space_diplomacy~!0x000002F3 -emotion Neutral -require Grob
+	text space_diplomacy~!0x000002F4 -emotion Neutral -require Grob
+
+end
+dialog tutorial_mission_unavailable
+	text space_diplomacy~!0x00000166
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x00000167
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x00000168
+	end
+end
+dialog greeting_after_disaster_player_helped
+	value4 true
+
+	text space_diplomacy~!0x000001B8 -emotion Happy -require MySpecies
+	text space_diplomacy~!0x000001B9 -emotion Happy -require MySpecies
+	text space_diplomacy~!0x000001BA -emotion Happy -require MySpecies
+	text space_diplomacy~!0x000001BB -emotion Happy -require Diplomat -exclude MySpecies
+	text space_diplomacy~!0x000001BC -emotion Happy -require Diplomat -exclude MySpecies
+	text space_diplomacy~!0x000001BD -emotion Happy -require Diplomat -exclude MySpecies
+	text space_diplomacy~!0x000001BE -emotion Happy -require Bard -exclude MySpecies
+	text space_diplomacy~!0x000001BF -emotion Happy -require Bard -exclude MySpecies
+	text space_diplomacy~!0x000001C0 -emotion Happy -require Bard -exclude MySpecies
+	text space_diplomacy~!0x000001C1 -emotion Happy -require Shaman -exclude MySpecies
+	text space_diplomacy~!0x000001C2 -emotion Happy -require Shaman -exclude MySpecies
+	text space_diplomacy~!0x000001C3 -emotion Happy -require Shaman -exclude MySpecies
+	text space_diplomacy~!0x000001C4 -emotion Happy -require Ecologist -exclude MySpecies
+	text space_diplomacy~!0x000001C5 -emotion Happy -require Ecologist -exclude MySpecies
+	text space_diplomacy~!0x000001C6 -emotion Happy -require Ecologist -exclude MySpecies
+	text space_diplomacy~!0x000001C7 -emotion Happy -require Trader -exclude MySpecies
+	text space_diplomacy~!0x000001C8 -emotion Happy -require Trader -exclude MySpecies
+	text space_diplomacy~!0x000001C9 -emotion Happy -require Trader -exclude MySpecies
+	text space_diplomacy~!0x000001CA -emotion Happy -require Scientist -exclude MySpecies
+	text space_diplomacy~!0x000001CB -emotion Happy -require Scientist -exclude MySpecies
+	text space_diplomacy~!0x000001CC -emotion Happy -require Scientist -exclude MySpecies
+	text space_diplomacy~!0x000001CD -emotion Happy -require Warrior -exclude MySpecies
+	text space_diplomacy~!0x000001CE -emotion Happy -require Warrior -exclude MySpecies
+	text space_diplomacy~!0x000001CF -emotion Happy -require Warrior -exclude MySpecies
+	text space_diplomacy~!0x000001D0 -emotion Happy -require Zealot -exclude MySpecies
+	text space_diplomacy~!0x000001D1 -emotion Happy -require Zealot -exclude MySpecies
+	text space_diplomacy~!0x000001D2 -emotion Happy -require Zealot -exclude MySpecies
+	text space_diplomacy~!0x000001D3 -emotion Happy -require Grob -exclude MySpecies
+	text space_diplomacy~!0x000001D4 -emotion Happy -require Grob -exclude MySpecies
+	text space_diplomacy~!0x000001D5 -emotion Happy -require Grob -exclude MySpecies
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x000001D6
+		text space_diplomacy~!0x000001D7
+		text space_diplomacy~!0x000001D8
+	end
+end
+dialog war_peace_offering
+	text space_diplomacy~!0x000000F3 -require MySpecies
+	text space_diplomacy~!0x000005AF -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x000005B0 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x000005B1 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x000005B2 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x000005B3 -emotion Angry -require Bard
+	text space_diplomacy~!0x000005B4 -emotion Angry -require Bard
+	text space_diplomacy~!0x000005B5 -emotion Angry -require Zealot
+	text space_diplomacy~!0x000005B6 -emotion Angry -require Zealot
+	text space_diplomacy~!0x000005B7 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x000005B8 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x000005B9 -emotion Neutral -require Trader
+	text space_diplomacy~!0x000005BA -emotion Neutral -require Trader
+	text space_diplomacy~!0x000005BB -emotion Angry -require Shaman
+	text space_diplomacy~!0x000005BC -emotion Angry -require Shaman
+	text space_diplomacy~!0x000005BD -emotion Angry -require Warrior
+	text space_diplomacy~!0x000005BE -emotion Angry -require Warrior
+	text space_diplomacy~!0x000005BF -emotion Neutral -require Grob
+
+	response
+		action kCnvPeaceOffer5~
+		text space_diplomacy~!0x000000F4
+		enableRequire PeaceOfferMoneyAvailable5
+	end
+	response
+		action kCnvPeaceOffer4~
+		text space_diplomacy~!0x000000F5
+		enableRequire PeaceOfferMoneyAvailable4
+	end
+	response
+		action kCnvPeaceOffer3~
+		text space_diplomacy~!0x000000F6
+		enableRequire PeaceOfferMoneyAvailable3
+	end
+	response
+		action kCnvPeaceOffer2~
+		text space_diplomacy~!0x000000F7
+		enableRequire PeaceOfferMoneyAvailable2
+	end
+	response
+		action kCnvPeaceOffer1~
+		text space_diplomacy~!0x000000F8
+		enableRequire PeaceOfferMoneyAvailable1
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x000000F9
+	end
+end
+dialog peace_offering_big_success
+	text space_diplomacy~!0x00000100 -emotion Neutral -require MySpecies
+	text space_diplomacy~!0x000005F3 -emotion Happy -require Diplomat
+	text space_diplomacy~!0x000005F4 -emotion Happy -require Diplomat
+	text space_diplomacy~!0x000005F5 -emotion Happy -require Ecologist
+	text space_diplomacy~!0x000005F6 -emotion Happy -require Ecologist
+	text space_diplomacy~!0x000005F7 -emotion Happy -require Bard
+	text space_diplomacy~!0x000005F8 -emotion Happy -require Bard
+	text space_diplomacy~!0x000005F9 -emotion Happy -require Zealot
+	text space_diplomacy~!0x000005FA -emotion Happy -require Zealot
+	text space_diplomacy~!0x000005FB -emotion Happy -require Scientist
+	text space_diplomacy~!0x000005FC -emotion Happy -require Scientist
+	text space_diplomacy~!0x000005FD -emotion Happy -require Trader
+	text space_diplomacy~!0x000005FE -emotion Happy -require Trader
+	text space_diplomacy~!0x000005FF -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000600 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000601 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x00000602 -emotion Happy -require Warrior
+	text space_diplomacy~!0x00000603 -emotion Neutral -require Grob
+
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x00000101
+	end
+end
+dialog first_contact_neutral
+	text space_diplomacy~!0x00000517 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000518 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000009 -emotion Neutral -require Bard
+	text space_diplomacy~!0x0000000A -emotion Neutral -require Bard
+	text space_diplomacy~!0x0000000B -emotion Neutral -require Shaman
+	text space_diplomacy~!0x0000000F -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000022 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000056 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000065 -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000006B -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000097 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000098 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000099 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x000000AC -emotion Neutral -require Warrior
+	text space_diplomacy~!0x000000B9 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000113 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000116 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000181 -emotion Neutral -require Grob
+
+	response
+		action 0x577614C6
+		text space_diplomacy~!0x0000008D
+	end
+end
+dialog trade_route_declined_relationship
+	value1 true
+	value4 true
+
+	text space_diplomacy~!0x00000481 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000482 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000483 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000484 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000485 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000486 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000487 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000488 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000489 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000048A -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000048B -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000048C -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000048D -emotion Neutral -require Shaman
+	text space_diplomacy~!0x0000048E -emotion Neutral -require Shaman
+	text space_diplomacy~!0x0000048F -emotion Neutral -require Warrior
+	text space_diplomacy~!0x00000490 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x00000491 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000492 -emotion Neutral -require Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x000000DA
+	end
+end
+dialog mission_info
+	value1 true
+	value4 true
+
+	text space_diplomacy~!0x0000051B -emotion Neutral -require MySpecies
+	text space_diplomacy~!0x0000051C -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x0000051D -emotion Neutral -require Shaman
+	text space_diplomacy~!0x0000051E -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x0000051F -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000520 -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000521 -emotion Laugh -require Bard
+	text space_diplomacy~!0x00000522 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x00000523 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000524 -emotion Neutral -require Grob
+	text space_diplomacy~!0x00000525 -emotion Angry -require Grob
+
+end
+dialog first_greetings_after_uplift
+	value4 true
+
+	text space_diplomacy~!0x00000169 -emotion Happy -require Diplomat
+	text space_diplomacy~!0x0000016A -emotion Happy -require Bard
+	text space_diplomacy~!0x0000016B -emotion Happy -require Shaman
+	text space_diplomacy~!0x0000016C -emotion Happy -require Ecologist
+	text space_diplomacy~!0x0000016D -emotion Happy -require Trader
+	text space_diplomacy~!0x0000016E -emotion Happy -require Zealot
+	text space_diplomacy~!0x0000016F -emotion Happy -require Scientist
+	text space_diplomacy~!0x00000170 -emotion Happy -require Warrior
+	text space_diplomacy~!0x00000171 -emotion Happy -require Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x00000551
+	end
+end
+dialog trade_route_purchase_success
+	value4 true
+
+	text space_diplomacy~!0x000004D0 -emotion Neutral -require Diplomat -exclude Alliance
+	text space_diplomacy~!0x000004D1 -emotion Neutral -require Diplomat -exclude Alliance
+	text space_diplomacy~!0x000004D2 -emotion Neutral -require Alliance Diplomat
+	text space_diplomacy~!0x000004D3 -emotion Neutral -require Alliance Diplomat
+	text space_diplomacy~!0x000004D4 -emotion Neutral -require Ecologist -exclude Alliance
+	text space_diplomacy~!0x000004D5 -emotion Neutral -require Ecologist -exclude Alliance
+	text space_diplomacy~!0x000004D6 -emotion Happy -require Alliance Ecologist
+	text space_diplomacy~!0x000004D7 -emotion Neutral -require Alliance Ecologist
+	text space_diplomacy~!0x000004D8 -emotion Happy -require Bard -exclude Alliance
+	text space_diplomacy~!0x000004D9 -emotion Happy -require Bard -exclude Alliance
+	text space_diplomacy~!0x000004DA -emotion Happy -require Alliance Bard
+	text space_diplomacy~!0x000004DB -emotion Happy -require Alliance Bard
+	text space_diplomacy~!0x000004DC -emotion Neutral -require Zealot -exclude Alliance
+	text space_diplomacy~!0x000004DD -emotion Neutral -require Zealot -exclude Alliance
+	text space_diplomacy~!0x000004DE -emotion Neutral -require Alliance Zealot
+	text space_diplomacy~!0x000004DF -emotion Neutral -require Alliance Zealot
+	text space_diplomacy~!0x000004E0 -emotion Neutral -require Scientist -exclude Alliance
+	text space_diplomacy~!0x000004E1 -emotion Neutral -require Scientist -exclude Alliance
+	text space_diplomacy~!0x000004E2 -emotion Happy -require Alliance Scientist
+	text space_diplomacy~!0x000004E3 -emotion Neutral -require Alliance Scientist
+	text space_diplomacy~!0x000004E4 -emotion Happy -require Trader -exclude Alliance
+	text space_diplomacy~!0x000004E5 -emotion Happy -require Trader -exclude Alliance
+	text space_diplomacy~!0x000004E6 -emotion Happy -require Alliance Trader
+	text space_diplomacy~!0x000000E9 -emotion Happy -require Alliance Trader
+	text space_diplomacy~!0x000004E7 -emotion Happy -require Shaman -exclude Alliance
+	text space_diplomacy~!0x000004E8 -emotion Happy -require Shaman -exclude Alliance
+	text space_diplomacy~!0x000004E9 -emotion Happy -require Alliance Shaman
+	text space_diplomacy~!0x000004EA -emotion Happy -require Alliance Shaman
+	text space_diplomacy~!0x000004EB -emotion Neutral -require Warrior -exclude Alliance
+	text space_diplomacy~!0x000004EC -emotion Neutral -require Warrior -exclude Alliance
+	text space_diplomacy~!0x000004ED -emotion Neutral -require Alliance Warrior
+	text space_diplomacy~!0x000004EE -emotion Neutral -require Alliance Warrior
+	text space_diplomacy~!0x000004EF -emotion Neutral -require Grob
+	text space_diplomacy~!0x000004F0 -emotion Neutral -require Grob
+
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x000000EA
+	end
+end
+dialog under_grob_shock
+	text space_diplomacy~!0x0000010D -emotion Afraid -require MySpecies
+	text space_diplomacy~!0x00000667 -emotion Afraid -require MySpecies
+	text space_diplomacy~!0x00000604 -emotion Afraid -require Diplomat
+	text space_diplomacy~!0x000001A5 -emotion Afraid -require Diplomat
+	text space_diplomacy~!0x00000605 -emotion Afraid -require Ecologist
+	text space_diplomacy~!0x00000606 -emotion Afraid -require Ecologist
+	text space_diplomacy~!0x00000607 -emotion Afraid -require Bard
+	text space_diplomacy~!0x00000608 -emotion Afraid -require Bard
+	text space_diplomacy~!0x00000609 -emotion Afraid -require Zealot
+	text space_diplomacy~!0x0000060A -emotion Afraid -require Zealot
+	text space_diplomacy~!0x0000060B -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000060C -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000060D -emotion Afraid -require Trader
+	text space_diplomacy~!0x0000060E -emotion Afraid -require Trader
+	text space_diplomacy~!0x0000060F -emotion Afraid -require Shaman
+	text space_diplomacy~!0x00000610 -emotion Afraid -require Shaman
+	text space_diplomacy~!0x00000611 -emotion Afraid -require Warrior
+	text space_diplomacy~!0x00000612 -emotion Afraid -require Warrior
+
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x0000010E
+	end
+end
+dialog teaching_expand_empire_menu
+	text space_diplomacy~!0x0000028B -emotion Happy
+
+	response
+		action kCnvMission~ TutorialColonize
+		text space_diplomacy~!0x00000315
+		ints4 0x5ECA8A39
+	end
+	response
+		action kCnvMission~ TutorialTerraform
+		text space_diplomacy~!0x00000316
+		ints3 0x5ECA8A39
+		ints4 0xE90550D8
+	end
+	response
+		action kCnvMission~ TutorialTradespice
+		text space_diplomacy~!0x00000317
+		ints3 0x06E7602B
+		ints4 0xA74AC6DE
+	end
+	response
+		action kCnvMission~ TutorialTraderare
+		text space_diplomacy~!0x00000318
+		ints3 0x4AB09A80 0x06E7602B
+		ints4 0x079C9097
+	end
+	response
+		action kCnvMission~ TutorialSetupTradeRoute
+		text space_diplomacy~!0x00000319
+		ints3 0x06E7602B
+		ints4 0x5759425D
+	end
+	response
+		action kCnvMission~ TutorialWar
+		text space_diplomacy~!0x0000031A
+		ints3 0x5759425D 0x06E7602B
+		ints4 0xE38D9BB1
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!teaching_menu.cnv
+		text space_diplomacy~!0x0000031B
+	end
+end
+dialog myspecies_greeting_after_death_by_Grob
+	value4 true
+
+	text space_diplomacy~!0x00000174 -emotion Gasp
+	text space_diplomacy~!0x00000175 -emotion Gasp
+	text space_diplomacy~!0x00000176 -emotion Gasp
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x00000659
+	end
+end
+dialog teaching_other_empires_menu
+	text space_diplomacy~!0x0000031C -emotion Happy
+
+	response
+		action kCnvMission~ TutorialFindAliens
+		text space_diplomacy~!0x0000031D
+		ints4 0x06E7602B
+	end
+	response
+		action kCnvMission~ TutorialTradespice
+		text space_diplomacy~!0x0000031E
+		ints3 0x06E7602B
+		ints4 0xA74AC6DE
+	end
+	response
+		action kCnvMission~ TutorialSetupTradeRoute
+		text space_diplomacy~!0x0000031F
+		ints3 0x06E7602B
+		ints4 0x5759425D
+	end
+	response
+		action kCnvMission~ TutorialMakeally
+		text space_diplomacy~!0x00000320
+		ints3 0x06E7602B 0x5759425D
+		ints4 0xFF6F7429
+	end
+	response
+		action kCnvMission~ TutorialWar
+		text space_diplomacy~!0x00000321
+		ints3 0x5759425D 0x06E7602B
+		ints4 0xE38D9BB1
+	end
+	response
+		action kCnvCommEvent~ space_diplomacy~!teaching_menu.cnv
+		text space_diplomacy~!0x00000322
+	end
+end
+dialog give_gift_NoRelationship
+	text space_diplomacy~!0x000003A2 -emotion Neutral -require Diplomat AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003A3 -emotion Neutral -require Diplomat AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003A4 -emotion Neutral -require Diplomat AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003A5 -emotion Neutral -require Diplomat AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003A6 -emotion Neutral -require Alliance Diplomat
+	text space_diplomacy~!0x000003A7 -emotion Neutral -require Alliance Diplomat
+	text space_diplomacy~!0x000003A8 -emotion Angry -require Ecologist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003A9 -emotion Laugh -require Ecologist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003AA -emotion Neutral -require Ecologist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003AB -emotion Neutral -require Ecologist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003AC -emotion Neutral -require Alliance Ecologist
+	text space_diplomacy~!0x000003AD -emotion Neutral -require Alliance Ecologist
+	text space_diplomacy~!0x000003AE -emotion Gasp -require Bard AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003AF -emotion Gasp -require Bard AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003B0 -emotion Neutral -require Bard AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003B1 -emotion Neutral -require Bard AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003B2 -emotion Neutral -require Alliance Bard
+	text space_diplomacy~!0x000003B3 -emotion Neutral -require Alliance Bard
+	text space_diplomacy~!0x000003B4 -emotion Angry -require Zealot AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003B5 -emotion Angry -require Zealot AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003B6 -emotion Neutral -require Zealot AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003B7 -emotion Neutral -require Zealot AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003B8 -emotion Neutral -require Alliance Zealot
+	text space_diplomacy~!0x000003B9 -emotion Neutral -require Alliance Zealot
+	text space_diplomacy~!0x000003BA -emotion Neutral -require Scientist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003BB -emotion Neutral -require Scientist AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003BC -emotion Neutral -require Scientist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003BD -emotion Neutral -require Scientist AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003BE -emotion Neutral -require Alliance Scientist
+	text space_diplomacy~!0x000003BF -emotion Neutral -require Alliance Scientist
+	text space_diplomacy~!0x000003C0 -emotion Gasp -require Trader AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003C1 -emotion Angry -require Trader AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003C2 -emotion Neutral -require Trader AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003C3 -emotion Neutral -require Trader AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003C4 -emotion Neutral -require Alliance Trader
+	text space_diplomacy~!0x000003C5 -emotion Neutral -require Alliance Trader
+	text space_diplomacy~!0x000003C6 -emotion Angry -require Warrior AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003C7 -emotion Angry -require Warrior AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003C8 -emotion Neutral -require Warrior AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003C9 -emotion Neutral -require Warrior AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003CA -emotion Neutral -require Alliance Warrior
+	text space_diplomacy~!0x000003CB -emotion Neutral -require Alliance Warrior
+	text space_diplomacy~!0x000003CC -emotion Angry -require Shaman AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003CD -emotion Angry -require Shaman AttitudeAnnoyedOrWorse
+	text space_diplomacy~!0x000003CE -emotion Neutral -require Shaman AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003CF -emotion Neutral -require Shaman AttitudeCautiousOrBetter -exclude Alliance
+	text space_diplomacy~!0x000003D0 -emotion Neutral -require Alliance Shaman
+	text space_diplomacy~!0x000003D1 -emotion Neutral -require Alliance Shaman
+	text space_diplomacy~!0x000003D2 -emotion Angry -require Grob
+	text space_diplomacy~!0x000003D3 -emotion Angry -require Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x000003D4
+		text space_diplomacy~!0x000003D5
+		text space_diplomacy~!0x000003D6
+		text space_diplomacy~!0x000003D7
+		exclude AtWar
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x000003D8 -exclude AtWar
+		text space_diplomacy~!0x000003D9 -require AtWar
+	end
+end
+dialog philosophy
+	value1 true
+	value4 true
+
+	text space_diplomacy~!0x00000325 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000326 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000289 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000327 -emotion Neutral -require Bard
+	text space_diplomacy~!0x000001A4 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000328 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000526 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000527 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x0000066E -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000528 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000529 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000664 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x0000052A -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000052B -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000066F -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000670 -emotion Neutral -require Trader
+	text space_diplomacy~!0x0000052C -emotion Neutral -require Zealot
+	text space_diplomacy~!0x0000052D -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000665 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x0000052E -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000666 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x0000052F -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000530 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x00000531 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000066B -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000066C -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000066D -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000011E -emotion Neutral -require Grob
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x00000532
+	end
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x00000533
+	end
+end
+dialog myspecies_greeting_after_death
+	value4 true
+
+	text space_diplomacy~!0x00000656 -emotion Gasp
+	text space_diplomacy~!0x00000172 -emotion Gasp
+	text space_diplomacy~!0x00000173 -emotion Gasp
+
+	response
+		action kCnvCommEvent~ space_diplomacy~!default.cnv
+		text space_diplomacy~!0x00000657
+	end
+end
+dialog peace_offering_success
+	text space_diplomacy~!0x000000FE -require MySpecies
+	text space_diplomacy~!0x000005E2 -emotion Happy -require Diplomat
+	text space_diplomacy~!0x000005E3 -emotion Happy -require Diplomat
+	text space_diplomacy~!0x000005E4 -emotion Happy -require Ecologist
+	text space_diplomacy~!0x000005E5 -emotion Happy -require Ecologist
+	text space_diplomacy~!0x000005E6 -emotion Happy -require Bard
+	text space_diplomacy~!0x000005E7 -emotion Happy -require Bard
+	text space_diplomacy~!0x000005E8 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x000005E9 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x000005EA -emotion Neutral -require Scientist
+	text space_diplomacy~!0x000005EB -emotion Neutral -require Scientist
+	text space_diplomacy~!0x000005EC -emotion Happy -require Trader
+	text space_diplomacy~!0x000005ED -emotion Happy -require Trader
+	text space_diplomacy~!0x000005EE -emotion Neutral -require Shaman
+	text space_diplomacy~!0x000005EF -emotion Neutral -require Shaman
+	text space_diplomacy~!0x000005F0 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x000005F1 -emotion Happy -require Warrior
+	text space_diplomacy~!0x000005F2 -emotion Neutral -require Grob
+
+	response
+		action kCnvCloseComm~
+		text space_diplomacy~!0x000000FF
+	end
+end
+dialog request_attack_accepted
+	text space_diplomacy~!0x0000045D -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x0000045E -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x0000045F -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000460 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000461 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000462 -emotion Neutral -require Bard
+	text space_diplomacy~!0x00000463 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000464 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000465 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000466 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000467 -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000468 -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000469 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x0000046A -emotion Neutral -require Shaman
+	text space_diplomacy~!0x0000046B -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000046C -emotion Neutral -require Warrior
+	text space_diplomacy~!0x0000046D -emotion Neutral -require Grob
+	text space_diplomacy~!0x0000046E -emotion Neutral -require Grob
+
+	response
+		action 0x2027BC64
+		text space_diplomacy~!0x000000D6
+	end
+end
+dialog request_attack_declined_already_attacking
+	text space_diplomacy~!0x00000430 -emotion Neutral -require Diplomat
+	text space_diplomacy~!0x00000431 -emotion Neutral -require Ecologist
+	text space_diplomacy~!0x00000432 -emotion Gasp -require Bard
+	text space_diplomacy~!0x00000433 -emotion Neutral -require Zealot
+	text space_diplomacy~!0x00000434 -emotion Neutral -require Scientist
+	text space_diplomacy~!0x00000435 -emotion Neutral -require Trader
+	text space_diplomacy~!0x00000436 -emotion Neutral -require Shaman
+	text space_diplomacy~!0x00000437 -emotion Neutral -require Warrior
+	text space_diplomacy~!0x00000438 -emotion Neutral -require Grob
+
+	response
+		action 0x2027BC64
+		text space_diplomacy~!0x000000CD
+	end
+end
+
