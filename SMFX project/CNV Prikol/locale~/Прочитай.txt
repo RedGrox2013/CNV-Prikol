@@ -11,7 +11,7 @@ spore.com - http://www.spore.com/view/myspore/RedGrox
 На этапе "Космос":
 Зайди в панель переговоров > дипломатия > давайте сыграем в игру...
 
-Мод переодически обновляется. Новые версии выходят тут - https://github.com/RedGrox2013/CNV-Prikol/releases/new
+Мод переодически обновляется. Новые версии выходят тут - https://github.com/RedGrox2013/CNV-Prikol/releases
 В моде есть анимации, для того, чтобы музыка воспроизводилась, необходим мод Prikol или SmachnayaBEBRA (SmachnayaBEBRA включает в себя мод Prikol, по этому вам нужен только 1 из этих модов) - https://youtu.be/RN3gjIZBvq4
 
 Помог перевести на английский Зеленоид - https://www.youtube.com/channel/UCbJcB6MJciYAmjKKHpkgydA
