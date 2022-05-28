@@ -1,0 +1,88 @@
+# Экзамен взял у Небуди - https://www.youtube.com/watch?v=wv5r0UK-7hA
+
+dialog MemesExam00
+	text MemesExam!0x21008880
+	
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam01.cnv
+		text MemesExam!0x21008883
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog MemesExam01
+	text MemesExam!0x21008882
+	
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam02.cnv
+		text MemesExam!0x21008885
+	end
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam02.cnv
+		text MemesExam!0x21008884
+	end
+	response # Правильный ответ
+		action kCnvCommEvent~ MemesExam!MemesExam03.cnv
+		text MemesExam!0x21008887
+	end
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam02.cnv
+		text MemesExam!0x21008886
+	end
+end
+
+dialog MemesExam02
+	text MemesExam!0x21008889 -emotion Sad -exclude Grob
+	text MemesExam!0x21008889 -require Grob
+	
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam04.cnv
+		text MemesExam!0x21008888
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog MemesExam03
+	text MemesExam!0x2000872E -emotion Happy -exclude Grob
+	text MemesExam!0x2000872E -require Grob
+	
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam04.cnv
+		text MemesExam!0x21008888
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog MemesExam04
+	text MemesExam!0x2000872F
+	
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
