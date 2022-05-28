@@ -1,3 +1,13 @@
+#<#####################################################################################################################
+
+Этот файл отвечает за основные диалоги на этапе "Космос"
+Он был модифицирован с целью добавления кнопки "Давайте сыграем в игру..."
+
+######################################################################################################################>
+
+# 0 - выкл, 1 - вкл
+set military_capture_option_button 0 # Кнопка с мини-играми во время захвата системы
+
 dialog mission_unavailable
 	text space_diplomacy~!0x00000159 -emotion Neutral -require MySpecies
 	text space_diplomacy~!0x0000015A -emotion Neutral -require MySpecies
@@ -283,6 +293,12 @@ dialog military_capture_option
 		action 0xAB909E37
 		text space_diplomacy~!0x000000EF
 	end
+	if ($military_capture_option_button == true)
+		response # кнопка вызова мини-игр
+			action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+			text PrikolGameVariants!0x37C8C6B6
+		end
+	endif
 end
 dialog request_attack_declined_already_raided
 	text space_diplomacy~!0x00000439 -emotion Neutral -require Diplomat

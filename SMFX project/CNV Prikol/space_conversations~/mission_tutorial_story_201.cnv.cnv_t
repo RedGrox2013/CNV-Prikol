@@ -1,3 +1,14 @@
+#<########################################################################################################################
+
+Этот файл отвечает за миссию с руинами
+Он был модифицирован с целью добавление кнопки "Давайте сыграем в игру...", а так же дополнительных диалогов
+При желании вы можете убрать кнопку "Давайте сыграем в игру...". Для этого изменить значение game_button на false или на 0
+
+#########################################################################################################################>
+
+# 0 - выкл, 1 - вкл
+set game_button 1 # Кнопка для вызова мини-игр
+
 dialog mission_assign
 	text mission_tutorial_story_201!0x00000001
 
@@ -57,16 +68,18 @@ dialog defender_conversation_1
 		action kCnvCommEvent~ mission_tutorial_story_201!defender_conversation_2.cnv
 		text mission_tutorial_story_201!0x0000001C
 	end
-	response
+	response # Новые диалоги
 		action kCnvCommEvent~ mission_tutorial_story_201!0xDD0F716F.cnv
 		text 0x86327A08!0xF70FB9DC
 	end
-	response
-		action kCnvCommEvent~ Prikol_diplomacy!Prikol_gamemission_tutorial_story_201.cnv
-		text PrikolGameVariants!0x37C8C6B6
-	end
+	if ($game_button == true)
+		response # Кнопка для вызова мини-игр
+			action kCnvCommEvent~ Prikol_diplomacy!Prikol_gamemission_tutorial_story_201.cnv
+			text PrikolGameVariants!0x37C8C6B6
+		end
+	endif
 end
-dialog defender_conversation_4
+dialog defender_conversation_4 # Новые диалоги
 	showStatic true
 
 	text 0x86327A08!0x3EB7C4E5

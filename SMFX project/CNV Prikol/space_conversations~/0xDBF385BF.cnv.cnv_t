@@ -1,3 +1,13 @@
+#<#####################################################################################################################
+
+Этот файл отвечает за основные диалоги на этапе "Цивилизация"
+Он был модифицирован с целью добавления кнопки "Давайте сыграем в игру..."
+
+######################################################################################################################>
+
+# 0 - выкл, 1 - вкл
+set easter_egg 1 # Пасхалка
+
 dialog trade_route_offer_npc
 	text 0xDBF385BF!0x00000012 -emotion Happy -require SourceCivMilitary
 	text 0xDBF385BF!0x00000013 -emotion Happy -require SourceCivReligious
@@ -56,10 +66,13 @@ dialog player_contact_npc
 	response
 		action 0x70C14C34
 		text 0xDBF385BF!0x00000042
-		text 0xDBF385BF!0x00000042
-		text 0xDBF385BF!0x00000042
-		text 0xDBF385BF!0x00000042
-		text CNV_Prikol!0x70C14C34
+		if ($easter_egg == true)
+			text 0xDBF385BF!0x00000042
+			text 0xDBF385BF!0x00000042
+			text 0xDBF385BF!0x00000042
+			text 0xDBF385BF!0x00000042
+			text CNV_Prikol!0x70C14C34 # Пасхалка (вероятность её появления ~ 17%)
+		endif
 	end
 	response
 		action 0x26B14441
@@ -70,11 +83,11 @@ dialog player_contact_npc
 		text 0xDBF385BF!0x00000051
 		require AcceptsGifts
 	end
-	response
+	response # Кнопка для вызова мини-игр
 		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
 		text PrikolGameVariants!0x37C8C6B6
 	end
-	response
+	response # Информация о создателе
 		action kCnvCommEvent~ Prikol_diplomacy!ModCreator.cnv
 		text ModCreator!0xE6147379
 	end

@@ -1,47 +1,76 @@
+# Основной файл
+
+################################## НАСТРОЙКИ ##################################
+# 0 - выкл, 1 - вкл
+set missionAdventureTown 1 # Пройти приключение "Город приключений"
+set zagadka_truboglazki 1 # Загадка от Трубоглазки
+set zagadka_RedGrox 1 # Загадка от RedGrox'а
+set flex 1 # Станцуй танец
+set quest 1 # Квест
+set right_door 1 # Выбери правильную дверь, чтобы выжить
+set brawl_stars_test 1 # Тест "Кто ты из Бравл Старс"
+set strashilka 1 # Расскажи страшилку
+set social_credit 1 # Тест на социальный рейтинг
+###############################################################################
+
 dialog Prikol_game
 	text PrikolGameVariants!0xAB2B08C0 -emotion Happy -exclude Grob
 	text PrikolGameVariants!0x8AA8C319 -require Grob
 	
-	set missionAdventureTown true
-	
-	response
-		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki01.cnv
-		text PrikolGameVariants!0x214AA141
-	end
-	response
-		action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox.cnv
-		text PrikolGameVariants!0xC5FCD6E0
-	end
-	response
-		action kCnvCommEvent~ Prikol_diplomacy!Flex.cnv
-		text PrikolGameVariants!0xB3076251
-	end
-	response
-		action kCnvCommEvent~ Prikol_Quest!Quest.cnv
-		text PrikolGameVariants!0x6B5D0665
-	end
-	response
-		action kCnvCommEvent~ RightDoor!Door.cnv
-		text PrikolGameVariants!0x920369C1
-	end
-	response
-		action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars01.cnv
-		text PrikolGameVariants!0x345539A1
-	end
-	response
-		action kCnvCommEvent~ PrikolStrashilka!PrikolStrashilka01.cnv
-		text PrikolGameVariants!0x2801C9DE
-		require Grob
-	end
-	response
-		action kCnvCommEvent~ Prikol_social_credit!social_credit01.cnv
-		text PrikolGameVariants!0xD469F323
-		text PrikolGameVariants!0xD469F323
-		text PrikolGameVariants!0xD469F323
-		text Prikol_Chinese!0xDE812165
-	end
+	if ($zagadka_truboglazki == true)
+		response # Загадка от Трубоглазки
+			action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki01.cnv
+			text PrikolGameVariants!0x214AA141
+		end
+	endif
+	if ($zagadka_RedGrox == true)
+		response # Загадка от RedGrox'а
+			action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox.cnv
+			text PrikolGameVariants!0xC5FCD6E0
+		end
+	endif
+	if ($flex == true)
+		response # Станцуй танец
+			action kCnvCommEvent~ Prikol_diplomacy!Flex.cnv
+			text PrikolGameVariants!0xB3076251
+		end
+	endif
+	if ($quest == true)
+		response # Квест
+			action kCnvCommEvent~ Prikol_Quest!Quest.cnv
+			text PrikolGameVariants!0x6B5D0665
+		end
+	endif
+	if ($right_door == true)
+		response # Выбери правильную дверь, чтобы выжить
+			action kCnvCommEvent~ RightDoor!Door.cnv
+			text PrikolGameVariants!0x920369C1
+		end
+	endif
+	if ($brawl_stars_test == true)
+		response # Тест "Кто ты из Бравл Старс"
+			action kCnvCommEvent~ Prikol_BrawlStarsTest!BrawlStars01.cnv
+			text PrikolGameVariants!0x345539A1
+		end
+	endif
+	if ($strashilka == true)
+		response # Расскажи страшилку
+			action kCnvCommEvent~ PrikolStrashilka!PrikolStrashilka01.cnv
+			text PrikolGameVariants!0x2801C9DE
+			require Grob
+		end
+	endif
+	if ($social_credit == true)
+		response # Тест на социальный рейтинг
+			action kCnvCommEvent~ Prikol_social_credit!social_credit01.cnv
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text Prikol_Chinese!0xDE812165
+		end
+	endif
 	if ($missionAdventureTown == true)
-		response
+		response # Пройти приключение "Город приключений"
 			action kCnvMission~ AdventureTown
 			text PrikolGameVariants!0xB32D8F37
 			exclude Grob SourceCivMilitary SourceCivReligious SourceCivEconomic
@@ -71,19 +100,21 @@ dialog ModCreator
 	end#>
 end
 
-dialog Flex
-	text CNV_Prikol!0x6825B7B4 -emotion Flex -exclude Grob
-	text CNV_Prikol!0x039820A2 -emotion Flex -require Grob
+if ($flex == true)
+	dialog Flex
+		text CNV_Prikol!0x6825B7B4 -emotion Flex -exclude Grob
+		text CNV_Prikol!0x039820A2 -emotion Flex -require Grob
 	
-	response
-		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
-		text PrikolGameVariants!0xE8591AA0
+		response
+			action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+			text PrikolGameVariants!0xE8591AA0
+		end
+		response
+			action kCnvCommDefault~
+			text CNV_Prikol!0xE520516F
+		end
 	end
-	response
-		action kCnvCommDefault~
-		text CNV_Prikol!0xE520516F
-	end
-end
+endif
 
 dialog Prikol_gamemission_tutorial_story_201 # доделать
 	showStatic true
