@@ -11,6 +11,7 @@ set right_door 1 # Выбери правильную дверь, чтобы вы
 set brawl_stars_test 1 # Тест "Кто ты из Бравл Старс"
 set strashilka 1 # Расскажи страшилку
 set social_credit 1 # Тест на социальный рейтинг
+set dead_inside_test 1 # Тест на дед инсайда
 ###############################################################################
 
 dialog Prikol_game
@@ -69,6 +70,12 @@ dialog Prikol_game
 			text Prikol_Chinese!0xDE812165
 		end
 	endif
+	if ($dead_inside_test == true)
+		response # Тест на дед инсайда
+			action kCnvCommEvent~ DeadInsideTest!Dead_inside_test_00.cnv
+			text PrikolGameVariants!0x49DC96F2
+		end
+	endif
 	if ($missionAdventureTown == true)
 		response # Пройти приключение "Город приключений"
 			action kCnvMission~ AdventureTown
@@ -120,10 +127,12 @@ dialog Prikol_gamemission_tutorial_story_201 # доделать
 	showStatic true
 	text PrikolGameVariants!0xDE43F894
 	
-	response
-		action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki01_mission_tutorial_story_201.cnv
-		text PrikolGameVariants!0x214AA141
-	end
+	if ($zagadka_truboglazki == true)
+		response # Загадка от Трубоглазки
+			action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki01_mission_tutorial_story_201.cnv
+			text PrikolGameVariants!0x214AA141
+		end
+	endif
 	response
 		action kCnvCommEvent~ Prikol_diplomacy!ModCreator_mission_tutorial_story_201.cnv
 		text ModCreator!0xE6147379
