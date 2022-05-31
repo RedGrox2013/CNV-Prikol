@@ -17,6 +17,9 @@ dialog MemesExam00
 	end
 end
 
+#################################################### I этап ####################################################
+
+# 1 вопрос
 dialog MemesExam01
 	text MemesExam!0x21008882
 	
@@ -38,6 +41,7 @@ dialog MemesExam01
 	end
 end
 
+# Неверный ответ на вопрос 1
 dialog MemesExam02
 	text MemesExam!0x21008889 -emotion Sad -exclude Grob
 	text MemesExam!0x21008889 -require Grob
@@ -56,6 +60,7 @@ dialog MemesExam02
 	end
 end
 
+# Верный ответ на вопрос 1
 dialog MemesExam03
 	text MemesExam!0x2000872E -emotion Happy -exclude Grob
 	text MemesExam!0x2000872E -require Grob
@@ -74,8 +79,189 @@ dialog MemesExam03
 	end
 end
 
+# 2 вопрос
 dialog MemesExam04
 	text MemesExam!0x2000872F
+	
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam05.cnv
+		text MemesExam!0x2000872C
+	end
+	response # Правильный ответ
+		action kCnvCommEvent~ MemesExam!MemesExam06.cnv
+		text MemesExam!0x2000872D
+	end
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam05.cnv
+		text MemesExam!0x2000872A
+	end
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam05.cnv
+		text MemesExam!0x2000872B
+	end
+end
+
+# Неверный ответ на вопрос 2
+dialog MemesExam05
+	text MemesExam!0x20008728 -emotion Sad -exclude Grob
+	text MemesExam!0x20008728 -require Grob
+	
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam07.cnv
+		text MemesExam!0x21008888
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+# Верный ответ на вопрос 2
+dialog MemesExam06
+	text MemesExam!0x20008729 -emotion Happy -exclude Grob
+	text MemesExam!0x20008729 -require Grob
+	
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam07.cnv
+		text MemesExam!0x21008888
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+# 3 вопрос
+dialog MemesExam07
+	text MemesExam!0x20008726
+
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam08.cnv
+		text MemesExam!0x20008727
+	end
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam08.cnv
+		text MemesExam!0x1F0085BB
+	end
+	response # Правильный ответ
+		action kCnvCommEvent~ MemesExam!MemesExam09.cnv
+		text MemesExam!0x1F0085BA
+	end
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam08.cnv
+		text MemesExam!0x1F0085B9
+	end
+end
+
+# Неверный ответ на вопрос 3
+dialog MemesExam08
+	text MemesExam!0x1F0085BF -emotion Sad -exclude Grob
+	text MemesExam!0x1F0085BF -require Grob
+	
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam10.cnv
+		text MemesExam!0x21008888
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+# Верный ответ на вопрос 3
+dialog MemesExam09
+	text MemesExam!0x1F0085B8 -emotion Happy -exclude Grob
+	text MemesExam!0x1F0085B8 -require Grob
+	
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam10.cnv
+		text MemesExam!0x21008888
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+# 4 вопрос
+dialog MemesExam10
+	text MemesExam!0x1F0085BE
+	
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam11.cnv
+		text MemesExam!0x1F0085BD
+	end
+	response # Правильный ответ
+		action kCnvCommEvent~ MemesExam!MemesExam12.cnv
+		text MemesExam!0x1F0085BC
+	end
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam11.cnv
+		text MemesExam!0x1F0085B3
+	end
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam11.cnv
+		text MemesExam!0x1F0085B2
+	end
+end
+
+# Неверный ответ на вопрос 4
+dialog MemesExam11
+	text MemesExam!0x1E0083C8 -emotion Sad -exclude Grob
+	text MemesExam!0x1E0083C8 -require Grob
+	
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam13.cnv
+		text MemesExam!0x21008888
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+# Верный ответ на вопрос 4
+dialog MemesExam12
+	text MemesExam!0x1E0083C9 -emotion Happy -exclude Grob
+	text MemesExam!0x1E0083C9 -require Grob
+	
+	response
+		action kCnvCommEvent~ MemesExam!MemesExam13.cnv
+		text MemesExam!0x21008888
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+# 5 вопрос
+dialog MemesExam13
+	text MemesExam!0x1E0083CA
 	
 	response
 		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
