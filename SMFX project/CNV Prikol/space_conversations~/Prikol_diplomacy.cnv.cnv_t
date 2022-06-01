@@ -13,22 +13,17 @@ set strashilka 1 # Расскажи страшилку
 set social_credit 1 # Тест на социальный рейтинг
 set dead_inside_test 1 # Тест на дед инсайда
 set memes_exam 0 # Экзамен по мемам
+set zagadka_aloychik 1 # Загадка от Алойчика
 ###############################################################################
 
 dialog Prikol_game
 	text PrikolGameVariants!0xAB2B08C0 -emotion Happy -exclude Grob
 	text PrikolGameVariants!0x8AA8C319 -require Grob
 	
-	if ($zagadka_truboglazki == true)
-		response # Загадка от Трубоглазки
-			action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki01.cnv
-			text PrikolGameVariants!0x214AA141
-		end
-	endif
-	if ($zagadka_RedGrox == true)
-		response # Загадка от RedGrox'а
-			action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox.cnv
-			text PrikolGameVariants!0xC5FCD6E0
+	if ($zagadka_truboglazki == true or $zagadka_RedGrox == true or $zagadka_aloychik == true)
+		response # Загадки
+			action kCnvCommEvent~ Prikol_diplomacy!Riddles.cnv
+			text PrikolGameVariants!0x0C1F0327
 		end
 	endif
 	if ($flex == true)
@@ -65,6 +60,8 @@ dialog Prikol_game
 	if ($social_credit == true)
 		response # Тест на социальный рейтинг
 			action kCnvCommEvent~ Prikol_social_credit!social_credit01.cnv
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
 			text PrikolGameVariants!0xD469F323
 			text PrikolGameVariants!0xD469F323
 			text PrikolGameVariants!0xD469F323
@@ -119,6 +116,39 @@ if ($flex == true)
 		text CNV_Prikol!0x6825B7B4 -emotion Flex -exclude Grob
 		text CNV_Prikol!0x039820A2 -emotion Flex -require Grob
 	
+		response
+			action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+			text PrikolGameVariants!0xE8591AA0
+		end
+		response
+			action kCnvCommDefault~
+			text CNV_Prikol!0xE520516F
+		end
+	end
+endif
+
+if ($zagadka_truboglazki == true or $zagadka_RedGrox == true or $zagadka_aloychik == true)
+	dialog Riddles
+		text CNV_Prikol!0x6F987556
+	
+		if ($zagadka_truboglazki == true)
+			response # Загадка от Трубоглазки
+				action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki01.cnv
+				text PrikolGameVariants!0x214AA141
+			end
+		endif
+		if ($zagadka_RedGrox == true)
+			response # Загадка от RedGrox'а
+				action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox.cnv
+				text PrikolGameVariants!0xC5FCD6E0
+			end
+		endif
+		if ($zagadka_aloychik == true)
+			response # Загадка от Алойчика
+				action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik00.cnv
+				text PrikolGameVariants!0x27349B37
+			end
+		endif
 		response
 			action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
 			text PrikolGameVariants!0xE8591AA0

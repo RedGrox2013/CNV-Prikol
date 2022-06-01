@@ -1,0 +1,82 @@
+# Тут был Алойчик
+
+dialog Zagadka_Aloychik00
+	text CNV_Prikol!0x96F9F88E
+	
+	response
+		action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik01.cnv
+		text CNV_Prikol!0x96F9F88D
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik01.cnv
+		text CNV_Prikol!0x96F9F88C
+	end
+	response # Правильный ответ
+		action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik02.cnv
+		text CNV_Prikol!0x96F9F88B
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik01.cnv
+		text CNV_Prikol!0xEED057A0
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik01.cnv
+		text CNV_Prikol!0x4DAED495
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik01.cnv
+		text CNV_Prikol!0x4DAED494
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik01.cnv
+		text CNV_Prikol!0x4DAED49B
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik01.cnv
+		text CNV_Prikol!0x4DAED49A
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik01.cnv
+		text CNV_Prikol!0x4248CF3E
+	end
+	response
+		action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik01.cnv
+		text CNV_Prikol!0x91DACA71
+	end
+end
+
+dialog Zagadka_Aloychik01
+	text CNV_Prikol!0x4CAED320 -emotion Sad -exclude Grob
+	text CNV_Prikol!0x4CAED320 -require Grob
+	
+	response
+		action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik00.cnv
+		text CNV_Prikol!0xBFC00D23
+	end
+	response
+		action kCnvCloseComm~
+		text CNV_Prikol!0x4CAED322
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end
+
+dialog Zagadka_Aloychik02
+	text CNV_Prikol!0x4CAED325 -emotion Happy -exclude Grob
+	text CNV_Prikol!0x4CAED325 -require Grob
+	
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0x4CAED326
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
