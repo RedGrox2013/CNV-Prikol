@@ -1,9 +1,10 @@
-#<#####################################################################################################################
+#<########################################################################################################################
 
-Этот файл отвечает за анимации на этапах "Цивилизация" и "Космос"
+Этот файл отвечает за анимации в панели переговоров на этапах "Цивилизация" и "Космос"
 Он был модифицирован с целью добавления новых анимаций
+К сожалению, добавлять анимации в свой собственный файл без изменений этого нельзя (по карйней мере у меня не получилось)
 
-######################################################################################################################>
+#########################################################################################################################>
 
 animation Afraid
 	variation playerm
@@ -407,40 +408,40 @@ animation Happy
 end
 animation Flex
 	variation ecologist
-		idle Flex_01 Flex_02 Flex_03 Flex_04
-		action Flex_01 Flex_02 Flex_03 Flex_04
+		idle Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
+		action Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
 	end
 	variation shaman
-		idle Flex_01 Flex_02 Flex_03 Flex_04
-		action Flex_01 Flex_02 Flex_03 Flex_04
+		idle Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
+		action Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
 	end
 	variation trader
-		idle Flex_01 Flex_02 Flex_03 Flex_04
-		action Flex_01 Flex_02 Flex_03 Flex_04
+		idle Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
+		action Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
 	end
 	variation zealot
-		idle Flex_01 Flex_02 Flex_03 Flex_04
-		action Flex_01 Flex_02 Flex_03 Flex_04
+		idle Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
+		action Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
 	end
 	variation warrior
-		idle Flex_01 Flex_02 Flex_03 Flex_04
-		action Flex_01 Flex_02 Flex_03 Flex_04
+		idle Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
+		action Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
 	end
 	variation grob
-		idle GroxFlex Flex_01 Flex_02 Flex_03 Flex_04
+		idle GroxFlex Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
 		action GroxFlex
 	end
 	variation bard
-		idle Flex_01 Flex_02 Flex_03 Flex_04
-		action Flex_01 Flex_02 Flex_03 Flex_04
+		idle Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
+		action Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
 	end
 	variation scientist
-		idle Flex_01 Flex_02 Flex_03 Flex_04
-		action Flex_01 Flex_02 Flex_03 Flex_04
+		idle Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
+		action Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
 	end
 	variation diplomat
-		idle Flex_01 Flex_02 Flex_03 Flex_04
-		action Flex_01 Flex_02 Flex_03 Flex_04
+		idle Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
+		action Flex_01 Flex_02 Flex_03 Flex_04 CNV_Prikol_PolishCow
 	end
 end
 animation Fortnite
@@ -479,5 +480,43 @@ animation Fortnite
 	variation diplomat
 		idle PrikolFortnite
 		action PrikolFortnite
+	end
+end
+animation Cow
+	variation ecologist
+		idle CNV_Prikol_PolishCow
+		action CNV_Prikol_PolishCow
+	end
+	variation shaman
+		idle CNV_Prikol_PolishCow
+		action CNV_Prikol_PolishCow
+	end
+	variation trader
+		idle CNV_Prikol_PolishCow
+		action CNV_Prikol_PolishCow
+	end
+	variation zealot
+		idle CNV_Prikol_PolishCow
+		action CNV_Prikol_PolishCow
+	end
+	variation warrior
+		idle CNV_Prikol_PolishCow
+		action CNV_Prikol_PolishCow
+	end
+	variation grob
+		idle CNV_Prikol_PolishCow
+		action CNV_Prikol_PolishCow
+	end
+	variation bard
+		idle CNV_Prikol_PolishCow
+		action CNV_Prikol_PolishCow
+	end
+	variation scientist
+		idle CNV_Prikol_PolishCow
+		action CNV_Prikol_PolishCow
+	end
+	variation diplomat
+		idle CNV_Prikol_PolishCow
+		action CNV_Prikol_PolishCow
 	end
 end

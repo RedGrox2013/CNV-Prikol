@@ -10,6 +10,16 @@ anim GroxFlex "Grox Flex"
 	end
 end
 
+anim CNV_Prikol_PolishCow "Polish cow"
+	endMode 0
+	allowLocomotion false
+	priorityOverride 0
+
+	choice -probability 1
+		animation "CNV_Prikol_PolishCow"
+	end
+end
+
 anim PrikolFortnite "Fortnite"
 	endMode 0
 	allowLocomotion false
