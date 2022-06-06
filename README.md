@@ -36,18 +36,19 @@ ___
 ```
 ################################## НАСТРОЙКИ ##################################
 # 0 - выкл, 1 - вкл
-set missionAdventureTown 1 # Пройти приключение "Город приключений"
-set zagadka_truboglazki 1 # Загадка от Трубоглазки
-set zagadka_RedGrox 1 # Загадка от RedGrox'а
-set flex 1 # Станцуй танец
-set quest 1 # Квест
-set right_door 1 # Выбери правильную дверь, чтобы выжить
-set brawl_stars_test 1 # Тест "Кто ты из Бравл Старс"
-set strashilka 1 # Расскажи страшилку
-set social_credit 1 # Тест на социальный рейтинг
-set dead_inside_test 1 # Тест на дед инсайда
-set memes_exam 0 # Экзамен по мемам
-set zagadka_aloychik 1 # Загадка от Алойчика
+set missionAdventureTown 1  # Пройти приключение "Город приключений"
+set zagadka_truboglazki 1   # Загадка от Трубоглазки
+set zagadka_RedGrox 1       # Загадка от RedGrox'а
+set flex 1                  # Станцуй танец
+set quest 1                 # Квест
+set right_door 1            # Выбери правильную дверь, чтобы выжить
+set brawl_stars_test 1      # Тест "Кто ты из Бравл Старс"
+set strashilka 1            # Расскажи страшилку
+set social_credit 1         # Тест на социальный рейтинг
+set dead_inside_test 1      # Тест на дед инсайда
+set memes_exam 0            # Экзамен по мемам (в разработке)
+set zagadka_aloychik 1      # Загадка от Алойчика
+set zelenoid_math 0         # Математика от Зеленоида (в разработке)
 ###############################################################################
 ```
 
@@ -55,11 +56,9 @@ ___
 
 ## Создатели
 
-Мод сделали **RedGrox** (Дух Ияхо) и **Алойчик**
+Мод сделали **RedGrox** (Дух Ияхо), **Алойчик** и [**Зеленоид**](https://www.youtube.com/channel/UCbJcB6MJciYAmjKKHpkgydA)
 
 * [Основной канал](https://www.youtube.com/c/ДухИяхо)
 * [Второй канал](https://www.youtube.com/c/КрутойДухИяхо2013)
 * [Телеграм](https://t.me/SporeRedGroxMods)
 * [spore.com](http://www.spore.com/view/myspore/RedGrox)
-
-Помог перевести на английский [Зеленоид](https://www.youtube.com/channel/UCbJcB6MJciYAmjKKHpkgydA)
