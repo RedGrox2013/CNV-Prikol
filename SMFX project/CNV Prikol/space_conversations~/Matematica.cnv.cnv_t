@@ -1,0 +1,136 @@
+# Тут был Зеленоид
+
+dialog Matematica_00
+	text Matematica!0x49DC96F2
+	
+	response
+		action kCnvCommEvent~ Matematica!Matematica_01.cnv
+		text Matematica!0x49DC96F1 
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_01.cnv
+		text Matematica!0xAA1D5B76
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_01.cnv
+		text Matematica!0x75CB2501
+	end
+end
+
+dialog Matematica_01
+	text Matematica!0x49DC96F0
+	
+	response
+		action kCnvCommEvent~ Matematica!Matematica_02.cnv
+		text Matematica!0x49DC96F1
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_02.cnv
+		text Matematica!0xAA1D5B76
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_02.cnv
+		text Matematica!0x75CB2501
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_02.cnv
+		text Matematica!0x2DDA90BC
+	end
+end
+
+dialog Matematica_02
+	text Matematica!0x415EECC3
+	
+	response
+		action kCnvCommEvent~ Matematica!Matematica_03.cnv
+		text Matematica!0x7F07B758
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_03.cnv
+		text Matematica!0x49DC96F1
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_03.cnv
+		text Matematica!0x1D1CD4C1
+	end
+end
+	
+dialog Matematica_03
+	text Matematica!0xA9EFDCE3
+
+	response
+		action kCnvCommEvent~ Matematica!Matematica_04.cnv
+		text Matematica!0x3A72D292
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_04.cnv
+		text Matematica!0x1CEFA26C
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_04.cnv
+		text Matematica!0xDE609C02
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_04.cnv
+		text Matematica!0x2081B4FE
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_04.cnv
+		text Matematica!0x6377188C
+	end
+end
+
+dialog Matematica_04
+	text Matematica!0x20882EAE
+	
+	response
+		action kCnvCommEvent~ Matematica!Matematica_05.cnv
+		text Matematica!0x22706EEF
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_05.cnv
+		text Matematica!0x61E28573
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_05.cnv
+		text Matematica!0xE3403871
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_05.cnv
+		text DeadInsideTest!0xD8E23B8C
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_05.cnv
+		text Matematica!0x406CCC57
+	end
+end
+
+dialog Matematica_05
+	text Matematica!0x46842E90
+	
+	response
+		action kCnvCommEvent~ Matematica!Matematica_06.cnv
+		text Matematica!0x2E72D6B1
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_06.cnv
+		text Matematica!0xFFF4C8B8
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_06.cnv
+		text Matematica!0x368D104A
+	end
+	response
+		action kCnvCommEvent~ Matematica!Matematica_06.cnv
+		text Matematica!0x1988653B
+	end
+end
+
+dialog Matematica_06
+	text Matematica!0x408425E7
+	
+	response
+		action kCnvCommDefault~
+		text Matematica!0xF68B1821
+	end
+end

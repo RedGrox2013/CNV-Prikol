@@ -14,6 +14,7 @@ set social_credit 1 		# Тест на социальный рейтинг
 set dead_inside_test 1 		# Тест на дед инсайда
 set memes_exam 0 		# Экзамен по мемам (в разработке)
 set zagadka_aloychik 1 		# Загадка от Алойчика
+set zelenoid_math 1		# Математика от Зеленоида
 ###############################################################################
 
 dialog Prikol_game
@@ -80,6 +81,12 @@ dialog Prikol_game
 			text PrikolGameVariants!0x507EB959
 		end
 	endif
+	if ($zelenoid_math == true)
+		response # Математика от Зеленоида
+			action kCnvCommEvent~ Matematica!Matematica_00.cnv
+			text PrikolGameVariants!0x77E48439
+		end
+	endif
 	if ($missionAdventureTown == true)
 		response # Пройти приключение "Город приключений"
 			action kCnvMission~ AdventureTown
@@ -105,10 +112,6 @@ dialog ModCreator
 		action kCnvCommDefault~
 		text ModCreator!0xA55B5715
 	end
-	#<response
-		action ModCreatorTest
-		text ModCreator!0xA55B5715
-	end#>
 end
 
 if ($flex == true)
