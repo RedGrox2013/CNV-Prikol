@@ -1,0 +1,194 @@
+# Тут был Алойчик
+
+dialog HellTest_00
+	text HellTest!0x0AF22E25
+	
+	response
+		action kCnvCommEvent~ HellTest!HellTest_01.cnv
+		text HellTest!0x0AF22E26
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_01.cnv
+		text HellTest!0x0AF22E27
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_01.cnv
+		text HellTest!0x0AF22E21
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_01.cnv
+		text HellTest!0x6A166E8D
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
+
+dialog HellTest_01
+	text HellTest!0x6A166E8C
+	response
+		action kCnvCommEvent~ HellTest!HellTest_03.cnv
+		text HellTest!0x6A166E83
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_03.cnv
+		text HellTest!0x6A166E82
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_03.cnv
+		text HellTest!0x69166D18
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_03.cnv
+		text HellTest!0x69166D19
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_03.cnv
+		text HellTest!0x69166D1A
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_03.cnv
+		text HellTest!0x69166D1B
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_03.cnv
+		text HellTest!0x69166D1C
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
+
+dialog HellTest_03
+	text HellTest!0x6C1671D4
+	response
+		action kCnvCommEvent~ HellTest!HellTest_04.cnv
+		text HellTest!0x6C1671D7
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_04.cnv
+		text HellTest!0x6C1671D6
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_04.cnv
+		text HellTest!0x6C1671D9
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
+
+dialog HellTest_04
+	text HellTest!0x6C1671D8
+	response
+		action kCnvCommEvent~ HellTest!HellTest_05.cnv
+		text HellTest!0x6B16707F
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_05.cnv
+		text HellTest!0x6B16707C
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_05.cnv
+		text HellTest!0x6B16707D
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_05.cnv
+		text HellTest!0x6B16707A
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_05.cnv
+		text HellTest!0x6B16707B
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
+
+dialog HellTest_05
+	text HellTest!0x6B167078
+	response
+		action kCnvCommEvent~ HellTest!HellTest_06.cnv
+		text HellTest!0x6B167079
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_06.cnv
+		text HellTest!0x6B167076
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_06.cnv
+		text HellTest!0x6B167077
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
+
+dialog HellTest_06
+	text HellTest!0x6E167537
+	response
+		action kCnvCommEvent~ HellTest!HellTest_07.cnv
+		text HellTest!0x6E167536
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_07.cnv
+		text HellTest!0x6E167535
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_07.cnv
+		text HellTest!0x6E167534
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_08.cnv
+		text HellTest!0x6E167533
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_07.cnv
+		text HellTest!0x6E167532
+	end
+	response
+		action kCnvCommEvent~ HellTest!HellTest_07.cnv
+		text HellTest!0x6E167531
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
+
+dialog HellTest_07
+	text HellTest!0x6E167530
+	text HellTest!0x6D167344
+	text HellTest!0x6D167345
+	text HellTest!0x6D167346
+	text HellTest!0x6D167342
+	text HellTest!0x6D167343
+	text HellTest!0x6D16734C
+	text HellTest!0x6D16734D
+	text HellTest!0x7016781D
+	text HellTest!0x7016781C
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+	response
+		action kCnvCloseComm~
+		text HellTest!0x7016781F
+	end
+end
+dialog HellTest_08
+	text HellTest!0x7016781E -emotion Afraid
+	response
+		action kCnvCloseComm~
+		text HellTest!0x70167819
+	end
+end
