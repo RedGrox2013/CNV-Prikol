@@ -1,0 +1,23 @@
+# Тут будут игры только для своих)
+
+dialog AloeGames
+	text PrikolGameVariants!0xEFFC7922
+	
+	response # Тест "Какая ты адская тварь"
+		action kCnvCommEvent~ HellTest!HellTest_00.cnv
+		text PrikolGameVariants!0x71697CA4
+	end
+	response # Тест на дед инсайда
+		action kCnvCommEvent~ DeadInsideTest!Dead_inside_test_00.cnv
+		text PrikolGameVariants!0x49DC96F2
+	end
+	
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xE520516F
+	end
+end

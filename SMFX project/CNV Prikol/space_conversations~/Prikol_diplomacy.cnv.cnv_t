@@ -2,29 +2,33 @@
 
 ################################## НАСТРОЙКИ ##################################
 # 0 - выкл, 1 - вкл
+set riddles 1			# Загадки
 set missionAdventureTown 1 	# Пройти приключение "Город приключений"
-set zagadka_truboglazki 1 	# Загадка от Трубоглазки
-set zagadka_RedGrox 1 		# Загадка от RedGrox'а
 set flex 1 			# Станцуй танец
 set quest 1 			# Квест
 set right_door 1 		# Выбери правильную дверь, чтобы выжить
 set brawl_stars_test 1 		# Тест "Кто ты из Бравл Старс"
 set strashilka 1 		# Расскажи страшилку
 set social_credit 1 		# Тест на социальный рейтинг
-set dead_inside_test 1 		# Тест на дед инсайда
 set memes_exam 0 		# Экзамен по мемам (в разработке)
-set zagadka_aloychik 1 		# Загадка от Алойчика
-set zelenoid_math 0		# Математика от Зеленоида (в разработке)
+set aloe_games 1			# Aloe Games
 ###############################################################################
+# К сожалению, некоторые настройки пришлось объединить
 
 dialog Prikol_game
 	text PrikolGameVariants!0xAB2B08C0 -emotion Happy -exclude Grob
 	text PrikolGameVariants!0x8AA8C319 -require Grob
 	
-	if ($zagadka_truboglazki == true or $zagadka_RedGrox == true or $zagadka_aloychik == true)
+	if ($riddles == true)
 		response # Загадки
 			action kCnvCommEvent~ Prikol_diplomacy!Riddles.cnv
 			text PrikolGameVariants!0x0C1F0327
+		end
+	endif
+	if ($aloe_games == true)
+		response # Aloe Games
+			action kCnvCommEvent~ Prikol_AloeGames!AloeGames.cnv
+			text PrikolGameVariants!0x8E339D8F
 		end
 	endif
 	if ($flex == true)
@@ -69,22 +73,10 @@ dialog Prikol_game
 			text Prikol_Chinese!0xDE812165
 		end
 	endif
-	if ($dead_inside_test == true)
-		response # Тест на дед инсайда
-			action kCnvCommEvent~ DeadInsideTest!Dead_inside_test_00.cnv
-			text PrikolGameVariants!0x49DC96F2
-		end
-	endif
 	if ($memes_exam == true)
 		response # Экзамен по мемам
 			action kCnvCommEvent~ MemesExam!MemesExam00.cnv
 			text PrikolGameVariants!0x507EB959
-		end
-	endif
-	if ($zelenoid_math == true)
-		response # Математика от Зеленоида
-			action kCnvCommEvent~ Matematica!Matematica_00.cnv
-			text PrikolGameVariants!0x77E48439
 		end
 	endif
 	if ($missionAdventureTown == true)
@@ -94,6 +86,7 @@ dialog Prikol_game
 			exclude Grob SourceCivMilitary SourceCivReligious SourceCivEconomic
 		end
 	endif
+	
 	response
 		action kCnvCommEvent~ Prikol_diplomacy!ModCreator.cnv
 		text ModCreator!0xE6147379
@@ -130,28 +123,22 @@ if ($flex == true)
 	end
 endif
 
-if ($zagadka_truboglazki == true or $zagadka_RedGrox == true or $zagadka_aloychik == true)
+if ($riddles == true)
 	dialog Riddles
 		text CNV_Prikol!0x6F987556
-	
-		if ($zagadka_truboglazki == true)
-			response # Загадка от Трубоглазки
-				action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki01.cnv
-				text PrikolGameVariants!0x214AA141
-			end
-		endif
-		if ($zagadka_RedGrox == true)
-			response # Загадка от RedGrox'а
-				action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox.cnv
-				text PrikolGameVariants!0xC5FCD6E0
-			end
-		endif
-		if ($zagadka_aloychik == true)
-			response # Загадка от Алойчика
-				action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik00.cnv
-				text PrikolGameVariants!0x27349B37
-			end
-		endif
+		
+		response # Загадка от Трубоглазки
+			action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki01.cnv
+			text PrikolGameVariants!0x214AA141
+		end
+		response # Загадка от RedGrox'а
+			action kCnvCommEvent~ Zagadka_RedGrox!Zagadka_RedGrox.cnv
+			text PrikolGameVariants!0xC5FCD6E0
+		end
+		response # Загадка от Алойчика
+			action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik00.cnv
+			text PrikolGameVariants!0x27349B37
+		end
 		response
 			action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
 			text PrikolGameVariants!0xE8591AA0
@@ -167,7 +154,7 @@ dialog Prikol_gamemission_tutorial_story_201 # доделать
 	showStatic true
 	text PrikolGameVariants!0xDE43F894
 	
-	if ($zagadka_truboglazki == true)
+	if ($riddles == true)
 		response # Загадка от Трубоглазки
 			action kCnvCommEvent~ Zagadka_Truboglazki!Zagadka_Truboglazki01_mission_tutorial_story_201.cnv
 			text PrikolGameVariants!0x214AA141
