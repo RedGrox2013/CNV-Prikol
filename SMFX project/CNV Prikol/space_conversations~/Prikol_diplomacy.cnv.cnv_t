@@ -3,7 +3,6 @@
 ################################## НАСТРОЙКИ ##################################
 # 0 - выкл, 1 - вкл
 set riddles 1			# Загадки
-set missionAdventureTown 1 	# Пройти приключение "Город приключений"
 set flex 1 			# Станцуй танец
 set quest 1 			# Квест
 set right_door 1 		# Выбери правильную дверь, чтобы выжить
@@ -77,13 +76,6 @@ dialog Prikol_game
 		response # Экзамен по мемам
 			action kCnvCommEvent~ MemesExam!MemesExam00.cnv
 			text PrikolGameVariants!0x507EB959
-		end
-	endif
-	if ($missionAdventureTown == true)
-		response # Пройти приключение "Город приключений"
-			action kCnvMission~ AdventureTown
-			text PrikolGameVariants!0xB32D8F37
-			exclude Grob SourceCivMilitary SourceCivReligious SourceCivEconomic
 		end
 	endif
 	
@@ -177,5 +169,19 @@ dialog ModCreator_mission_tutorial_story_201
 	response
 		action kCnvCommEvent~ Prikol_diplomacy!Prikol_gamemission_tutorial_story_201.cnv
 		text ModCreator!0xA55B5715
+	end
+end
+
+dialog Prikol_mission
+	text PrikolGameVariants!0xD7A911A2
+	
+	response # Пройти приключение "Город приключений"
+		action kCnvMission~ AdventureTown
+		text PrikolGameVariants!0xB32D8F37
+	end
+	
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xD7A911A2
 	end
 end

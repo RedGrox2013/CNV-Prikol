@@ -990,6 +990,11 @@ dialog mission_main
 		require HasMissionConversation
 		exclude AtWar
 	end
+	response # Новые задания
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_mission.cnv
+		text PrikolGameVariants!0x6087B1AB
+		exclude MySpecies AtWar HasAssignedMission
+	end
 end
 dialog first_contact_friendly
 	text space_diplomacy~!0x00000111 -emotion Happy -require Diplomat
