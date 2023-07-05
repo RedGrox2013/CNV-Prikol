@@ -1,15 +1,9 @@
-# Тут будут игры только для своих)
-
 dialog AloeGames
 	text PrikolGameVariants!0xEFFC7922
 	
-	response # Тест "Какая ты адская тварь"
-		action kCnvCommEvent~ HellTest!HellTest_00.cnv
-		text PrikolGameVariants!0x71697CA4
-	end
-	response # Тест на дед инсайда
-		action kCnvCommEvent~ DeadInsideTest!Dead_inside_test_00.cnv
-		text PrikolGameVariants!0x49DC96F2
+	response # Загадка от Алойчика
+		action kCnvCommEvent~ Zagadka_Aloychik!Zagadka_Aloychik00.cnv
+		text PrikolGameVariants!0x27349B37
 	end
 	
 	response
