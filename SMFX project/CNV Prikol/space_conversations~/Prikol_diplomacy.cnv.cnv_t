@@ -93,14 +93,10 @@ dialog ModCreator
 	text ModCreator!0x0B172445 -emotion Happy -exclude Grob
 	text ModCreator!0x0B172445 -require Grob
 	
-	#<response
-		action test
+	response
+		action kOpenUrl
 		text ModCreator!0xA55B5715
 	end
-	response
-		action test2
-		text ModCreator!0xA55B5715
-	end#>
 	response
 		action kCnvCommDefault~
 		text ModCreator!0xA55B5715
