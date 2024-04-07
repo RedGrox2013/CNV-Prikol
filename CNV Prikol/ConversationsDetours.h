@@ -6,3 +6,8 @@ member_detour(HandleSpaceCommAction__detour, Simulator::cCommManager, void(const
 {
 	void detoured(const Simulator::CnvAction & action, uint32_t source, Simulator::PlanetID planetKey, void* pMission);
 };
+
+member_detour(HandleCivCommAction__detour, Simulator::cCommManager, void(const Simulator::CnvAction&, void*, Simulator::cCity*, Simulator::cCity*))
+{
+	void detoured(const Simulator::CnvAction & action, void* pSourceCiv, Simulator::cCity * pSourceCity, Simulator::cCity * pTargetCity);
+};

@@ -24,6 +24,7 @@ void AttachDetours()
 	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
 
 	HandleSpaceCommAction__detour::attach(GetAddress(Simulator::cCommManager, HandleSpaceCommAction));
+	HandleCivCommAction__detour::attach(GetAddress(Simulator::cCommManager, HandleCivCommAction));
 }
 
 
