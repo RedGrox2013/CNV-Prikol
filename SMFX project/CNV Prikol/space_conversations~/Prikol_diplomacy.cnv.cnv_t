@@ -94,8 +94,24 @@ dialog ModCreator
 	text ModCreator!0x0B172445 -require Grob
 	
 	response
-		action kOpenUrl
-		text ModCreator!0xA55B5715
+		action kOpenUrl CNV_Prikol_URLs!FirstYouTubeChannel.prop
+		text ModCreator!0x8FA4E0B1
+	end
+	response
+		action kOpenUrl CNV_Prikol_URLs!SecondYouTubeChannel.prop
+		text ModCreator!0x8448A6DD
+	end
+	response
+		action kOpenUrl CNV_Prikol_URLs!GitHub.prop
+		text ModCreator!0x6CE82084
+	end
+	response
+		action kOpenUrl CNV_Prikol_URLs!Discord.prop
+		text ModCreator!discord
+	end
+	response
+		action kOpenUrl CNV_Prikol_URLs!Telegram.prop
+		text ModCreator!telegram
 	end
 	response
 		action kCnvCommDefault~
