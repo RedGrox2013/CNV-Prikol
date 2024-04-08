@@ -3,7 +3,11 @@
 #include <shellapi.h>
 #include <Spore/Properties.h>
 
-CustomAction::CustomAction(const Simulator::CnvAction& action)
+using namespace Simulator;
+
+vector<uint32_t> CustomAction::_tributeEmpires;
+
+CustomAction::CustomAction(const CnvAction& action)
 	: _action(action)
 {
 	if (!IsCustom())
@@ -22,14 +26,15 @@ bool CustomAction::IsCustom() const
 	{
 	case CommActions::kCustonAction:
 	case CommActions::kOpenUrl:
+	case CommActions::kCollectTribute:
 		return true;
 	default:
 		return false;
 	}
 }
 
-Simulator::CnvAction CustomAction::GetAction() const { return _action; }
-Simulator::CnvAction CustomAction::GetNextAction() const { return _nextAction; }
+CnvAction CustomAction::GetAction() const { return _action; }
+CnvAction CustomAction::GetNextAction() const { return _nextAction; }
 
 void CustomAction::OpenUrl()
 {
@@ -40,7 +45,7 @@ void CustomAction::OpenUrl()
 	ShellExecuteA(NULL, "open", url, NULL, NULL, SW_SHOW);
 }
 
-void CustomAction::HandleCivCommAction(void* pSourceCiv, Simulator::cCity* pSourceCity, Simulator::cCity* pTargetCity)
+void CustomAction::HandleCivCommAction(void* pSourceCiv, cCity* pSourceCity, cCity* pTargetCity)
 {
 	switch (_action.actionID)
 	{
@@ -50,12 +55,28 @@ void CustomAction::HandleCivCommAction(void* pSourceCiv, Simulator::cCity* pSour
 	}
 }
 
-void CustomAction::HandleSpaceCommAction(uint32_t source, Simulator::PlanetID planetKey, void* pMission)
+void CustomAction::HandleSpaceCommAction(uint32_t source, PlanetID planetKey, void* pMission)
 {
 	switch (_action.actionID)
 	{
 	case CommActions::kOpenUrl:
 		OpenUrl();
+		break;
+	case CommActions::kCollectTribute:
+		for (uint32_t i : _tributeEmpires)
+			if (i == source) {
+#ifdef _DEBUG
+				App::ConsolePrintF("This empire has already paid tribute");
+#endif
+				return;
+			}
+
+		_tributeEmpires.push_back(source);
+		RelationshipManager.ApplyRelationship(source, GetPlayerEmpireID(), kRelationshipEventInsult, 2);
+		cEmpire* empire = StarManager.GetEmpire(source);
+		if (empire->mEmpireMoney >= 10000)
+			empire->mEmpireMoney -= 10000;
+		
 		break;
 	}
 }

@@ -10,7 +10,8 @@ enum CommActions : uint32_t
 
 	// Custom
 	kCustonAction = id("kCustonAction"),
-	kOpenUrl = id("kOpenUrl")
+	kOpenUrl = id("kOpenUrl"),
+	kCollectTribute = id("kCollectTribute")
 };
 
 class CustomAction
@@ -18,6 +19,7 @@ class CustomAction
 private:
 	Simulator::CnvAction _action, _nextAction;
 	PropertyListPtr _prop;
+	static vector<uint32_t> _tributeEmpires;
 
 	void OpenUrl();
 public:
