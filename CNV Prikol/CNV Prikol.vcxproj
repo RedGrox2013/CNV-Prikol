@@ -99,11 +99,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConversationsDetours.h" />
+    <ClInclude Include="CustomAction.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConversationsDetours.cpp" />
+    <ClCompile Include="CustomAction.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
