@@ -1,3 +1,2 @@
 uint32 nextAction hash(kCnvCommEvent~)
 key actionKey Prikol_diplomacy!ModCreator.cnv
-bool nextActionIsCustom false
