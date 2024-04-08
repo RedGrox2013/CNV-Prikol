@@ -23,7 +23,7 @@ static bool HundleAction(Simulator::CnvAction& action, uint32_t source, Simulato
 		char* url = nullptr;
 		if (PropManager.GetPropertyList(action.key.instanceID, action.key.groupID, prop)) {
 			App::Property::GetCString8(prop.get(), id("url"), url);
-			App::Property::GetUInt32(prop.get(), id("action"), action.actionID);
+			App::Property::GetUInt32(prop.get(), id("nextAction"), action.actionID);
 			App::Property::GetKey(prop.get(), id("actionKey"), action.key);
 			App::Property::GetBool(prop.get(), id("nextActionIsCustom"), isCustom);
 		}

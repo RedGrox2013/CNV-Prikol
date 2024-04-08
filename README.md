@@ -56,7 +56,7 @@ end
 string8 url "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 
 # Следующее действие, которое будет совершено после этого
-uint32 action hash(kCnvCommEvent~)
+uint32 nextAction hash(kCnvCommEvent~)
 
 # ResourceKey для этого действия
 key actionKey Prikol_diplomacy!ModCreator.cnv
