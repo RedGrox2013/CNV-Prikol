@@ -8,6 +8,9 @@
 В моде есть анимации, для того, чтобы музыка воспроизводилась, необходим мод [Prikol](https://www.youtube.com/watch?v=O9_V5AUnSss) или [SmachnayaBEBRA](https://www.youtube.com/watch?v=LRsF8qaEPvQ) (SmachnayaBEBRA включает в себя мод Prikol, по этому вам нужен только 1 из этих модов)
 
 Для работы мода требуется [Spore ModAPI Launcher](https://davoonline.com/sporemodder/rob55rod/ModAPI/Public/) (кроме версии [v1.0](https://github.com/RedGrox2013/CNV-Prikol/releases/tag/v1.0) и более старых, они работают так)
+
+На данный момент мод находится в разработке. Новая версия будет использовать Mod API (она пока что недоступна). Как только я закончу работать над ней, вы сможете скачать её в релизах. А пока что вы можете скачать старую версию без плюшек из Mod API или, если вам не терпится, скомпилировать мод самостоятельно.
+
 ___
 
 ## Как зайти в мини-игры
@@ -60,9 +63,6 @@ uint32 nextAction hash(kCnvCommEvent~)
 
 # ResourceKey для этого действия
 key actionKey Prikol_diplomacy!ModCreator.cnv
-
-# Если следующее действие из мода, указываем true, если из игры - false
-bool nextActionIsCustom false
 ```
 
 ___
