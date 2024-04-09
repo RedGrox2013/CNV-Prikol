@@ -1,6 +1,7 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "stdafx.h"
 #include "ConversationsDetours.h"
+#include "SaveListener.h"
 
 void Initialize()
 {
@@ -11,6 +12,10 @@ void Initialize()
 	//  - Add new game modes
 	//  - Add new space tools
 	//  - Change materials
+
+	SaveListenerPtr saveListener = new SaveListener();
+	MessageManager.AddListener(saveListener.get(), Simulator::kMsgSaveGame);
+	MessageManager.AddListener(saveListener.get(), App::kMsgOnModeEnter);
 }
 
 void Dispose()

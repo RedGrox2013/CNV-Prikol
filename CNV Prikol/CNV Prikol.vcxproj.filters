@@ -25,6 +25,15 @@
     <ClInclude Include="CustomAction.h">
       <Filter>CNV Prikol</Filter>
     </ClInclude>
+    <ClInclude Include="CNVPrikolManager.h">
+      <Filter>CNV Prikol</Filter>
+    </ClInclude>
+    <ClInclude Include="SocialCredit.h">
+      <Filter>CNV Prikol</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveListener.h">
+      <Filter>CNV Prikol</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -37,6 +46,12 @@
       <Filter>CNV Prikol</Filter>
     </ClCompile>
     <ClCompile Include="CustomAction.cpp">
+      <Filter>CNV Prikol</Filter>
+    </ClCompile>
+    <ClCompile Include="CNVPrikolManager.cpp">
+      <Filter>CNV Prikol</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveListener.cpp">
       <Filter>CNV Prikol</Filter>
     </ClCompile>
   </ItemGroup>
