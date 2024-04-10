@@ -1,12 +1,15 @@
 #include "stdafx.h"
 #include "CNVPrikolManager.h"
 #include <Shlobj.h>
+#include <Spore/Properties.h>
 
 CNVPrikolManager CNVPrikolManager::_instance;
 
-CNVPrikolManager::CNVPrikolManager() { }
-
-CNVPrikolManager* CNVPrikolManager::Get() { return &_instance; }
+CNVPrikolManager::CNVPrikolManager()
+{
+	PropManager.GetGlobalPropertyList(id("CNVPrikolConfig"), _config);
+	App::Property::GetBool(_config.get(), id("debugMode"), _debugMode);
+}
 
 int32_t CNVPrikolManager::GetSocialCredit(uint32_t politicalID)
 {
@@ -41,18 +44,13 @@ inline const string16 CNVPrikolManager::GetSavePath()
 
 void CNVPrikolManager::SaveSpaceData()
 {
-	size_t size = _socialCredit.size();
-	if (size == 0 || !Simulator::IsSpaceGame())
+	if (!Simulator::IsSpaceGame() || _socialCredit.size() == 0)
 		return;
 
 	auto path = GetSavePath();
 	FileStreamPtr stream = new IO::FileStream(path.c_str());
 	stream->Open(IO::AccessFlags::Write, IO::CD::CreateAlways);
-	IO::WriteUInt32(stream.get(), &size);
-	for (auto sc : _socialCredit) {
-		IO::WriteInt32(stream.get(), &sc.point);
-		IO::WriteUInt32(stream.get(), &sc.politicalID);
-	}
+	SaveSocialCredit(stream);
 
 	stream->Close();
 }
@@ -62,16 +60,14 @@ void CNVPrikolManager::LoadSpaceData()
 	if (!Simulator::IsSpaceGame())
 		return;
 
-#ifdef _DEBUG
-	App::ConsolePrintF("Load CNV Prikol save...\nSocial credit:");
-#endif // _DEBUG
-
-
 	_socialCredit.clear();
 	auto path = GetSavePath();
 	FileStreamPtr stream = new IO::FileStream(path.c_str());
-	if (!stream->Open(IO::AccessFlags::Read, IO::CD::OpenExisting))
+	if (!stream->Open(IO::AccessFlags::Read, IO::CD::OpenExisting)) {
+		if (_debugMode)
+			ShowDebugInfo(PrikolManagerDebugInfo::LoadFailed);
 		return;
+	}
 
 	size_t size;
 	IO::ReadUInt32(stream.get(), &size);
@@ -80,12 +76,36 @@ void CNVPrikolManager::LoadSpaceData()
 		IO::ReadInt32(stream.get(), &credit.point);
 		IO::ReadUInt32(stream.get(), &credit.politicalID);
 		_socialCredit.push_back(credit);
-
-#ifdef _DEBUG
-		App::ConsolePrintF("Political ID: %d; social credit: %d",
-			credit.politicalID, credit.point);
-#endif // _DEBUG
 	}
 
 	stream->Close();
+
+	if (_debugMode)
+		ShowDebugInfo(PrikolManagerDebugInfo::LoadData);
+}
+
+void CNVPrikolManager::ShowDebugInfo(PrikolManagerDebugInfo info)
+{
+	switch (info)
+	{
+	case PrikolManagerDebugInfo::LoadData:
+		App::ConsolePrintF("Load CNV Prikol save...\nSocial credit:");
+		for (auto credit : _socialCredit)
+			App::ConsolePrintF("Political ID: %d; social credit: %d",
+				credit.politicalID, credit.point);
+		break;
+	}
+}
+
+inline void CNVPrikolManager::SaveSocialCredit(FileStreamPtr stream)
+{
+	size_t size = _socialCredit.size();
+	if (size == 0)
+		return;
+
+	IO::WriteUInt32(stream.get(), &size);
+	for (auto sc : _socialCredit) {
+		IO::WriteInt32(stream.get(), &sc.point);
+		IO::WriteUInt32(stream.get(), &sc.politicalID);
+	}
 }
