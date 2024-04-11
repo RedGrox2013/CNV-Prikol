@@ -1,0 +1,14 @@
+# Для этапа "Космос"
+
+dialog social_credit_start
+	text PrikolSocialCredit!0x058E11DB
+	
+	response
+		action kCnvCommDefault~
+		text PrikolSocialCredit!0xB7C9CAD2
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end

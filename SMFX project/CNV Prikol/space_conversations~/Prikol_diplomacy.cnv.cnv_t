@@ -69,6 +69,37 @@ dialog Prikol_game
 			text PrikolGameVariants!0xD469F323
 			text PrikolGameVariants!0xD469F323
 			text Prikol_Chinese!0xDE812165
+			require SourceCivMilitary
+		end
+		response # Тест на социальный рейтинг
+			action kCnvCommEvent~ Prikol_social_credit!social_credit01.cnv
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text Prikol_Chinese!0xDE812165
+			require SourceCivEconomic
+		end
+		response # Тест на социальный рейтинг
+			action kCnvCommEvent~ Prikol_social_credit!social_credit01.cnv
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text Prikol_Chinese!0xDE812165
+			require SourceCivReligious
+		end
+		response # Тест на социальный рейтинг
+			action kCnvCommEvent~ Prikol_socialCredit!social_credit_start.cnv
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text PrikolGameVariants!0xD469F323
+			text Prikol_Chinese!0xDE812165
+			exclude SourceCivMilitary SourceCivReligious SourceCivEconomic
 		end
 	endif
 	#<if ($memes_exam == true)

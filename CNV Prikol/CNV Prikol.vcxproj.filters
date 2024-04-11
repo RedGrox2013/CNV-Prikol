@@ -34,6 +34,12 @@
     <ClInclude Include="SaveListener.h">
       <Filter>CNV Prikol</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CNVPrikolTokenTranslator.h">
+      <Filter>CNV Prikol</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -54,6 +60,9 @@
     <ClCompile Include="SaveListener.cpp">
       <Filter>CNV Prikol</Filter>
     </ClCompile>
+    <ClCompile Include="CNVPrikolTokenTranslator.cpp">
+      <Filter>CNV Prikol</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SdkPathConfig.props" />
@@ -62,5 +71,10 @@
     <Text Include="ReadMe.txt">
       <Filter>Internal</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CNV Prikol.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

@@ -3,6 +3,7 @@
 #include "ConversationsDetours.h"
 #include "SaveListener.h"
 #include "CNVPrikolManager.h"
+#include "CNVPrikolTokenTranslator.h"
 
 void Initialize()
 {
@@ -21,6 +22,8 @@ void Initialize()
 	SaveListenerPtr saveListener = new SaveListener();
 	MessageManager.AddListener(saveListener.get(), Simulator::kMsgSaveGame);
 	MessageManager.AddListener(saveListener.get(), App::kMsgOnModeEnter);
+
+	LocaleManager.GetStringDetokenizer()->AddTranslator(new CNVPrikolTokenTranslator());
 }
 
 void Dispose()
@@ -40,8 +43,8 @@ void AttachDetours()
 
 // Generally, you don't need to touch any code here
 BOOL APIENTRY DllMain( HMODULE hModule,
-                       DWORD  ul_reason_for_call,
-                       LPVOID lpReserved
+					   DWORD  ul_reason_for_call,
+					   LPVOID lpReserved
 					 )
 {
 	switch (ul_reason_for_call)
