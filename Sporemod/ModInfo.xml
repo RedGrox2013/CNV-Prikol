@@ -1,0 +1,9 @@
+<mod displayName="CNV Prikol" unique="CNVPrikol" description="Мод на мини-игры и не только" installerSystemVersion="1.0.1.0" hasCustomInstaller="true" dllsBuild="2.5.20">
+	<!--<componentGroup unique="locale" displayName="Locale">
+		<component unique="rus" displayName="Russian" description="Русская локализация" game="GalacticAdventures" defaultChecked="true"></component>
+		<component unique="eng" displayName="English" description="English localization" game="GalacticAdventures" defaultChecked="false"></component>
+	</componentGroup>-->
+
+	<prerequisite game="GalacticAdventures">CNV_Prikol.package</prerequisite>
+	<prerequisite>CNV Prikol.dll</prerequisite>
+</mod>
