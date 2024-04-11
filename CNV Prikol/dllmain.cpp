@@ -2,6 +2,7 @@
 #include "stdafx.h"
 #include "ConversationsDetours.h"
 #include "SaveListener.h"
+#include "CNVPrikolManager.h"
 
 void Initialize()
 {
@@ -12,6 +13,10 @@ void Initialize()
 	//  - Add new game modes
 	//  - Add new space tools
 	//  - Change materials
+
+	PrikolManager.Initialize();
+	if (PrikolManager.DebugMode())
+		App::ConsolePrintF("CNV Prikol is initialized");
 
 	SaveListenerPtr saveListener = new SaveListener();
 	MessageManager.AddListener(saveListener.get(), Simulator::kMsgSaveGame);

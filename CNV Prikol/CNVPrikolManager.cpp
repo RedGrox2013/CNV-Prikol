@@ -5,7 +5,7 @@
 
 CNVPrikolManager CNVPrikolManager::_instance;
 
-CNVPrikolManager::CNVPrikolManager()
+void CNVPrikolManager::Initialize()
 {
 	PropManager.GetGlobalPropertyList(id("CNVPrikolConfig"), _config);
 	App::Property::GetBool(_config.get(), id("debugMode"), _debugMode);

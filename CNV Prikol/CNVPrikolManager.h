@@ -18,13 +18,17 @@ private:
 	bool _debugMode;
 	vector<SocialCredit> _socialCredit;
 
-	CNVPrikolManager();
+	CNVPrikolManager() : _debugMode(false) {}
 
 	static inline const string16 GetSavePath();
 	inline void SaveSocialCredit(FileStreamPtr stream);
 
 public:
 	static CNVPrikolManager* Get() { return &_instance; }
+
+	void Initialize();
+
+	const bool DebugMode() const { return _debugMode; }
 
 	int32_t GetSocialCredit(uint32_t politicalID);
 	void AddSocialCredit(SocialCredit credit);
