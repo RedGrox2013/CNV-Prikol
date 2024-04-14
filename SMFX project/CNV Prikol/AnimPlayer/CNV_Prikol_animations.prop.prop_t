@@ -1,0 +1,12 @@
+# https://github.com/RedGrox2013/AnimPlayer?tab=readme-ov-file#для-разработчиков-модов
+
+string16 modName "CNV Prikol"
+string16s animationsNames
+	"playAnim -id GroxFlex"
+	"playAnim -id CNV_Prikol_PolishCow"
+	"playAnim -id PrikolFortnite"
+	"playAnim -id Flex_01"
+	"playAnim -id Flex_02"
+	"playAnim -id Flex_03"
+	"playAnim -id Flex_04"
+end
