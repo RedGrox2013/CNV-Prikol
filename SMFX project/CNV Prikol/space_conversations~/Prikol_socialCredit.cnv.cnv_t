@@ -17,7 +17,7 @@ dialog social_credit_01
 	text PrikolSocialCredit!0x26751792
 	
 	response
-		action kCnvCommEvent~ Prikol_social_credit!social_credit02.cnv
+		action kAddSocialCredit SocialCredit!Question1_wrong.prop
 		text Prikol_BrawlStarsTest!0x35553B19
 	end
 	response # верный варинант
@@ -28,7 +28,257 @@ end
 
 dialog social_credit_01_right
 	text PrikolSocialCredit!right -emotion Happy
+	text PrikolSocialCredit!right1 -emotion Happy
+	text PrikolSocialCredit!right2 -emotion Happy
+	text PrikolSocialCredit!right3 -emotion Happy
 
+	response
+		action kCnvCommEvent~ Prikol_socialCredit!social_credit_02.cnv
+		text PrikolSocialCredit!0x1F0AA31F
+	end
+end
+
+dialog social_credit_01_wrong
+	text PrikolSocialCredit!0xE28127A4 -emotion Angry
+	text PrikolSocialCredit!wrong1 -emotion Angry
+	text PrikolSocialCredit!wrong2 -emotion Angry
+	text PrikolSocialCredit!wrong3 -emotion Angry
+
+	response
+		action kCnvCommEvent~ Prikol_socialCredit!social_credit_02.cnv
+		text PrikolSocialCredit!0x1F0AA31F
+	end
+end
+
+dialog social_credit_02
+	text PrikolSocialCredit!0x058E11DE
+	
+	response # верный варинант
+		action kAddSocialCredit SocialCredit!Question2_right.prop
+		text PrikolSocialCredit!0xE4812AF6
+	end
+	response
+		action kAddSocialCredit SocialCredit!Question2_wrong.prop
+		text PrikolSocialCredit!0xE4812AF7
+	end
+end
+
+dialog social_credit_02_right
+	text PrikolSocialCredit!right -emotion Happy
+	text PrikolSocialCredit!right1 -emotion Happy
+	text PrikolSocialCredit!right2 -emotion Happy
+	text PrikolSocialCredit!right3 -emotion Happy
+
+	response
+		action kCnvCommEvent~ Prikol_socialCredit!social_credit_03.cnv
+		text PrikolSocialCredit!0x1F0AA31F
+	end
+end
+
+dialog social_credit_02_wrong
+	text PrikolSocialCredit!0xE28127A4 -emotion Angry
+	text PrikolSocialCredit!wrong1 -emotion Angry
+	text PrikolSocialCredit!wrong2 -emotion Angry
+	text PrikolSocialCredit!wrong3 -emotion Angry
+
+	response
+		action kCnvCommEvent~ Prikol_socialCredit!social_credit_03.cnv
+		text PrikolSocialCredit!0x1F0AA31F
+	end
+end
+
+dialog social_credit_03
+	text PrikolSocialCredit!0xE4812AF4
+	
+	response # верный варинант
+		action kAddSocialCredit SocialCredit!Question3_right.prop
+		text PrikolSocialCredit!0xE4812AFA
+	end
+	response
+		action kAddSocialCredit SocialCredit!Question3_wrong.prop
+		text PrikolSocialCredit!0xE4812AFB
+	end
+end
+
+dialog social_credit_03_right
+	text PrikolSocialCredit!right -emotion Happy
+	text PrikolSocialCredit!right1 -emotion Happy
+	text PrikolSocialCredit!right2 -emotion Happy
+	text PrikolSocialCredit!right3 -emotion Happy
+
+	response
+		action kCnvCommEvent~ Prikol_socialCredit!social_credit_04.cnv
+		text PrikolSocialCredit!0x1F0AA31F
+	end
+end
+
+dialog social_credit_03_wrong
+	text PrikolSocialCredit!0xE28127A4 -emotion Angry
+	text PrikolSocialCredit!wrong1 -emotion Angry
+	text PrikolSocialCredit!wrong2 -emotion Angry
+	text PrikolSocialCredit!wrong3 -emotion Angry
+
+	response
+		action kCnvCommEvent~ Prikol_socialCredit!social_credit_04.cnv
+		text PrikolSocialCredit!0x1F0AA31F
+	end
+end
+
+dialog social_credit_04
+	text PrikolSocialCredit!0xE5812C64
+	
+	response
+		action kAddSocialCredit SocialCredit!Question4_wrong.prop
+		text PrikolSocialCredit!0xE5812C67
+	end
+	response # верный варинант
+		action kAddSocialCredit SocialCredit!Question4_right.prop
+		text PrikolSocialCredit!0xE5812C66
+	end
+end
+
+dialog social_credit_04_right
+	text PrikolSocialCredit!right -emotion Happy
+	text PrikolSocialCredit!right1 -emotion Happy
+	text PrikolSocialCredit!right2 -emotion Happy
+	text PrikolSocialCredit!right3 -emotion Happy
+
+	response
+		action kCnvCommEvent~ Prikol_socialCredit!social_credit_05.cnv
+		text PrikolSocialCredit!0x1F0AA31F
+	end
+end
+
+dialog social_credit_04_wrong
+	text PrikolSocialCredit!0xE28127A4 -emotion Angry
+	text PrikolSocialCredit!wrong1 -emotion Angry
+	text PrikolSocialCredit!wrong2 -emotion Angry
+	text PrikolSocialCredit!wrong3 -emotion Angry
+
+	response
+		action kCnvCommEvent~ Prikol_socialCredit!social_credit_05.cnv
+		text PrikolSocialCredit!0x1F0AA31F
+	end
+end
+
+dialog social_credit_05
+	text PrikolSocialCredit!0xE5812C61
+	
+	response
+		action kAddSocialCredit SocialCredit!Question5_wrong.prop
+		text PrikolSocialCredit!0xE5812C60
+	end
+	response # верный варинант
+		action kAddSocialCredit SocialCredit!Question5_right.prop
+		text PrikolSocialCredit!0xE5812C63
+	end
+	response
+		action kAddSocialCredit SocialCredit!Question5_wrong.prop
+		text PrikolSocialCredit!0xE5812C62
+	end
+	response
+		action kAddSocialCredit SocialCredit!Question5_wrong.prop
+		text PrikolSocialCredit!0xE5812C6D
+	end
+	response
+		action kAddSocialCredit SocialCredit!Question5_wrong.prop
+		text PrikolSocialCredit!0x3B8C4633
+	end
+end
+
+dialog social_credit_05_right
+	text PrikolSocialCredit!right -emotion Happy
+	text PrikolSocialCredit!right1 -emotion Happy
+	text PrikolSocialCredit!right2 -emotion Happy
+	text PrikolSocialCredit!right3 -emotion Happy
+
+	response
+		action kCnvCommEvent~ Prikol_socialCredit!social_credit_06.cnv
+		text PrikolSocialCredit!0x1F0AA31F
+	end
+end
+
+dialog social_credit_05_wrong
+	text PrikolSocialCredit!0xE28127A4 -emotion Angry
+	text PrikolSocialCredit!wrong1 -emotion Angry
+	text PrikolSocialCredit!wrong2 -emotion Angry
+	text PrikolSocialCredit!wrong3 -emotion Angry
+
+	response
+		action kCnvCommEvent~ Prikol_socialCredit!social_credit_06.cnv
+		text PrikolSocialCredit!0x1F0AA31F
+	end
+end
+
+dialog social_credit_06
+	text Prikol_Chinese!0xE5812C6C
+	
+	response # верный варинант
+		action kAddSocialCredit SocialCredit!Question6_right.prop
+		text Prikol_Chinese!0xDE812160
+	end
+	response
+		action kAddSocialCredit SocialCredit!Question6_wrong.prop
+		text Prikol_Chinese!0xDE812161
+	end
+	response
+		action kAddSocialCredit SocialCredit!Question6_wrong.prop
+		text PrikolSocialCredit!0xDE812162
+	end
+end
+
+dialog social_credit_06_right
+	text PrikolSocialCredit!right -emotion Happy
+	text PrikolSocialCredit!right1 -emotion Happy
+	text PrikolSocialCredit!right2 -emotion Happy
+	text PrikolSocialCredit!right3 -emotion Happy
+
+	response
+		action kSocialCreditEnd
+		text PrikolSocialCredit!0x1F0AA31F
+	end
+end
+
+dialog social_credit_06_wrong
+	text PrikolSocialCredit!0xE28127A4 -emotion Angry
+	text PrikolSocialCredit!wrong1 -emotion Angry
+	text PrikolSocialCredit!wrong2 -emotion Angry
+	text PrikolSocialCredit!wrong3 -emotion Angry
+
+	response
+		action kSocialCreditEnd
+		text PrikolSocialCredit!0x1F0AA31F
+	end
+end
+
+dialog social_credit_win
+	text PrikolSocialCredit!win -emotion Happy
+	
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xD9515895
+	end
+	response
+		action kCnvCommEvent~ Prikol_socialCredit!social_credit_start.cnv
+		text Prikol_BrawlStarsTest!0x35553B1F
+	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
+
+dialog social_credit_lose
+	text PrikolSocialCredit!lose -emotion Angry
+	
+	response
+		action kCnvCommDefault~
+		text CNV_Prikol!0xD9515895
+	end
+	response
+		action kCnvCommEvent~ Prikol_socialCredit!social_credit_start.cnv
+		text Prikol_BrawlStarsTest!0x35553B1F
+	end
 	response
 		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
 		text PrikolGameVariants!0xE8591AA0

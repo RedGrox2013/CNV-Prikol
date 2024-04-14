@@ -1,0 +1,3 @@
+int32 socialCreditAddend -100
+uint32 nextAction hash(kCnvCommEvent~)
+key actionKey Prikol_socialCredit!social_credit_05_wrong.cnv

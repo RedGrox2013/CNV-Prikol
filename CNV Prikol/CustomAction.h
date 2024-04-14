@@ -12,7 +12,8 @@ enum CommActions : uint32_t
 	kCustonAction = id("kCustonAction"),
 	kOpenUrl = id("kOpenUrl"),
 	kCollectTribute = id("kCollectTribute"),
-	kAddSocialCredit = id("kAddSocialCredit")
+	kAddSocialCredit = id("kAddSocialCredit"),
+	kSocialCreditEnd = id("kSocialCreditEnd")
 };
 
 class CustomAction

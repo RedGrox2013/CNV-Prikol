@@ -32,6 +32,7 @@ bool CustomAction::IsCustom() const
 	case CommActions::kOpenUrl:
 	case CommActions::kCollectTribute:
 	case CommActions::kAddSocialCredit:
+	case CommActions::kSocialCreditEnd:
 		return true;
 	default:
 		return false;
@@ -91,6 +92,17 @@ void CustomAction::HandleSpaceCommAction(uint32_t source, PlanetID planetKey, vo
 		if (!Prop::GetInt32(_prop.get(), id("socialCreditAddend"), socialCredit))
 			socialCredit = PrikolManager.GetSocialCreditAddend();
 		PrikolManager.AddSocialCredit(source, socialCredit);
+	}
+		break;
+	case CommActions::kSocialCreditEnd:
+	{
+		ResourceKey key(0, 0x055ADA24, id("Prikol_socialCredit"));
+		_nextAction.actionID = CommActions::kCnvCommEvent;
+		if (PrikolManager.GetSocialCredit(source) <= 0)
+			key.instanceID = id("social_credit_lose");
+		else
+			key.instanceID = id("social_credit_win");
+		_nextAction.key = key;
 	}
 		break;
 	}
