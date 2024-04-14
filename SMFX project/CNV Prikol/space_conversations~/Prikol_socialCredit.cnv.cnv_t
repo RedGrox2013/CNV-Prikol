@@ -4,9 +4,31 @@ dialog social_credit_start
 	text PrikolSocialCredit!0x058E11DB
 	
 	response
-		action kCnvCommDefault~
+		action kCnvCommEvent~ Prikol_socialCredit!social_credit_01.cnv
 		text PrikolSocialCredit!0xB7C9CAD2
 	end
+	response
+		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
+		text PrikolGameVariants!0xE8591AA0
+	end
+end
+
+dialog social_credit_01
+	text PrikolSocialCredit!0x26751792
+	
+	response
+		action kCnvCommEvent~ Prikol_social_credit!social_credit02.cnv
+		text Prikol_BrawlStarsTest!0x35553B19
+	end
+	response # верный варинант
+		action kAddSocialCredit SocialCredit!Question1_rigth.prop
+		text Prikol_BrawlStarsTest!0x33553832
+	end
+end
+
+dialog social_credit_01_rigth
+	text PrikolSocialCredit!rigth -emotion Happy
+
 	response
 		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
 		text PrikolGameVariants!0xE8591AA0

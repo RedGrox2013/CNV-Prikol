@@ -2,8 +2,11 @@
 #include "CustomAction.h"
 #include <shellapi.h>
 #include <Spore/Properties.h>
+#include "CNVPrikolManager.h"
 
 using namespace Simulator;
+
+#define Prop App::Property
 
 vector<uint32_t> CustomAction::_tributeEmpires;
 
@@ -16,8 +19,9 @@ CustomAction::CustomAction(const CnvAction& action)
 	if (!PropManager.GetPropertyList(action.key.instanceID, action.key.groupID, _prop))
 		PropManager.GetPropertyList(id("CustomActionTemplate"), id("CustomCnvActions"), _prop);
 
-	App::Property::GetUInt32(_prop.get(), id("nextAction"), _nextAction.actionID);
-	App::Property::GetKey(_prop.get(), id("actionKey"), _nextAction.key);
+	Prop::GetUInt32(_prop.get(), id("nextAction"), _nextAction.actionID);
+	if (!Prop::GetKey(_prop.get(), id("actionKey"), _nextAction.key))
+		_nextAction.actionID = CommActions::kCnvCommDefault;
 }
 
 bool CustomAction::IsCustom() const
@@ -27,6 +31,7 @@ bool CustomAction::IsCustom() const
 	case CommActions::kCustonAction:
 	case CommActions::kOpenUrl:
 	case CommActions::kCollectTribute:
+	case CommActions::kAddSocialCredit:
 		return true;
 	default:
 		return false;
@@ -63,6 +68,7 @@ void CustomAction::HandleSpaceCommAction(uint32_t source, PlanetID planetKey, vo
 		OpenUrl();
 		break;
 	case CommActions::kCollectTribute:
+	{
 		for (uint32_t i : _tributeEmpires)
 			if (i == source) {
 #ifdef _DEBUG
@@ -76,7 +82,16 @@ void CustomAction::HandleSpaceCommAction(uint32_t source, PlanetID planetKey, vo
 		cEmpire* empire = StarManager.GetEmpire(source);
 		if (empire->mEmpireMoney >= 10000)
 			empire->mEmpireMoney -= 10000;
-		
+
+	}
+		break;
+	case CommActions::kAddSocialCredit:
+	{
+		int32_t socialCredit;
+		if (!Prop::GetInt32(_prop.get(), id("socialCreditAddend"), socialCredit))
+			socialCredit = PrikolManager.GetSocialCreditAddend();
+		PrikolManager.AddSocialCredit(source, socialCredit);
+	}
 		break;
 	}
 }
