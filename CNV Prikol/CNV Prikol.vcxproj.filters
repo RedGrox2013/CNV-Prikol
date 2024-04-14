@@ -28,7 +28,7 @@
     <ClInclude Include="CNVPrikolManager.h">
       <Filter>CNV Prikol</Filter>
     </ClInclude>
-    <ClInclude Include="SocialCredit.h">
+    <ClInclude Include="PrikolRecord.h">
       <Filter>CNV Prikol</Filter>
     </ClInclude>
     <ClInclude Include="SaveListener.h">

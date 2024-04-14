@@ -13,22 +13,22 @@ void CNVPrikolManager::Initialize()
 
 int32_t CNVPrikolManager::GetSocialCredit(uint32_t politicalID)
 {
-	for (auto sc : _socialCredit)
-		if (sc.politicalID == politicalID)
-			return sc.point;
+	for (auto& sc : _data)
+		if (sc->politicalID == politicalID)
+			return sc->socialCredit;
 
 	return 0;
 }
 
-void CNVPrikolManager::AddSocialCredit(SocialCredit credit)
+void CNVPrikolManager::AddSocialCredit(const uint32_t& politicalID, const int32_t& socialCredit)
 {
-	for (auto sc : _socialCredit)
-		if (sc.politicalID == credit.politicalID) {
-			sc.point += credit.point;
-			return;
-		}
+	_socialCreditAddend = socialCredit;
+	for (auto& sc : _data)
+		if (sc->politicalID == politicalID)
+			sc->socialCredit += socialCredit;
 
-	_socialCredit.push_back(credit);
+	PrikolRecordPtr record = new PrikolRecord(politicalID, socialCredit);
+	_data.push_back(record);
 }
 
 inline const string16 CNVPrikolManager::GetSavePath()
@@ -44,13 +44,20 @@ inline const string16 CNVPrikolManager::GetSavePath()
 
 void CNVPrikolManager::SaveSpaceData()
 {
-	if (!Simulator::IsSpaceGame() || _socialCredit.size() == 0)
+	size_t size = _data.size();
+	if (!Simulator::IsSpaceGame() || size == 0)
 		return;
 
 	auto path = GetSavePath();
 	FileStreamPtr stream = new IO::FileStream(path.c_str());
 	stream->Open(IO::AccessFlags::Write, IO::CD::CreateAlways);
-	SaveSocialCredit(stream);
+
+	IO::WriteInt32(stream.get(), &PrikolRecord::VERSION);
+	IO::WriteUInt32(stream.get(), &size);
+	for (auto& sc : _data) {
+		IO::WriteInt32(stream.get(), &sc->socialCredit);
+		IO::WriteUInt32(stream.get(), &sc->politicalID);
+	}
 
 	stream->Close();
 }
@@ -60,7 +67,7 @@ void CNVPrikolManager::LoadSpaceData()
 	if (!Simulator::IsSpaceGame())
 		return;
 
-	_socialCredit.clear();
+	_data.clear();
 	auto path = GetSavePath();
 	FileStreamPtr stream = new IO::FileStream(path.c_str());
 	if (!stream->Open(IO::AccessFlags::Read, IO::CD::OpenExisting)) {
@@ -69,13 +76,15 @@ void CNVPrikolManager::LoadSpaceData()
 		return;
 	}
 
+	int32_t version;
+	IO::ReadInt32(stream.get(), &version);
 	size_t size;
 	IO::ReadUInt32(stream.get(), &size);
 	for (size_t i = 0; i < size; ++i) {
-		SocialCredit credit{};
-		IO::ReadInt32(stream.get(), &credit.point);
-		IO::ReadUInt32(stream.get(), &credit.politicalID);
-		_socialCredit.push_back(credit);
+		PrikolRecordPtr record = new PrikolRecord();
+		IO::ReadInt32(stream.get(), &record->socialCredit);
+		IO::ReadUInt32(stream.get(), &record->politicalID);
+		_data.push_back(record);
 	}
 
 	stream->Close();
@@ -90,22 +99,9 @@ void CNVPrikolManager::ShowDebugInfo(PrikolManagerDebugInfo info)
 	{
 	case PrikolManagerDebugInfo::LoadData:
 		App::ConsolePrintF("Load CNV Prikol save...\nSocial credit:");
-		for (auto credit : _socialCredit)
+		for (auto credit : _data)
 			App::ConsolePrintF("Political ID: %d; social credit: %d",
-				credit.politicalID, credit.point);
+				credit->politicalID, credit->socialCredit);
 		break;
-	}
-}
-
-inline void CNVPrikolManager::SaveSocialCredit(FileStreamPtr stream)
-{
-	size_t size = _socialCredit.size();
-	if (size == 0)
-		return;
-
-	IO::WriteUInt32(stream.get(), &size);
-	for (auto sc : _socialCredit) {
-		IO::WriteInt32(stream.get(), &sc.point);
-		IO::WriteUInt32(stream.get(), &sc.politicalID);
 	}
 }
