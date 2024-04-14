@@ -68,11 +68,11 @@ key actionKey Prikol_diplomacy!ModCreator.cnv
 Вариант ответа в каком-либо диалоге:
 ```
 response
-	action kAddSocialCredit SocialCredit!Question1_rigth.prop
+	action kAddSocialCredit SocialCredit!Question1_right.prop
 	text Prikol_BrawlStarsTest!0x33553832
 end
 ```
-Содержимое файла Question1_rigth.prop.prop_t:
+Содержимое файла Question1_right.prop.prop_t:
 ```
 # Сколько социального рейтинга прибавится (чтобы убавить, число должно быть отрицательным)
 int32 socialCreditAddend 100
@@ -81,7 +81,7 @@ int32 socialCreditAddend 100
 uint32 nextAction hash(kCnvCommEvent~)
 
 # ResourceKey для следующего действия
-key actionKey Prikol_socialCredit!social_credit_01_rigth.cnv
+key actionKey Prikol_socialCredit!social_credit_01_right.cnv
 
 ```
 

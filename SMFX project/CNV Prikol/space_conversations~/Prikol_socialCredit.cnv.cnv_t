@@ -21,13 +21,13 @@ dialog social_credit_01
 		text Prikol_BrawlStarsTest!0x35553B19
 	end
 	response # верный варинант
-		action kAddSocialCredit SocialCredit!Question1_rigth.prop
+		action kAddSocialCredit SocialCredit!Question1_right.prop
 		text Prikol_BrawlStarsTest!0x33553832
 	end
 end
 
-dialog social_credit_01_rigth
-	text PrikolSocialCredit!rigth -emotion Happy
+dialog social_credit_01_right
+	text PrikolSocialCredit!right -emotion Happy
 
 	response
 		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv

@@ -5,4 +5,4 @@ int32 socialCreditAddend 100
 uint32 nextAction hash(kCnvCommEvent~)
 
 # ResourceKey для следующего действия
-key actionKey Prikol_socialCredit!social_credit_01_rigth.cnv
+key actionKey Prikol_socialCredit!social_credit_01_right.cnv
