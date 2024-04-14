@@ -1,3 +1,8 @@
+# Сколько социального рейтинга прибавится (чтобы убавить, число должно быть отрицательным)
 int32 socialCreditAddend 100
+
+# Следующее действие, которое будет совершено после этого
 uint32 nextAction hash(kCnvCommEvent~)
+
+# ResourceKey для следующего действия
 key actionKey Prikol_socialCredit!social_credit_01_rigth.cnv
