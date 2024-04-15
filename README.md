@@ -52,7 +52,7 @@ end
 Содержимое файла Rickroll.prop.prop_t:
 ```
 # Ссылка, которую мы хотим открыть
-string8 url "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+string16 url "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 
 # Следующее действие, которое будет совершено после этого
 uint32 nextAction hash(kCnvCommEvent~)
