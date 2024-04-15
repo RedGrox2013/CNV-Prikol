@@ -3,6 +3,7 @@
 #include <shellapi.h>
 #include <Spore/Properties.h>
 #include "CNVPrikolManager.h"
+#include <Spore/App/cAppSystem.h>
 
 using namespace Simulator;
 
@@ -44,11 +45,11 @@ CnvAction CustomAction::GetNextAction() const { return _nextAction; }
 
 void CustomAction::OpenUrl()
 {
-	char* url;
-	if (!App::Property::GetCString8(_prop.get(), id("url"), url))
-		url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+	char16_t* url;
+	if (!App::Property::GetCString16(_prop.get(), id("url"), url))
+		url = u"https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
-	ShellExecuteA(NULL, "open", url, NULL, NULL, SW_SHOW);
+	AppSystem.OpenURL(url);
 }
 
 void CustomAction::HandleCivCommAction(void* pSourceCiv, cCity* pSourceCity, cCity* pTargetCity)
