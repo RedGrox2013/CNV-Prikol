@@ -1336,12 +1336,12 @@ dialog diplomacy
 		require Alliance
 		exclude MySpecies
 	end
-	response
+	#<response
 		action kCollectTribute
 		text PrikolGameVariants!0xFFFFFFFF
 		require AttitudeCautiousOrWorse
 		exclude MySpecies Alliance AtWar
-	end
+	end#>
 	response # кнопка вызова мини-игр
 		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
 		text PrikolGameVariants!0x37C8C6B6
