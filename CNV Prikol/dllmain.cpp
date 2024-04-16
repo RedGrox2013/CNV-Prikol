@@ -4,6 +4,7 @@
 #include "SaveListener.h"
 #include "CNVPrikolManager.h"
 #include "CNVPrikolTokenTranslator.h"
+#include "ClearSocialCreditCheat.h"
 
 void Initialize()
 {
@@ -22,6 +23,7 @@ void Initialize()
 	SaveListenerPtr saveListener = new SaveListener();
 	MessageManager.AddListener(saveListener.get(), Simulator::kMsgSaveGame);
 	MessageManager.AddListener(saveListener.get(), App::kMsgOnModeEnter);
+	CheatManager.AddCheat("clearSocialCredit", new ClearSocialCreditCheat());
 
 	LocaleManager.GetStringDetokenizer()->AddTranslator(new CNVPrikolTokenTranslator());
 }

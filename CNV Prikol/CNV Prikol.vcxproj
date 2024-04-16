@@ -98,6 +98,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClearSocialCreditCheat.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="CNVPrikolManager.h" />
     <ClInclude Include="ConversationsDetours.h" />
     <ClInclude Include="CustomAction.h" />
@@ -112,6 +116,10 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ClearSocialCreditCheat.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="CNVPrikolManager.cpp" />
     <ClCompile Include="ConversationsDetours.cpp" />
     <ClCompile Include="CustomAction.cpp" />

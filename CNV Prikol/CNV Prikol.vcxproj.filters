@@ -40,6 +40,9 @@
     <ClInclude Include="CNVPrikolTokenTranslator.h">
       <Filter>CNV Prikol</Filter>
     </ClInclude>
+    <ClInclude Include="ClearSocialCreditCheat.h">
+      <Filter>CNV Prikol</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -61,6 +64,9 @@
       <Filter>CNV Prikol</Filter>
     </ClCompile>
     <ClCompile Include="CNVPrikolTokenTranslator.cpp">
+      <Filter>CNV Prikol</Filter>
+    </ClCompile>
+    <ClCompile Include="ClearSocialCreditCheat.cpp">
       <Filter>CNV Prikol</Filter>
     </ClCompile>
   </ItemGroup>

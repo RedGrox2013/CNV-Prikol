@@ -99,9 +99,16 @@ void CNVPrikolManager::ShowDebugInfo(PrikolManagerDebugInfo info)
 	{
 	case PrikolManagerDebugInfo::LoadData:
 		App::ConsolePrintF("Load CNV Prikol save...\nSocial credit:");
-		for (auto credit : _data)
+		for (auto& credit : _data)
 			App::ConsolePrintF("Political ID: %d; social credit: %d",
 				credit->politicalID, credit->socialCredit);
 		break;
 	}
+}
+
+void CNVPrikolManager::ClearSocialCredit(uint32_t politicalID)
+{
+	for (auto& i : _data)
+		if (i->politicalID == politicalID)
+			i->socialCredit = 0;
 }

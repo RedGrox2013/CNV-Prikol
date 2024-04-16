@@ -38,4 +38,6 @@ public:
 	void LoadSpaceData();
 
 	void ShowDebugInfo(PrikolManagerDebugInfo info);
+
+	void ClearSocialCredit(uint32_t politicalID);
 };
