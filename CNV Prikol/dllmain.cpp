@@ -1,7 +1,6 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "stdafx.h"
 #include "ConversationsDetours.h"
-#include "SaveListener.h"
 #include "CNVPrikolManager.h"
 #include "CNVPrikolTokenTranslator.h"
 #include "ClearSocialCreditCheat.h"
@@ -17,15 +16,11 @@ void Initialize()
 	//  - Change materials
 
 	PrikolManager.Initialize();
+	CheatManager.AddCheat("clearSocialCredit", new ClearSocialCreditCheat());
+	LocaleManager.GetStringDetokenizer()->AddTranslator(new CNVPrikolTokenTranslator());
+
 	if (PrikolManager.DebugMode())
 		App::ConsolePrintF("CNV Prikol is initialized");
-
-	SaveListenerPtr saveListener = new SaveListener();
-	MessageManager.AddListener(saveListener.get(), Simulator::kMsgSaveGame);
-	MessageManager.AddListener(saveListener.get(), App::kMsgOnModeEnter);
-	CheatManager.AddCheat("clearSocialCredit", new ClearSocialCreditCheat());
-
-	LocaleManager.GetStringDetokenizer()->AddTranslator(new CNVPrikolTokenTranslator());
 }
 
 void Dispose()

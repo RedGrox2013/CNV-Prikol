@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CNVPrikolManager.h"
+#include "SaveListener.h"
 #include <Shlobj.h>
 #include <Spore/Properties.h>
 
@@ -9,6 +10,10 @@ void CNVPrikolManager::Initialize()
 {
 	PropManager.GetGlobalPropertyList(id("CNVPrikolConfig"), _config);
 	App::Property::GetBool(_config.get(), id("debugMode"), _debugMode);
+
+	SaveListenerPtr saveListener = new SaveListener();
+	MessageManager.AddListener(saveListener.get(), Simulator::kMsgSaveGame);
+	MessageManager.AddListener(saveListener.get(), App::kMsgOnModeEnter);
 }
 
 int32_t CNVPrikolManager::GetSocialCredit(uint32_t politicalID)

@@ -36,7 +36,7 @@ const char* ClearSocialCreditCheat::GetDescription(ArgScript::DescriptionMode mo
 		return "This cheat clears the social credit from the CNV Prikol mod.";
 	}
 	else {
-		return "This cheat clears the social credit from the CNV Prikol mod."
+		return "This cheat clears the social credit from the CNV Prikol mod.\n"
 			"To clear the social credit, you must fly to a planet that has an empire and use this cheat.";
 	}
 }
