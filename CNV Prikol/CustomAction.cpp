@@ -10,6 +10,8 @@ using namespace Simulator;
 #define Prop App::Property
 
 vector<uint32_t> CustomAction::_tributeEmpires;
+uint32_t* CustomAction::_defaultCnvActions;
+size_t CustomAction::_defaultCnvActionsCount;
 
 CustomAction::CustomAction(const CnvAction& action)
 	: _action(action)
@@ -27,17 +29,15 @@ CustomAction::CustomAction(const CnvAction& action)
 
 bool CustomAction::IsCustom() const
 {
-	switch (_action.actionID)
-	{
-	case CommActions::kCustonAction:
-	case CommActions::kOpenUrl:
-	case CommActions::kCollectTribute:
-	case CommActions::kAddSocialCredit:
-	case CommActions::kSocialCreditEnd:
-		return true;
-	default:
-		return false;
-	}
+	if (!_defaultCnvActions)
+		Prop::GetArrayUInt32(PrikolManager.GetPropertyList(),
+			id("defaultCnvActions"), _defaultCnvActionsCount, _defaultCnvActions);
+
+	for (size_t i = 0; i < _defaultCnvActionsCount; i++)
+		if (_defaultCnvActions[i] == _action.actionID)
+			return false;
+
+	return true;
 }
 
 CnvAction CustomAction::GetAction() const { return _action; }
