@@ -40,4 +40,6 @@ public:
 	void ShowDebugInfo(PrikolManagerDebugInfo info);
 
 	void ClearSocialCredit(uint32_t politicalID);
+
+	App::PropertyList* GetPropertyList() { return _config.get(); }
 };
