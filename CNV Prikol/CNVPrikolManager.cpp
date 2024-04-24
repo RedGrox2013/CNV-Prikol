@@ -29,8 +29,10 @@ void CNVPrikolManager::AddSocialCredit(const uint32_t& politicalID, const int32_
 {
 	_socialCreditAddend = socialCredit;
 	for (auto& sc : _data)
-		if (sc->politicalID == politicalID)
+		if (sc->politicalID == politicalID) {
 			sc->socialCredit += socialCredit;
+			return;
+		}
 
 	PrikolRecordPtr record = new PrikolRecord(politicalID, socialCredit);
 	_data.push_back(record);
