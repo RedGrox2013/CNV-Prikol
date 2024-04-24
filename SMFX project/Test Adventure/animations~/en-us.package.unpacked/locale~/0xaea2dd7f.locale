@@ -1,0 +1,42 @@
+# Auto-generated localization file for: Название приключения (ID: 0XAEA2DD7F)
+# Author
+0x00000001 Maxis
+
+# Adventure name
+0x00000002 Adventure name
+
+# Adventure description
+0x00000003 Adventure description
+
+# Adventure tags
+0x00000004 Adventure tags
+
+# Intro text
+0x00000005 Intro text
+
+# Win text
+0x00000006 Win text
+
+# Lose text
+0x00000007 Lose text
+
+# Act 1
+0x00000008 Act name
+0x00000009 Act description
+
+# Goal 1
+0x0000000a Hello, ~cnv_prikol_captain_name~!
+
+
+# Prop #1 - Сигма убийца гроксов
+0x0000000b Sigma grox killer
+
+# Prop #2 - Смэрть
+0x0000000c Dath
+
+# Prop #3 - Monitor
+0x0000000d Monitor
+
+# Inspect for Act 1
+0x0000000e Ok
+
