@@ -1,9 +1,21 @@
-<mod displayName="CNV Prikol" unique="CNVPrikol" description="Мод на мини-игры и не только" installerSystemVersion="1.0.1.0" hasCustomInstaller="true" dllsBuild="2.5.20">
-	<component unique="test_adventure" displayName="Test Adventure" description="Тестовое приключение для проверки локализаций" game="GalacticAdventures" defaultChecked="true">Test_Adventure.package</component>
+<mod displayName="CNV Prikol" unique="CNV_Prikol" description="Мод на мини-игры и не только" installerSystemVersion="1.0.1.0" hasCustomInstaller="true" dllsBuild="2.5.20" imagePlacement="After">
+	<component unique="test_adventure"
+			   displayName="Test Adventure"
+			   description="Тестовое приключение для проверки локализаций"
+			   game="GalacticAdventures"
+			   defaultChecked="true">Test_Adventure.package</component>
+	<component unique="AdvTutorial"
+			   displayName="Туториал для разрабов"
+			   description="Обучающее приключение для разработчиков CNV Prikol"
+			   game="GalacticAdventures"
+			   defaultChecked="false"
+			   imagePlacement="After">CNV_Prikol_Adventures_tutorial.package</component>
 
 	<prerequisite game="GalacticAdventures">CNV_Prikol.package</prerequisite>
 	<prerequisite>CNV Prikol.dll</prerequisite>
 
 	<remove game="GalacticAdventures">*Test_Adventure.package</remove>
+	<remove game="GalacticAdventures">*CNV_Prikol_Adventures_tutorial.package</remove>
 	<remove game="Spore">*Test_Adventure.package</remove>
+	<remove game="Spore">*CNV_Prikol_Adventures_tutorial.package</remove>
 </mod>
