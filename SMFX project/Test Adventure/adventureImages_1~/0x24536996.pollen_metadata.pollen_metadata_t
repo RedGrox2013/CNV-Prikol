@@ -1,0 +1,21 @@
+metadataVersion 13
+
+assetID -1
+assetKey adventureImages_1~!0x24536996.0x366A930D
+parentAssetKey adventureImages_1~!0x24536716.0x366A930D
+parentAssetID -1
+originalParentAssetID -1
+timeCreated 63849656786
+timeDownloaded 63849656786
+authorID -2
+authorName "ryzij"
+authorNameLocale 0xaea2dd7f!0x00000001
+name "Название приключения"
+nameLocale 0xaea2dd7f!0x00000002
+description "Описание"
+descriptionLocale 0xaea2dd7f!0x00000003
+authors "ryzij"
+tags "теги"
+tagsLocale 0xaea2dd7f!0x00000004
+isShareable true
+consequenceTraits
