@@ -94,4 +94,17 @@ ___
 * [Основной канал](https://www.youtube.com/c/ДухИяхо)
 * [Второй канал](https://www.youtube.com/c/КрутойДухИяхо2013)
 * [Телеграм](https://t.me/SporeRedGroxMods)
+* [Дискорд](https://discord.gg/Wk5XWWewRh)
 * [spore.com](http://www.spore.com/view/myspore/RedGrox)
+
+___
+
+## Использованные инструменты
+
+Для создания мода были использованы следующие инструменты:
+
+* [SporeModder FX](https://github.com/emd4600/SporeModder-FX) для упаковывания ресурсов мода и модификации ресурсов игры
+* [Spore ModAPI](https://github.com/emd4600/Spore-ModAPI) для создания мода, с использованием языка C++
+* [Visual Studio 2022](https://visualstudio.microsoft.com/) для написания кода и компиляции в *dll*
+* Мод [Adventure Localizer](https://github.com/Liskomato/Spore-AdventureLocalizer) для локализации приключений
+* Мод [Creation ZIP Porter](https://github.com/Liskomato/Spore-CreationZIP-Porter) для быстрого и удобного экспорта приключений и их ассетов
