@@ -41,6 +41,9 @@ bool CNVPrikolTokenTranslator::TranslateToken(const char16_t* pToken, eastl::str
 		}
 	}
 	return true;
+	case id(u"cnv_prikol_mission_planet"):
+		dst = Simulator::GetActivePlanet()->mpPlanetRecord->mName;
+		return true;
 	default:
 		return false;
 	};
