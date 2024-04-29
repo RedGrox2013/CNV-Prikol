@@ -1,4 +1,4 @@
-<mod displayName="CNV Prikol" unique="CNV_Prikol" description="Мод на мини-игры и не только" installerSystemVersion="1.0.1.0" hasCustomInstaller="true" dllsBuild="2.5.20" imagePlacement="After">
+<mod displayName="Fabulomosa" unique="CNV_Prikol" description="Мод на дополнительный сюжет для каждой философии" installerSystemVersion="1.0.1.0" hasCustomInstaller="true" dllsBuild="2.5.20">
 	<component unique="mini_games"
 			   displayName="Мини-игры"
 			   description="Старые добрые мини-игры, с которых всё и начиналось"
