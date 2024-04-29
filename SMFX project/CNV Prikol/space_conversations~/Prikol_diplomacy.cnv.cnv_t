@@ -10,8 +10,8 @@ set brawl_stars_test 1 		# Тест "Кто ты из Бравл Старс"
 set strashilka 1 		# Расскажи страшилку
 set social_credit 1 		# Тест на социальный рейтинг
 set aloe_games 1			# Aloe Games
+set memes_exam 0			# Экзамен по мемам
 ###############################################################################
-# К сожалению, некоторые настройки пришлось объединить
 
 dialog Prikol_game
 	text PrikolGameVariants!0xAB2B08C0 -emotion Happy -exclude Grob
