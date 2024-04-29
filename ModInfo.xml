@@ -4,11 +4,6 @@
 			   description="Старые добрые мини-игры, с которых всё и начиналось"
 			   game="GalacticAdventures"
 			   defaultChecked="true">CNV_Prikol.package</component>
-	<component unique="test_adventure"
-			   displayName="Test Adventure"
-			   description="Тестовое приключение для проверки локализаций"
-			   game="GalacticAdventures"
-			   defaultChecked="false">Test_Adventure.package</component>
 	<component unique="AdvTutorial"
 			   displayName="Туториал для разрабов"
 			   description="Обучающее приключение для разработчиков CNV Prikol"
@@ -20,9 +15,7 @@
 	<prerequisite>CNV Prikol.dll</prerequisite>
 
 	<remove game="GalacticAdventures">*CNV_Prikol.package</remove>
-	<remove game="GalacticAdventures">*Test_Adventure.package</remove>
 	<remove game="GalacticAdventures">*CNV_Prikol_Adventures_tutorial.package</remove>
 	<remove game="Spore">*CNV_Prikol.package</remove>
-	<remove game="Spore">*Test_Adventure.package</remove>
 	<remove game="Spore">*CNV_Prikol_Adventures_tutorial.package</remove>
 </mod>
