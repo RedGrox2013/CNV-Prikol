@@ -1,0 +1,9 @@
+key parent AssetBrowserFilter!FixedObjectTemplate.prop
+key browserFilterButtonAtlasedIconID 0x41464100!AdventureFilterButtons
+key browserFilterData FixedObjectAudioMusic
+keys browserFilterChildrenFilters
+	CNVPrikolMusic
+end
+texts browserFilterName
+	(sporepediaEP1!0x0102100a) "Music (placeholder)"
+end
