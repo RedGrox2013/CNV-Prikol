@@ -1,20 +1,17 @@
 metadataVersion 13
 
-assetID 10
-assetKey adventureImages_1~!0x2453CFCC.0x366A930D
-parentAssetKey adventureImages_1~!0x2453CFCB.0x366A930D
+assetID 1
+assetKey adventureImages_1~!0x2459BBAE.0x366A930D
+parentAssetKey adventureImages_1~!0x2459BA45.0x366A930D
 parentAssetID -1
 originalParentAssetID -1
 timeCreated 0
 timeDownloaded 0
 authorID 501074940839
 authorName "RedGrox"
-authorNameLocale 0x00881e67!0x00000001
-name "Туториал"
-nameLocale 0x00881e67!0x00000002
+name "Туториал (NONLOCALIZED)"
 description "Обучение для разработчиков мода CNV Prikol"
-descriptionLocale 0x00881e67!0x00000003
 authors "RedGrox"
 tags "cnv_prikol"
-isShareable false
+isShareable true
 consequenceTraits
