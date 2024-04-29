@@ -29,6 +29,7 @@ public:
 	void Initialize();
 
 	const bool DebugMode() const { return _debugMode; }
+	void ShowThanksForPlaying() const;
 
 	int32_t GetSocialCredit(uint32_t politicalID);
 	void AddSocialCredit(const uint32_t& politicalID, const int32_t& socialCredit);

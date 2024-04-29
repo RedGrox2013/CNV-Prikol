@@ -1,0 +1,5 @@
+float hintLife 5
+int32 hintPriority 3
+texts hintText
+	(CNVPrikolTexts!0x1) "placeholder"
+end

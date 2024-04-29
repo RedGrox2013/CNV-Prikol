@@ -119,3 +119,11 @@ void CNVPrikolManager::ClearSocialCredit(uint32_t politicalID)
 		if (i->politicalID == politicalID)
 			i->socialCredit = 0;
 }
+
+void CNVPrikolManager::ShowThanksForPlaying() const
+{
+	bool show = false;
+	App::Property::GetBool(_config.get(), id("showThanksForPlaying"), show);
+	if (show)
+		HintManager.ShowHint(id("CNVPrikolThanksForPlaying"));
+}

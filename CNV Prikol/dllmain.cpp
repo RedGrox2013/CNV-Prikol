@@ -21,6 +21,7 @@ void Initialize()
 
 	if (PrikolManager.DebugMode())
 		App::ConsolePrintF("CNV Prikol is initialized");
+	PrikolManager.ShowThanksForPlaying();
 }
 
 void Dispose()

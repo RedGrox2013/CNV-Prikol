@@ -1,4 +1,5 @@
 bool debugMode true
+bool showThanksForPlaying true
 
 # List of standard game actions
 # Don't change!!!
