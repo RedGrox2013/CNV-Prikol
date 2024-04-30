@@ -1,0 +1,41 @@
+dialog fabulamosa_main
+	text CNVPrikolTexts!in_developing -exclude Zealot
+	text CNVPrikolTexts!main_zealot -require Zealot
+	
+	response
+		action kCnvCommDefault~
+		text CNVPrikolTexts!in_developing
+		exclude Zealot
+	end
+	
+	####################### Фанатик #######################
+	response
+		action kCnvCommEvent~ Fabulamosa_diplomacy!zealot_test.cnv
+		text CNVPrikolTexts!fork_1
+		require Zealot
+	end
+	response
+		action kCnvCommDefault~
+		text CNVPrikolTexts!fork_2
+		require Zealot
+	end
+	response
+		action kCnvCommDefault~
+		text CNVPrikolTexts!fork_3
+		require Zealot
+	end
+	response
+		action kCnvCommDefault~
+		text CNVPrikolTexts!fork_4
+		require Zealot
+	end
+end
+
+dialog zealot_test
+	text CNVPrikolTexts!fork_1_zealot_start
+	
+	response
+		action kCnvCommDefault~
+		text CNVPrikolTexts!in_developing
+	end
+end

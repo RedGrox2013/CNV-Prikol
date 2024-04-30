@@ -225,6 +225,12 @@ end
 dialog Prikol_mission
 	text PrikolGameVariants!0xD7A911A2
 	
+	response # Fabulamosa
+		action kCnvCommEvent~ Fabulamosa_diplomacy!fabulamosa_main.cnv
+		text CNVPrikolTexts!fabulamosa_response
+		exclude MySpecies AtWar HasAssignedMission
+	end
+	
 	response # Пройти приключение "Город приключений"
 		action kCnvMission~ AdventureTown
 		text PrikolGameVariants!0xB32D8F37

@@ -1,13 +1,3 @@
-#<#####################################################################################################################
-
-Этот файл отвечает за основные диалоги на этапе "Космос"
-Он был модифицирован с целью добавления кнопки "Давайте сыграем в игру..."
-
-######################################################################################################################>
-
-# 0 - выкл, 1 - вкл
-set military_capture_option_button 0 # Кнопка с мини-играми во время захвата системы
-
 dialog mission_unavailable
 	text space_diplomacy~!0x00000159 -emotion Neutral -require MySpecies
 	text space_diplomacy~!0x0000015A -emotion Neutral -require MySpecies
@@ -41,7 +31,7 @@ dialog mission_unavailable
 		text space_diplomacy~!0x00000161
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x00000162
 		text space_diplomacy~!0x00000163
 		text space_diplomacy~!0x00000164
@@ -118,7 +108,7 @@ dialog trade_route_purchase_failure
 		text space_diplomacy~!0x000002F9
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x000000E8
 	end
 end
@@ -185,7 +175,7 @@ dialog give_gift_Relationship
 		exclude AtWar
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x000003A0 -exclude AtWar
 		text space_diplomacy~!0x000003A1 -require AtWar
 	end
@@ -261,7 +251,7 @@ dialog trade_route_purchase_big_failure
 		text space_diplomacy~!0x000002F8
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x000000E6
 	end
 end
@@ -293,12 +283,6 @@ dialog military_capture_option
 		action 0xAB909E37
 		text space_diplomacy~!0x000000EF
 	end
-	if ($military_capture_option_button == true)
-		response # кнопка вызова мини-игр
-			action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
-			text PrikolGameVariants!0x37C8C6B6
-		end
-	endif
 end
 dialog request_attack_declined_already_raided
 	text space_diplomacy~!0x00000439 -emotion Neutral -require Diplomat
@@ -438,7 +422,7 @@ dialog first_greetings
 		exclude Grob
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x00000079
 		require AtWar
 	end
@@ -464,11 +448,11 @@ dialog war_surrender
 	text space_diplomacy~!0x000005AE -emotion Neutral -require Grob
 
 	response
-		action 0x3DE7CB69
+		action action_accept_surrender
 		text space_diplomacy~!0x000000F1
 	end
 	response
-		action 0x2E42264B
+		action action_decline_surrender
 		text space_diplomacy~!0x000000F2
 	end
 end
@@ -566,7 +550,7 @@ dialog create_alliance_failure
 		exclude AtWar
 	end
 	response
-		action kCnvMission~
+		action action_try_mission
 		text space_diplomacy~!0x00000150
 		text space_diplomacy~!0x00000151
 		text space_diplomacy~!0x00000152
@@ -716,7 +700,7 @@ dialog greetings
 		exclude AtWar
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x00000075
 		text space_diplomacy~!0x00000076
 		text space_diplomacy~!0x00000077
@@ -731,7 +715,7 @@ dialog greetings
 		exclude Grob
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x00000079
 		text space_diplomacy~!0x00000074
 		require AtWar
@@ -741,17 +725,17 @@ dialog teaching_explore_menu
 	text space_diplomacy~!0x00000285 -emotion Happy
 
 	response
-		action kCnvMission~ TutorialFindAliens
+		action action_try_mission TutorialFindAliens
 		text space_diplomacy~!0x00000286
 		ints4 0x06E7602B
 	end
 	response
-		action kCnvMission~ TutorialFindRare
+		action action_try_mission TutorialFindRare
 		text space_diplomacy~!0x00000287
 		ints4 0x4AB09A80
 	end
 	response
-		action kCnvMission~ TutorialColorTerrainPurple
+		action action_try_mission TutorialColorTerrainPurple
 		text space_diplomacy~!0x00000288
 		ints3 0x06E7602B
 		ints4 0xDD53B0F0
@@ -782,7 +766,7 @@ dialog peace_offering_failure
 	text space_diplomacy~!0x000005E1 -emotion Neutral -require Grob
 
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x000000FD
 	end
 end
@@ -829,7 +813,7 @@ dialog congratulations
 		exclude AtWar
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x0000053B
 		text space_diplomacy~!0x0000053C
 		text space_diplomacy~!0x0000053D
@@ -844,7 +828,7 @@ dialog congratulations
 		exclude Grob
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x0000053F
 		text space_diplomacy~!0x0000007C
 		require AtWar
@@ -869,7 +853,7 @@ dialog request_attack_declined_busy
 		text space_diplomacy~!0x000002F6
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x000000CB
 	end
 end
@@ -894,7 +878,7 @@ dialog first_contact_unfriendly
 	text space_diplomacy~!0x00000559 -emotion Neutral -require Grob
 
 	response
-		action kCnvRelationshipCommunicatedMean~
+		action action_contact_mean
 		text space_diplomacy~!0x0000008F
 	end
 end
@@ -963,7 +947,7 @@ dialog mission_main
 		exclude HasAssignedMission
 	end
 	response
-		action kCnvMission~
+		action action_try_mission
 		text space_diplomacy~!0x0000009D
 		text space_diplomacy~!0x0000009E
 		text space_diplomacy~!0x0000009F
@@ -990,10 +974,12 @@ dialog mission_main
 		require HasMissionConversation
 		exclude AtWar
 	end
-	response # Новые задания
-		action kCnvCommEvent~ Prikol_diplomacy!Prikol_mission.cnv
-		text PrikolGameVariants!0x6087B1AB
+	
+	response # Fabulamosa
+		action kCnvCommEvent~ Fabulamosa_diplomacy!fabulamosa_main.cnv
+		text CNVPrikolTexts!fabulamosa_response
 		exclude MySpecies AtWar HasAssignedMission
+		require Alliance
 	end
 end
 dialog first_contact_friendly
@@ -1107,7 +1093,7 @@ dialog trade_route_purchase_big_success
 	text space_diplomacy~!0x00000512 -emotion Neutral -require Grob
 
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x000000EC
 	end
 end
@@ -1313,7 +1299,7 @@ dialog diplomacy
 		exclude PlayerSaveEmpire
 	end
 	response
-		action kCnvEndTradeRoute~
+		action action_destroy_trade_route
 		text space_diplomacy~!0x00000668
 		require HasTradeRoute
 		exclude MySpecies PlayerSaveEmpire
@@ -1335,20 +1321,6 @@ dialog diplomacy
 		text space_diplomacy~!0x000000B6
 		require Alliance
 		exclude MySpecies
-	end
-	#<response
-		action kCollectTribute
-		text PrikolGameVariants!0xFFFFFFFF
-		require AttitudeCautiousOrWorse
-		exclude MySpecies Alliance AtWar
-	end#>
-	response # кнопка вызова мини-игр
-		action kCnvCommEvent~ Prikol_diplomacy!Prikol_game.cnv
-		text PrikolGameVariants!0x37C8C6B6
-	end
-	response # создатель мода
-		action kCnvCommEvent~ Prikol_diplomacy!ModCreator.cnv
-		text ModCreator!0xE6147379
 	end
 	response
 		action kCnvCommEvent~ space_diplomacy~!default.cnv
@@ -1376,7 +1348,7 @@ dialog already_active_archetype_mission
 		text space_diplomacy~!0x000000C3
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x000000BA
 	end
 end
@@ -1521,7 +1493,7 @@ dialog create_alliance_successful
 		text space_diplomacy~!0x00000144
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x00000145
 		text space_diplomacy~!0x00000146
 		text space_diplomacy~!0x00000147
@@ -1549,7 +1521,7 @@ dialog peace_offering_big_failure
 	text space_diplomacy~!0x000005D0 -emotion Neutral -require Grob
 
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x000000FB
 	end
 end
@@ -1577,7 +1549,7 @@ dialog under_disaster
 	text space_diplomacy~!0x000001A3 -emotion Urgent -require MySpecies
 
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x0000010C
 	end
 end
@@ -1644,14 +1616,14 @@ dialog break_alliance_successful
 		text space_diplomacy~!0x00000138
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x00000139
 		text space_diplomacy~!0x0000013A
 		text space_diplomacy~!0x0000013B
 		text space_diplomacy~!0x0000013C
 	end
 end
-dialog default # главная страница
+dialog default
 	value4 true
 
 	text space_diplomacy~!0x0000007D -emotion Neutral -require MySpecies
@@ -1689,7 +1661,7 @@ dialog tutorial_mission_unavailable
 		text space_diplomacy~!0x00000167
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x00000168
 	end
 end
@@ -1755,32 +1727,32 @@ dialog war_peace_offering
 	text space_diplomacy~!0x000005BF -emotion Neutral -require Grob
 
 	response
-		action kCnvPeaceOffer5~
+		action action_peace_offer_5
 		text space_diplomacy~!0x000000F4
 		enableRequire PeaceOfferMoneyAvailable5
 	end
 	response
-		action kCnvPeaceOffer4~
+		action action_peace_offer_4
 		text space_diplomacy~!0x000000F5
 		enableRequire PeaceOfferMoneyAvailable4
 	end
 	response
-		action kCnvPeaceOffer3~
+		action action_peace_offer_3
 		text space_diplomacy~!0x000000F6
 		enableRequire PeaceOfferMoneyAvailable3
 	end
 	response
-		action kCnvPeaceOffer2~
+		action action_peace_offer_2
 		text space_diplomacy~!0x000000F7
 		enableRequire PeaceOfferMoneyAvailable2
 	end
 	response
-		action kCnvPeaceOffer1~
+		action action_peace_offer_1
 		text space_diplomacy~!0x000000F8
 		enableRequire PeaceOfferMoneyAvailable1
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x000000F9
 	end
 end
@@ -1805,7 +1777,7 @@ dialog peace_offering_big_success
 	text space_diplomacy~!0x00000603 -emotion Neutral -require Grob
 
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x00000101
 	end
 end
@@ -1936,7 +1908,7 @@ dialog trade_route_purchase_success
 	text space_diplomacy~!0x000004F0 -emotion Neutral -require Grob
 
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x000000EA
 	end
 end
@@ -1961,7 +1933,7 @@ dialog under_grob_shock
 	text space_diplomacy~!0x00000612 -emotion Afraid -require Warrior
 
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x0000010E
 	end
 end
@@ -1969,36 +1941,36 @@ dialog teaching_expand_empire_menu
 	text space_diplomacy~!0x0000028B -emotion Happy
 
 	response
-		action kCnvMission~ TutorialColonize
+		action action_try_mission TutorialColonize
 		text space_diplomacy~!0x00000315
 		ints4 0x5ECA8A39
 	end
 	response
-		action kCnvMission~ TutorialTerraform
+		action action_try_mission TutorialTerraform
 		text space_diplomacy~!0x00000316
 		ints3 0x5ECA8A39
 		ints4 0xE90550D8
 	end
 	response
-		action kCnvMission~ TutorialTradespice
+		action action_try_mission TutorialTradespice
 		text space_diplomacy~!0x00000317
 		ints3 0x06E7602B
 		ints4 0xA74AC6DE
 	end
 	response
-		action kCnvMission~ TutorialTraderare
+		action action_try_mission TutorialTraderare
 		text space_diplomacy~!0x00000318
 		ints3 0x4AB09A80 0x06E7602B
 		ints4 0x079C9097
 	end
 	response
-		action kCnvMission~ TutorialSetupTradeRoute
+		action action_try_mission TutorialSetupTradeRoute
 		text space_diplomacy~!0x00000319
 		ints3 0x06E7602B
 		ints4 0x5759425D
 	end
 	response
-		action kCnvMission~ TutorialWar
+		action action_try_mission TutorialWar
 		text space_diplomacy~!0x0000031A
 		ints3 0x5759425D 0x06E7602B
 		ints4 0xE38D9BB1
@@ -2024,30 +1996,30 @@ dialog teaching_other_empires_menu
 	text space_diplomacy~!0x0000031C -emotion Happy
 
 	response
-		action kCnvMission~ TutorialFindAliens
+		action action_try_mission TutorialFindAliens
 		text space_diplomacy~!0x0000031D
 		ints4 0x06E7602B
 	end
 	response
-		action kCnvMission~ TutorialTradespice
+		action action_try_mission TutorialTradespice
 		text space_diplomacy~!0x0000031E
 		ints3 0x06E7602B
 		ints4 0xA74AC6DE
 	end
 	response
-		action kCnvMission~ TutorialSetupTradeRoute
+		action action_try_mission TutorialSetupTradeRoute
 		text space_diplomacy~!0x0000031F
 		ints3 0x06E7602B
 		ints4 0x5759425D
 	end
 	response
-		action kCnvMission~ TutorialMakeally
+		action action_try_mission TutorialMakeally
 		text space_diplomacy~!0x00000320
 		ints3 0x06E7602B 0x5759425D
 		ints4 0xFF6F7429
 	end
 	response
-		action kCnvMission~ TutorialWar
+		action action_try_mission TutorialWar
 		text space_diplomacy~!0x00000321
 		ints3 0x5759425D 0x06E7602B
 		ints4 0xE38D9BB1
@@ -2118,7 +2090,7 @@ dialog give_gift_NoRelationship
 		exclude AtWar
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x000003D8 -exclude AtWar
 		text space_diplomacy~!0x000003D9 -require AtWar
 	end
@@ -2168,7 +2140,7 @@ dialog philosophy
 		text space_diplomacy~!0x00000532
 	end
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x00000533
 	end
 end
@@ -2205,7 +2177,7 @@ dialog peace_offering_success
 	text space_diplomacy~!0x000005F2 -emotion Neutral -require Grob
 
 	response
-		action kCnvCloseComm~
+		action exit
 		text space_diplomacy~!0x000000FF
 	end
 end
