@@ -2,5 +2,5 @@ key parent AssetBrowserFilter!FixedObjectTemplate.prop
 key browserFilterButtonAtlasedIconID 0x41464100!AdventureFilterButtons
 key browserFilterData CNVPrikolMusic
 texts browserFilterName
-	"Fabulomosa"
+	(CNVPrikolTexts!fabulomosaBrowserFilterName) "Fabulomosa"
 end

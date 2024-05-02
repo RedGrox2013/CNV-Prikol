@@ -5,7 +5,7 @@
   <key name="modelMeshLOD0" groupid="EP1_TerrainIcons" instanceid="ep1_audioicon_default2" typeid="rw4" />
   <key name="paletteItemPlacedAsset" groupid="civicobjects" instanceid="ep1_audioobject_music" typeid="cPlaceableSound" />
   <texts name="sporepediaName">
-    <text>Peggy Gou - Nanana (speed up)</text>
+    <text tableid="CNVPrikolScenarioAssets" instanceid="Peggy Gou - Nanana (speed up)">Peggy Gou - Nanana (speed up)</text>
   </texts>
   <bool name="sporepediaShow">true</bool>
 </properties>
