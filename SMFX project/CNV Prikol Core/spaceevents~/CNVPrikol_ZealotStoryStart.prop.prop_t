@@ -1,0 +1,9 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Zealot Adventure 01"
+key missionAdventureID 0x245D4429
+key missionConversation CNVPrikol_ZealotStoryStart
+float missionGenericRewardMoney 30000
+float missionGenericRewardRelation 3
+bool missionIsAdventure true
+bool missionIsTutorial false
+key missionType Adventure

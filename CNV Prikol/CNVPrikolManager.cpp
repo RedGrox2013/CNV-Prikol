@@ -61,9 +61,10 @@ void CNVPrikolManager::SaveSpaceData()
 
 	IO::WriteInt32(stream.get(), &PrikolRecord::VERSION);
 	IO::WriteUInt32(stream.get(), &size);
-	for (auto& sc : _data) {
-		IO::WriteInt32(stream.get(), &sc->socialCredit);
-		IO::WriteUInt32(stream.get(), &sc->politicalID);
+	for (auto& record : _data) {
+		IO::WriteUInt32(stream.get(), &record->politicalID);
+		IO::WriteInt32(stream.get(), &record->socialCredit);
+		IO::WriteBool8(stream.get(), &record->storyStarted);
 	}
 
 	stream->Close();
@@ -85,12 +86,18 @@ void CNVPrikolManager::LoadSpaceData()
 
 	int32_t version;
 	IO::ReadInt32(stream.get(), &version);
+	if (version == 1) {
+		stream->Close();
+		return;
+	}
+
 	size_t size;
 	IO::ReadUInt32(stream.get(), &size);
 	for (size_t i = 0; i < size; ++i) {
 		PrikolRecordPtr record = new PrikolRecord();
-		IO::ReadInt32(stream.get(), &record->socialCredit);
 		IO::ReadUInt32(stream.get(), &record->politicalID);
+		IO::ReadInt32(stream.get(), &record->socialCredit);
+		IO::ReadBool8(stream.get(), record->storyStarted);
 		_data.push_back(record);
 	}
 
@@ -126,4 +133,15 @@ void CNVPrikolManager::ShowThanksForPlaying() const
 	App::Property::GetBool(_config.get(), id("showThanksForPlaying"), show);
 	if (show)
 		HintManager.ShowHint(id("CNVPrikolThanksForPlaying"));
+}
+
+void CNVPrikolManager::SetStoryStarted(uint32_t politicalID, bool value)
+{
+	for (auto& record : _data)
+		if (record->politicalID == politicalID)
+			record->storyStarted = value;
+
+	PrikolRecordPtr record = new PrikolRecord(politicalID);
+	record->storyStarted = value;
+	_data.push_back(record);
 }

@@ -21,11 +21,12 @@ enum CommActions : uint32_t
 	kCnvMission = 0x7B1F7D82,
 
 	// Custom
-	kCustonAction = id("kCustonAction"),
+	kCustomAction = id("kCustomAction"),
 	kOpenUrl = id("kOpenUrl"),
 	kCollectTribute = id("kCollectTribute"),
 	kAddSocialCredit = id("kAddSocialCredit"),
-	kSocialCreditEnd = id("kSocialCreditEnd")
+	kSocialCreditEnd = id("kSocialCreditEnd"),
+	kFabulamosaStoryStart = id("kFabulamosaStoryStart")
 };
 
 class CustomAction

@@ -1,0 +1,183 @@
+dialog mission_assign
+	text CNVPrikol_ZealotStoryStart!mission_assign -emotion Neutral -require Zealot
+
+	response
+		action kCnvCommEvent~ CNVPrikol_ZealotStoryStart!mission_accept.cnv
+		text 0xCF4AA8C2!0xFADED01B
+		text 0xCF4AA8C2!0xFADED01A
+		text 0xCF4AA8C2!0xFADED019
+	end
+	response
+		action kCnvCommEvent~ CNVPrikol_ZealotStoryStart!mission_reject.cnv
+		text 0xCF4AA8C2!0xFADED013 -exclude Grob
+		text 0xCF4AA8C2!0xFADED018 -exclude Grob
+		text 0xCF4AA8C2!0xFADED01C -exclude Grob
+	end
+end
+dialog dynamic_response_to_source
+	text 0xCF4AA8C2!0xFADED023
+
+	response
+		action kCnvCommEvent~ CNVPrikol_ZealotStoryStart!mission_incomplete.cnv
+		text 0xCF4AA8C2!0xFADED01F
+		text 0xCF4AA8C2!0xFADED027
+		text 0xCF4AA8C2!0xFADED028
+		text 0xCF4AA8C2!0xFADED024
+		text 0xCF4AA8C2!0xFADED025
+	end
+	response
+		action continue
+		text 0xCF4AA8C2!0xFADED026
+		text 0xCF4AA8C2!0xFADED006
+		text 0xCF4AA8C2!0xFADED003
+		text 0xCF4AA8C2!0xFADED002
+	end
+	response
+		action kCnvCommEvent~ CNVPrikol_ZealotStoryStart!abort.cnv
+		text 0xCF4AA8C2!0xFADED022 -exclude Grob
+		text 0xCF4AA8C2!0xFADED020 -exclude Grob
+		text 0xCF4AA8C2!0xFADED021 -exclude Grob
+		text 0xCF4AA8C2!0xFADED029 -require Grob
+	end
+	response
+		action exit
+		text 0xCF4AA8C2!0xFADED008 -exclude Grob
+		text 0xCF4AA8C2!0xFADED02A -exclude Grob
+		text 0xCF4AA8C2!0xFADED00B -exclude Grob
+		text 0xCF4AA8C2!0xFADED01E -require Grob
+	end
+end
+dialog mission_reject
+	action action_mission_reject
+
+	text CNVPrikol_ZealotStoryStart!mission_reject -emotion Neutral -require Zealot
+
+	response
+		action continue
+		text 0xCF4AA8C2!0xFADED001
+		text 0xCF4AA8C2!0xFADED004
+		text 0xCF4AA8C2!0xFADED003
+		text 0xCF4AA8C2!0xFADED002
+	end
+	response
+		action exit
+		text 0xCF4AA8C2!0xFADED008 -exclude Grob
+		text 0xCF4AA8C2!0xFADED009 -exclude Grob
+		text 0xCF4AA8C2!0xFADED00B -exclude Grob
+		text 0xCF4AA8C2!0xFADED00A -exclude Grob
+	end
+end
+dialog abort
+	action action_mission_abort
+
+	text mission_zealot_01!0x00000081 -emotion Neutral -require Zealot
+
+	response
+		action continue
+		text 0xCF4AA8C2!0xFADED001
+		text 0xCF4AA8C2!0xFADED004
+		text 0xCF4AA8C2!0xFADED003
+		text 0xCF4AA8C2!0xFADED002
+	end
+	response
+		action exit
+		text 0xCF4AA8C2!0xFADED008 -exclude Grob
+		text 0xCF4AA8C2!0xFADED009 -exclude Grob
+		text 0xCF4AA8C2!0xFADED00B -exclude Grob
+		text 0xCF4AA8C2!0xFADED00A -exclude Grob
+	end
+end
+dialog mission_complete
+	# TODO: изменить прогресс
+	action action_mission_complete
+
+	text CNVPrikol_ZealotStoryStart!mission_complete -emotion Neutral -require Zealot
+
+	response
+		action continue
+		text 0xCF4AA8C2!0xFADED001
+		text 0xCF4AA8C2!0xFADED006
+		text 0xCF4AA8C2!0xFADED00E
+		text 0xCF4AA8C2!0xFADED002
+	end
+	response
+		action exit
+		text 0xCF4AA8C2!0xFADED015 -exclude Grob
+		text 0xCF4AA8C2!0xFADED016 -exclude Grob
+		text 0xCF4AA8C2!0xFADED011 -exclude Grob
+	end
+end
+dialog mission_incomplete
+	text CNVPrikol_ZealotStoryStart!mission_incomplete -emotion Urgent -require Zealot
+
+	response
+		action continue
+		text 0xCF4AA8C2!0xFADED001
+		text 0xCF4AA8C2!0xFADED006
+		text 0xCF4AA8C2!0xFADED003
+		text 0xCF4AA8C2!0xFADED002
+	end
+	response
+		action kCnvCommEvent~ mission_zealot_01!mission_reject.cnv
+		text 0xCF4AA8C2!0xFADED00D -exclude Grob
+		text 0xCF4AA8C2!0xFADED014 -exclude Grob
+		text 0xCF4AA8C2!0xFADED013 -exclude Grob
+		text 0xCF4AA8C2!0xFADED00F -exclude Grob
+		text 0xCF4AA8C2!0xFADED012 -exclude Grob
+	end
+	response
+		action exit
+		text 0xCF4AA8C2!0xFADED007
+		text 0xCF4AA8C2!0xFADED005
+		text 0xCF4AA8C2!0xFADED00C
+		text 0xCF4AA8C2!0xFADED010
+	end
+end
+dialog mission_accept
+	action action_mission_accept
+
+	text CNVPrikol_ZealotStoryStart!mission_accept -emotion Neutral -require Zealot
+
+	response
+		action continue
+		text 0xCF4AA8C2!0xFADED001
+		text 0xCF4AA8C2!0xFADED004
+		text 0xCF4AA8C2!0xFADED003
+		text 0xCF4AA8C2!0xFADED002
+	end
+	response
+		action exit
+		text 0xCF4AA8C2!0xFADED007 -exclude Grob
+		text 0xCF4AA8C2!0xFADED005 -exclude Grob
+		text 0xCF4AA8C2!0xFADED00C -exclude Grob
+	end
+end
+
+eventlog UIMediumDesc_Fulfilled
+	text mission_zealot_01!0x00000093
+end
+eventlog event_log_return_for_rewards
+	text mission_zealot_01!0x00000099
+end
+eventlog UIShortDesc_InProgress
+	text CNVPrikol_ZealotStoryStart!UIShortDesc_InProgress
+end
+eventlog UILongDesc_Fulfilled
+	text CNVPrikol_ZealotStoryStart!UILongDesc_Fulfilled
+end
+eventlog UIMediumDesc_InProgress
+	text CNVPrikol_ZealotStoryStart!UIMediumDesc_InProgress
+end
+eventlog status_fulfilled
+	text mission_zealot_01!0x00000098
+end
+eventlog status_in_progress
+	text mission_zealot_01!0x00000097
+end
+eventlog UILongDesc_InProgress
+	text CNVPrikol_ZealotStoryStart!UILongDesc_InProgress
+end
+eventlog UIShortDesc_Fulfilled
+	text mission_zealot_01!0x000000B2
+end
+

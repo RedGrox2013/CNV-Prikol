@@ -35,6 +35,8 @@ public:
 	void AddSocialCredit(const uint32_t& politicalID, const int32_t& socialCredit);
 	int32_t GetSocialCreditAddend() const { return _socialCreditAddend; }
 
+	void SetStoryStarted(uint32_t politicalID, bool value = true);
+
 	void SaveSpaceData();
 	void LoadSpaceData();
 

@@ -86,7 +86,7 @@ void CustomAction::HandleSpaceCommAction(uint32_t source, PlanetID planetKey, vo
 			empire->mEmpireMoney -= 10000;
 
 	}
-		break;
+	break;
 	case CommActions::kAddSocialCredit:
 	{
 		int32_t socialCredit;
@@ -94,7 +94,7 @@ void CustomAction::HandleSpaceCommAction(uint32_t source, PlanetID planetKey, vo
 			socialCredit = PrikolManager.GetSocialCreditAddend();
 		PrikolManager.AddSocialCredit(source, socialCredit);
 	}
-		break;
+	break;
 	case CommActions::kSocialCreditEnd:
 	{
 		ResourceKey key(0, 0x055ADA24, id("Prikol_socialCredit"));
@@ -105,6 +105,9 @@ void CustomAction::HandleSpaceCommAction(uint32_t source, PlanetID planetKey, vo
 			key.instanceID = id("social_credit_win");
 		_nextAction.key = key;
 	}
+	break;
+	case CommActions::kFabulamosaStoryStart:
+		PrikolManager.SetStoryStarted(source);
 		break;
 	}
 }

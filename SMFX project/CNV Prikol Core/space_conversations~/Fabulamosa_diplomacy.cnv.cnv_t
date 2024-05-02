@@ -10,32 +10,8 @@ dialog fabulamosa_main
 	
 	####################### Фанатик #######################
 	response
-		action kCnvCommEvent~ Fabulamosa_diplomacy!zealot_test.cnv
+		action kFabulamosaStoryStart CNVPrikolStories!ZealotStoryStart.prop
 		text CNVPrikolTexts!fork_1
 		require Zealot
-	end
-	response
-		action kCnvCommDefault~
-		text CNVPrikolTexts!fork_2
-		require Zealot
-	end
-	response
-		action kCnvCommDefault~
-		text CNVPrikolTexts!fork_3
-		require Zealot
-	end
-	response
-		action kCnvCommDefault~
-		text CNVPrikolTexts!fork_4
-		require Zealot
-	end
-end
-
-dialog zealot_test
-	text CNVPrikolTexts!fork_1_zealot_start
-	
-	response
-		action kCnvCommDefault~
-		text CNVPrikolTexts!in_developing
 	end
 end
