@@ -8,10 +8,10 @@ dialog fabulamosa_main
 		exclude Zealot
 	end
 	
-	####################### Фанатик #######################
+	#################################### Фанатик ####################################
 	response
 		action kFabulamosaStoryStart CNVPrikolStories!ZealotStoryStart.prop
-		text CNVPrikolTexts!fork_1
+		text CNVPrikolTexts!story_start
 		require Zealot
 	end
 end
